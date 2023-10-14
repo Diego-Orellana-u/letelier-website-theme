@@ -1,10 +1,64 @@
-<h1> Hi </h1>
+
+<nav class="nav">
+    <a href="/" class="header-logo">
+    <img src="{{ section.settings.logo | img_url: 'master' }}" alt="{{ site.name }}" class="logo">
+    </a>
+
+    <button aria-controls="nav-list" aria-expanded="false" class="mobile__nav__toggle" id="nav-toggle">
+            <i class="ri-menu-line">
+                <span class="sr-only">Menu</span>
+            </i>
+    </button>
+
+    <ul data-visible="false" class="nav__list" id="nav-list">
+        {% for link in section.settings.navigation.links %}
+            <li class="nav__item">
+                <a href="{{ link.url }}" class="nav__link">
+                    {{ link.title}}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</nav>
+
+<script>
+const navMenu = document.querySelector('.nav__list');
+const toggleButton = document.querySelector('.mobile__nav__toggle');
+
+toggleButton.addEventListener('click', () => {
+    const visibility = navMenu.getAttribute('data-visible');
+
+    if(visibility === "false"){
+        navMenu.setAttribute('data-visible', true); //show menu on mobile
+        toggleButton.setAttribute('aria-expanded',true) //search purpose
+        toggleButton.firstElementChild.classList.replace('ri-menu-line','ri-close-line') //change icon
+    }else{
+        navMenu.setAttribute('data-visible', false)
+        toggleButton.setAttribute('aria-expanded',false)
+        toggleButton.firstElementChild.classList.replace('ri-close-line','ri-menu-line')
+    }
+})
+</script>
+
+
 
 {% schema %}
 {
     "name": "Header",
     "tag": "header",
-    "class": "header",
-    "settings":[]
+    "class": "header width",
+    "settings":[
+        {
+            "type": "image_picker",
+            "id": "logo",
+            "label": "Logo"
+        },
+        {
+            "type": "link_list",
+            "id": "navigation",
+            "label": "Navigation Menu",
+            "default": "main-menu"
+        }
+    ]
 }
 {% endschema %}

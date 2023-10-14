@@ -1,2 +1,146 @@
 /* $fadeOff: left 0s 0.4s, opacity 0.4s;
 $fadeOn: left 0s, opacity 0.4s; */
+
+.sr-only{  /*accessibility purpose */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;;
+    font-size: 1.2rem;
+    background-color: #FFFFFF;
+    color: #222;
+    transition: background-color .4s;
+    overflow-x: hidden;
+  }
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+img,svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+.button{
+    border: 0;
+    border-radius: 0.1rem;
+    background: #F1F1F1;
+    color: #000000;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: .5rem .7rem .5rem .7rem;
+    cursor: pointer;
+}
+
+.width{
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+
+/* HEADER */
+
+.header{
+    position: fixed;
+    width: 100%; 
+    top: 0;
+    left: 0;
+    background-color: #FFFFFF;
+    z-index: 100;
+    height: 4rem;
+    /* box-shadow: 0 1px 13px hsla(0,0%,0%, .62); */
+  }
+
+.nav{
+    position: relative;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+/*box-shadow*/
+
+.nav::after{
+    content: ''; 
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    padding-top: 5px;
+    z-index: -1;
+    box-shadow: 0 2px 7px hsla(0,0%,0%, .2);
+}
+
+.mobile__nav__toggle{
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    color: #000000;
+    font-size: 1.95rem;
+    cursor: pointer;
+    background: none;
+    border: 0;
+    z-index: 9999;
+}
+
+@media screen and (max-width: 1150px){
+    .nav__list{
+      position: fixed;
+      background-color: #F1F1F1;
+      top: -150px;
+      width: 100%;
+      padding: 2rem 0rem 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      row-gap: 2.2rem;
+      z-index: -1;
+      transition: transform .2s ease-out;
+    }
+}
+
+.nav__list[data-visible="true"]{
+    transform: translateY(100%);
+      transition: transform .2s ease-out;
+}
+
+.nav__link{
+    position: relative;
+    color: #333;
+    font-size: 1.45rem;
+    font-weight: 500;
+}
+  
+
+.header-logo{
+    margin-left: .5rem;
+    width: 13rem;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}

@@ -4,5 +4,19 @@
         "theme_name": "Coding with Robby",
         "theme_version": "1.0.0",
         "theme_autor": "Diego Orellana"
+    },
+    {
+        "name": "Page settings",
+        "settings": [
+            {
+                "type": "range",
+                "id": "page_width",
+                "label": "Page width",
+                "default": 1200,
+                "min": 800,
+                "max": 1600,
+                "step": 50
+            }
+        ]
     }
 ]
