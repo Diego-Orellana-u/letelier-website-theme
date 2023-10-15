@@ -3,7 +3,9 @@
         "name": "theme_info",
         "theme_name": "Coding with Robby",
         "theme_version": "1.0.0",
-        "theme_autor": "Diego Orellana"
+        "theme_support_email": "diego.orellana.git@gmail.com",
+        "theme_author": "Diego Orellana",
+        "theme_documentation_url": "https://diego.orellana.com"
     },
     {
         "name": "Page settings",
@@ -16,6 +18,16 @@
                 "min": 800,
                 "max": 1600,
                 "step": 50
+            },
+            {
+                "type": "image_picker",
+                "id": "logo",
+                "label": "logo"
+            },
+            {
+                "type": "image_picker",
+                "id": "logo-inverted",
+                "label": "Inverted logo"
             }
         ]
     }

@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Theme development</title>
-    <link rel="stylesheet" href="{{ 'base.css' | asset_url }}">
-    <link rel="stylesheet" href="{{ 'normalize.css' | asset_url }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
-    {{ content_for_header }}
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Theme development</title>
+
+        <link rel="stylesheet" href="{{ 'base.css' | asset_url }}">
+        <link rel="stylesheet" href="{{ 'normalize.css' | asset_url }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
+
+        {{ content_for_header }}
     </head>
+
     <body>
-    {% comment %} {%section 'header'%} {% endcomment %}
-    {{ content_for_layout }}
+        {% section 'header' %}
+        {% section 'hero' %}
+        {% section 'vende' %}
+        {% section 'why_us' %}
+        {% section 'social_section' %}
+        {% section 'howto' %}
+        {% section 'footer' %}
+        {{ content_for_layout }}
     </body>
 </html>

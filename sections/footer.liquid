@@ -1,0 +1,47 @@
+<img src="{{ settings.logo-inverted | img_url: 'master'}}" alt="letelier-logo" class="logo footer__logo">
+
+<div class="links__container">
+    <span class="links__title">Nuestra Tienda</span>
+    <ul class="footer__list-container">
+        <li><a class="footer__link" href="">Blog</a></li>
+        <li><a class="footer__link" href="">Tienda</a></li>
+        <li><a class="footer__link" href="">Vender</a></li>
+        <li><a class="footer__link" href="">Contacto</a></li>
+        <li><a class="footer__link" href="">Nosotros</a></li>
+    </ul>
+</div>
+
+<div class="links__container">
+    <span class="links__title">Terminos y Condiciones</span>
+    <ul class="footer__list-container">
+        <li><a class="footer__link" href="">Condiciones Legales</a></li>
+        <li><a class="footer__link" href="">Condiciones de Envío</a></li>
+        <li><a class="footer__link" href="">Devoluciones</a></li>
+    </ul>
+</div>
+
+<div class="links__container socials__container">
+    <span class="links__title">Siguenos</span>
+    <div class="social__btns-container">
+        <button class="social__btn wsp__btn">
+            <i class="ri-whatsapp-line social__icon"></i>
+        </button>
+        <button class="social__btn ig__btn">
+            <i class="ri-instagram-line social__icon"></i>
+        </button>
+        <button class="social__btn fb__btn">
+            <i class="ri-facebook-circle-fill social__icon"></i>
+        </button>        
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Footer",
+    "tag": "footer",
+    "class": "footer__container",
+    "settings": [
+
+    ]
+}
+{% endschema %}

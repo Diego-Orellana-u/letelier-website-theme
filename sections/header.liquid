@@ -1,7 +1,6 @@
-
 <nav class="nav">
     <a href="/" class="header-logo">
-    <img src="{{ section.settings.logo | img_url: 'master' }}" alt="{{ site.name }}" class="logo">
+    <img src="{{ settings.logo | img_url: 'master' }}" alt="{{ site.name }}" class="logo">
     </a>
 
     <button aria-controls="nav-list" aria-expanded="false" class="mobile__nav__toggle" id="nav-toggle">
@@ -48,11 +47,6 @@ toggleButton.addEventListener('click', () => {
     "tag": "header",
     "class": "header width",
     "settings":[
-        {
-            "type": "image_picker",
-            "id": "logo",
-            "label": "Logo"
-        },
         {
             "type": "link_list",
             "id": "navigation",

@@ -1,0 +1,43 @@
+<div class="howto__individual first__howto">
+    <span class="howto__upper-title">MAS INFORMACION</span>
+    <span class="howto__title">Comprar una antigüedad</span>
+    <a href=""></a>
+</div>
+<div class="howto__individual second__howto">
+    <span class="howto__upper-title">MAS INFORMACION</span>
+    <span class="howto__title">Vender una antigüedad</span>
+    <a href=""></a>
+</div>
+
+{%- style -%}
+    .first__howto{
+        background-image: url('{{ section.settings.first-background | img_url: 'master' }}');
+        background-size: cover;
+    }
+
+    .second__howto{
+        background-image: url('{{ section.settings.second-background | img_url: 'master' }}');
+        background-position:top;
+        background-size: cover;
+    }
+{%- endstyle -%}
+
+{% schema %}
+{
+    "name": "How to buy/sell",
+    "tag": "section",
+    "class": "howto__container",
+    "settings":[
+        {
+            "type": "image_picker",
+            "id": "first-background",
+            "label": "Background 1"
+        },
+        {
+            "type": "image_picker",
+            "id": "second-background",
+            "label": "Background 2"
+        }
+    ]
+}
+{% endschema %}

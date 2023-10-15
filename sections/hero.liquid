@@ -1,0 +1,25 @@
+<main class="main">
+    <section class="home__container">
+        <img src="{{section.settings.hero | img_url: 'master'}}" alt="home-image" class="home__img">
+        <section class="home__info">
+            <h2 class="home__title">LUXURY</h2>
+            <p class="home__p">Descubre los ultimos articulos de lujo en el mundo de la decoración</p>
+            <button class="home__btn button" id="home-btn">Go To Luxury</button>
+        </section>
+    </section>
+</main>
+
+{% schema %}
+{
+    "name": "Main",
+    "tag": "section",
+    "class": "main",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "hero",
+            "label": "Hero"
+        }
+    ]
+}
+{% endschema %}
