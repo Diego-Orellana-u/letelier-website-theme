@@ -121,7 +121,7 @@ img,svg {
     .nav__list{
       position: fixed;
       background-color: #F1F1F1;
-      top: -150px;
+      top: -155px;
       width: 100%;
       padding: 2rem 0rem 2rem 1rem;
       display: flex;
@@ -254,6 +254,7 @@ img,svg {
     padding: 1rem;
     margin: 0rem .8rem 1rem .8rem;
     background-color: #F1F1F1;
+    height: 300px;
 }
   
 .reason__icon{
@@ -376,3 +377,11 @@ img,svg {
     gap: 1rem;
 }
   
+
+/*=============== BREAKPOINTS ===============*/
+
+/* for medium devices */
+
+/* @media screen and (min-width:){
+
+} */
