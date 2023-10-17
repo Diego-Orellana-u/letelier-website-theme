@@ -2,12 +2,25 @@
     <a href="/" class="header-logo">
     <img src="{{ settings.logo | img_url: 'master' }}" alt="{{ site.name }}" class="logo">
     </a>
+    <div class="buttons__container">
+        <button aria-expanded="false" class="mobile__search__toggle icon" id="search-toggle">
+                <i class="ri-search-line">
+                    <span class="sr-only">Search</span>
+                </i>
+        </button>
 
-    <button aria-controls="nav-list" aria-expanded="false" class="mobile__nav__toggle" id="nav-toggle">
-            <i class="ri-menu-line">
-                <span class="sr-only">Menu</span>
-            </i>
-    </button>
+        <button aria-expanded="false" class="mobile__account__toggle icon" id="account-toggle">
+                <i class="ri-account-pin-circle-line">
+                    <span class="sr-only">User account</span>
+                </i>
+        </button>
+
+        <button aria-controls="nav-list" aria-expanded="false" class="mobile__nav__toggle icon" id="nav-toggle">
+                <i class="ri-menu-line">
+                    <span class="sr-only">Menu</span>
+                </i>
+        </button>
+    </div>
 
     <ul data-visible="false" class="nav__list" id="nav-list">
         {% for link in section.settings.navigation.links %}

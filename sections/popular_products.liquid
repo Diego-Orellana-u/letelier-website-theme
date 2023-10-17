@@ -1,16 +1,16 @@
 <h2 class="popular__section-title">Objetos más populares</h2>
-
-{% for product in collections['all'].products limit: 4 %}
-    <div class="popular__item">
-        <img src="{{ product.featured_image | product_img_url: 'medium' }}" alt="" class="popular__img">
-        <a href="{{ product.url }}" class="popular__item-title">
-            <h3>{{ product.title }}</h3>
-        </a>
-        <span class="popular__price">{{ product.price | money }}</span>
-        <button class="popular__btn button">Agregar al carrito</button>
-    </div>
-{% endfor %}
-
+<div class="popular__items-container">
+    {% for product in collections['all'].products limit: 4 %}
+        <div class="popular__item">
+            <img src="{{ product.featured_image | product_img_url: 'medium' }}" alt="" class="popular__img">
+            <a href="{{ product.url }}" class="popular__item-title">
+                <h3>{{ product.title }}</h3>
+            </a>
+            <span class="popular__price">{{ product.price | money }}</span>
+            <button class="popular__btn button">Agregar al carrito</button>
+        </div>
+    {% endfor %}
+</div>
 
 {% schema %}
 {

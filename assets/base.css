@@ -105,16 +105,29 @@ img,svg {
     box-shadow: 0 2px 7px hsla(0,0%,0%, .2);
 }
 
-.mobile__nav__toggle{
+.buttons__container{
     position: absolute;
-    top: 1.5rem;
+    top: 1.3rem;
     right: 1rem;
-    color: #000000;
-    font-size: 1.95rem;
+    display: flex;
+    gap: .5rem;
+    z-index: 9999;
+}
+
+.icon{
     cursor: pointer;
     background: none;
     border: 0;
-    z-index: 9999;
+    color: #000000;
+    font-size: 1.95rem;
+}
+
+.mobile__account__toggle{
+    font-size: 1.5rem;
+}
+
+.mobile__search__toggle{
+    font-size: 1.5rem;
 }
 
 @media screen and (max-width: 1150px){
@@ -147,7 +160,7 @@ img,svg {
 
 .header-logo{
     margin-left: .5rem;
-    width: 13rem;
+    width: 11rem;
 }
 
 .flex{
@@ -238,13 +251,16 @@ img,svg {
 /*=============== POPULAR ITEMS SECTION ===============*/
 
 .popular__container{
-    display: flex;
-    flex-direction: column;
     padding-bottom: 1.5rem;
 }
   
+.popular__items-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 .popular__section-title{
-    align-self: center;
+    text-align: center;
     margin-top: 2rem;
     font-size: var(--h2-font-size);
     font-weight: 400;
@@ -254,6 +270,7 @@ img,svg {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 340px;
     margin: 2rem .8rem 2rem .8rem;
 }
   
@@ -287,22 +304,30 @@ img,svg {
 
 .whyus__container{
     padding-bottom: 2.5rem;
+    padding-top: 2rem;
     background-color: #222;
-    display: flex;
-    flex-direction: column;
-  }
-  
+} 
+
 .whyus__container-title{
     font-size: var(--h2-font-size);
     font-weight: 400;
     color: #FFFFFF;
-    margin: 2rem 0rem 3rem .8rem;
+    margin: 0rem 0rem 3rem 0rem;
+    text-align: center;
 }
+  
+.reasons__container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
   
 .whyus__reason{
     padding: 1rem;
-    margin: 0rem .8rem 1rem .8rem;
+    margin: .8rem;
     background-color: #F1F1F1;
+    width: 300px;
     height: 300px;
 }
   
@@ -321,6 +346,50 @@ img,svg {
 .whyus__desc{
     font-size: var(--paragraph-font-size);
     margin-bottom: 2rem;
+}
+
+/*=============== POPULAR CATEGORIES SECTION ===============*/
+
+.categories__container{
+    padding-bottom: 2.5rem;
+}
+
+.popular__categories-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+  
+.categories__title{
+    text-align: center;
+    font-weight: 400;
+    font-size: var(--h2-font-size);
+    margin-top: 2rem;
+}
+  
+.category__individual{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem .8rem 2rem .8rem;
+}
+  
+.category__img{
+    height: 27rem;
+    width: 20rem;
+    object-fit: cover;
+    object-position: bottom;
+}
+  
+.category__title{
+    font-size: var(--h3-font-size);
+    margin: 1rem;
+    text-align: center;
+}
+  
+.category__btn{
+    border: 2px solid #222;
+    padding: 1rem 2rem 1rem 2rem;
 }
 
 /*=============== SOCIAL BAR ===============*/
@@ -398,6 +467,7 @@ img,svg {
     flex-wrap: wrap;
     gap: 2rem;
     background-color: #222;
+    padding: 1rem 0rem 3rem 1rem;
 }
   
 .footer__logo{
@@ -429,20 +499,54 @@ img,svg {
 
 /*=============== BREAKPOINTS ===============*/
 
+/* for medium phones */
+
 @media screen and (min-width: 360px) {
     .home__title{
         margin-top: 1rem;
     }
+    .header-logo{
+        width: 13rem;
+    }
+
+    .popular__item-title{
+        text-wrap: nowrap;
+    }
 }
 
-/* for medium devices */
+/* for large phones */
 
 @media screen and (min-width: 418px){
     .home__title{
         margin-top: 0;
     }
-    .footer__logo{
-        margin-right: 2rem;
+
+    .sell__button{
+        width: 70%;
     }
+
+    .links__title{
+        margin-top: 2rem;
+    }
+}
+
+/* for tablets */
+
+@media screen and (min-width: 600px){
+    .footer__container{
+        padding: 0rem 0rem 10rem 1rem;
+    }
+    .footer__logo{
+        margin-right: 5rem;
+    }
+    .links__container{
+        margin-top: 5rem;
+    }
+    
+}
+
+/* for desktop */
+
+@media screen and (min-width: 770px){
 
 }
