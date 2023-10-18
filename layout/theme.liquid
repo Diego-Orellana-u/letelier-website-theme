@@ -16,15 +16,12 @@
 
     <body>
         {% section 'header' %}
-        {% section 'hero' %}
-        {% section 'short_about' %}
-        {% section 'vende' %}
-        {% section 'popular_products' %}
-        {% section 'why_us' %}
-        {% section 'categories' %}
-        {% section 'social_section' %}
-        {% section 'howto' %}
-        {% section 'footer' %}
+        {% section 'cart-drawer' %}
+
         {{ content_for_layout }}
+
+        {% section 'footer' %}
+
+        {{ 'scripts.js' | asset_url | script_tag }}
     </body>
 </html>

@@ -7,10 +7,16 @@
                 <h3>{{ product.title }}</h3>
             </a>
             <span class="popular__price">{{ product.price | money }}</span>
-            <button class="popular__btn button">Agregar al carrito</button>
+            <form action="/cart/add" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+                <input type="hidden" name="quantity" value="1">
+                <button type="submit" class="popular__btn button">Agregar al carrito</button>
+            </form>
         </div>
     {% endfor %}
 </div>
+
+
 
 {% schema %}
 {

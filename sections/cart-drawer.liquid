@@ -1,0 +1,73 @@
+<span class="drawer__overlay"></span> 
+
+<div data-visible="false" class="mini__cart-container">
+    <div class="cart__header">
+        <i class="ri-shopping-bag-2-line icon mini__cart-bag"></i>
+        <span class="cart__header-title">Carrito</span>
+        <span class="cart__header-count">{{ cart.item_count}} items </span>
+        <i class="ri-close-line icon mini__cart-close"></i>
+    </div>
+
+    {% form 'cart', cart, class: 'cart-drawer-form' %}
+        {% if cart.empty? %}
+            <span class="mini__cart-empty">Tu carro está vacío</span>
+        {% else %}
+            <div class="mini__cart-items">
+                {% for item in cart.items %}
+                    <div class="mini__cart-item" data-line-item-key="{{ item.key }}">
+                        <div class="mini__cart-item-img">
+                            <img src="{{ item.image | img_url: '200x' }}" alt="{{ item.title }}">
+                        </div>
+                        <div class="mini__cart-item-main">
+                            <div class="mini__cart-item-main-flex">
+                                <div class="mini__cart-item-main-flex-left">
+                                    <h3>
+                                        <a href="{{ item.url }}"> {{ item.product.title}}</a>
+                                    </h3>
+                                    <div class="mini__cart-quantity-selector">
+                                        <button class="mini__cart-quantity-minus" type="button">
+                                            <i class="ri-subtract-line"></i>
+                                        </button>
+                                        <input type="text" readonly value="{{ item.quantity }}">
+                                        <button class="mini__cart-quantity-plus" type="button">
+                                            <i class="ri-add-line"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="mini__cart-item-main-flex-right">
+                                    <span>{{ item.final_line_price | money }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="mini__cart-footer">
+                {% if cart.total_discounts > 0 %}
+                    <div class="mini__cart-footer-row">
+                        <span>Descuento</span>
+                        <span> {{ cart.total_discounts | money }} </span>
+                    </div>
+                {% endif %}
+                <div class="mini__cart-footer-row">
+                    <span>Subtotal:</span>
+                    <span> {{cart.total_price | money }} </span>
+                </div>
+                <button type="submit" name="checkout" class="mini__cart-btn button">Finalizar Compra</button>
+            </div>
+        {% endif %}
+    {% endform %}
+    
+</div>
+
+
+
+{% schema %}
+{
+    "name": "Cart Drawer",
+    "settings":[
+
+    ]
+}
+{% endschema %}
