@@ -3,15 +3,22 @@
     <img src="{{ settings.logo | img_url: 'master' }}" alt="{{ site.name }}" class="logo">
     </a>
     <div class="buttons__container">
-        <button aria-expanded="false" class="mobile__search__toggle icon" id="search-toggle">
-                <i class="ri-search-line">
-                    <span class="sr-only">Search</span>
+
+        <button aria-expanded="false" class="mobile__cart__toggle icon" id="cart-toggle">
+                <i class="ri-shopping-bag-2-line">
+                    <span class="sr-only">Cart</span>
                 </i>
         </button>
 
         <button aria-expanded="false" class="mobile__account__toggle icon" id="account-toggle">
-                <i class="ri-account-pin-circle-line">
-                    <span class="sr-only">User account</span>
+                <i class="ri-account-circle-line">
+                    <span class="sr-only">Account</span>
+                </i>
+        </button>
+
+        <button aria-expanded="false" class="mobile__search__toggle icon" id="search-toggle">
+                <i class="ri-search-line">
+                    <span class="sr-only">Search</span>
                 </i>
         </button>
 
@@ -21,6 +28,7 @@
                 </i>
         </button>
     </div>
+
 
     <ul data-visible="false" class="nav__list" id="nav-list">
         {% for link in section.settings.navigation.links %}
@@ -33,9 +41,22 @@
     </ul>
 </nav>
 
+<section data-visible="false" class="mini__cart-container">
+    <div class="cart__header">
+        <i class="ri-shopping-bag-2-line icon mini__cart-bag"></i>
+        <span class="cart__header-title">Carrito</span>
+        <i class="ri-close-line icon mini__cart-close"></i>
+    </div>
+    
+    <div class="mini__cart-items"></div>
+</section>
+
 <script>
 const navMenu = document.querySelector('.nav__list');
-const toggleButton = document.querySelector('.mobile__nav__toggle');
+const toggleButton = document.getElementById('nav-toggle');
+const cartToggle = document.getElementById('cart-toggle');
+const cartDrawer = document.querySelector('.mini__cart-container');
+const cartClose = document.querySelector('.mini__cart-close')
 
 toggleButton.addEventListener('click', () => {
     const visibility = navMenu.getAttribute('data-visible');
@@ -49,6 +70,16 @@ toggleButton.addEventListener('click', () => {
         toggleButton.setAttribute('aria-expanded',false)
         toggleButton.firstElementChild.classList.replace('ri-close-line','ri-menu-line')
     }
+})
+
+cartToggle.addEventListener('click', () => {
+    cartDrawer.setAttribute('data-visible', true);
+    cartToggle.setAttribute('aria-expanded',true);
+})
+
+cartClose.addEventListener('click', () => {
+    cartDrawer.setAttribute('data-visible', false);
+    cartToggle.setAttribute('aria-expanded', false);
 })
 </script>
 

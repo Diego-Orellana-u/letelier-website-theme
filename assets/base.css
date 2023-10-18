@@ -29,6 +29,10 @@
     box-sizing: border-box;
 }
 
+h2{
+    font-weight: 400;
+}
+
 body {
     font-family: "Roboto", sans-serif;
     font-size: 1.2rem;
@@ -111,7 +115,7 @@ img,svg {
     right: 1rem;
     display: flex;
     gap: .5rem;
-    z-index: 9999;
+    z-index: 150;
 }
 
 .icon{
@@ -122,7 +126,7 @@ img,svg {
     font-size: 1.95rem;
 }
 
-.mobile__account__toggle{
+.mobile__cart__toggle{
     font-size: 1.5rem;
 }
 
@@ -134,7 +138,7 @@ img,svg {
     .nav__list{
       position: fixed;
       background-color: #F1F1F1;
-      top: -155px;
+      top: -215px;
       width: 100%;
       padding: 2rem 0rem 2rem 1rem;
       display: flex;
@@ -147,7 +151,7 @@ img,svg {
 
 .nav__list[data-visible="true"]{
     transform: translateY(100%);
-      transition: transform .2s ease-out;
+    transition: transform .2s ease-out;
 }
 
 .nav__link{
@@ -155,6 +159,7 @@ img,svg {
     color: #333;
     font-size: 1.45rem;
     font-weight: 500;
+    text-transform: uppercase;
 }
   
 
@@ -168,10 +173,50 @@ img,svg {
     align-items: center;
 }
 
+.mobile__account__toggle{
+    display: none;
+}
+
+.mini__cart-container{
+    position: fixed;
+    height: 100vh;
+    width: 280px;
+    background-color: white;
+    top: 0;
+    z-index: 999;
+    left: calc(100% - 280px);
+    transition: transform .4s ease-out;
+}
+
+.mini__cart-container[data-visible="false"]{
+    transform: translateX(400px);
+    transition: transform .4s ease-out;
+}
+ 
+.cart__header{
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    box-shadow: 0 2px 7px hsla(0,0%,0%, .1);
+    padding: .5rem 0 0 1rem;
+
+}
+
+.mini__cart-close{
+    position: absolute;
+    right: 15px;
+}
+
+
 /*=============== MAIN ===============*/
 
 .main{
-    background-color: #362613;
+    background-color: #222;
+}
+
+.home__container{
+    display: flex;
+    flex-direction: column;
 }
   
 .home__img{
@@ -207,44 +252,80 @@ img,svg {
     width: 100%;
     margin: 1rem 0 3rem 0;
 }
+
+/*=============== SHORT ABOUT US ===============*/
+
+.short__about-container{
+    width: 100%;
+    height: fit-content;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+}
+
+.short__about-title{
+    margin-bottom: 1.5rem;
+}
+
+.short__about-p{
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+.short__about-img{
+    width: 15rem;
+}
+
+.short__about-btn{
+    margin-bottom: 4rem;
+    background-color: #b71e07;
+    color: #FFFFFF;
+    padding: 1rem 2rem 1rem 2rem;
+}
+
   
 /*=============== SELL ===============*/
 
 .sell__section{
+    background-color: #222;
+}
+
+.sell__info-container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    background-color: hsla(0,0%, 95%);
-    height: fit-content;
-    padding: 0 .8rem 0 .8rem;
-    padding-bottom: 2rem;
+    justify-content: left;
+    padding: 5rem .8rem 2rem .8rem;
 }
 
 .sell__section-title{
-    color: #333;
-    font-size: 2rem;
-    margin: 3rem 0 1rem 0;
+    color: #FFFFFF;
+    font-size: 3rem;
     text-align: left;
     font-weight: 400;
   
 }
   
 .sell__section-desc{
-    color: #333;
-    margin: 1rem 0 1rem 0;
+    color: #FFFFFF;
+    margin-top: 2rem;
     text-align: left;
     font-size: 1.2rem;
+    font-weight: 300;
 }
   
-  
+.sell__img-container{
+    display: none;
+}  
 .sell__button{
     background-color: white;
     width: min-content;
-    align-self: center;
+    align-self: center; 
     color: #333;
     width: 100%;
     margin: 2rem 0rem 2rem 0rem;
-    border: 4px solid #333;
 }
 
 
@@ -295,7 +376,7 @@ img,svg {
 .popular__btn{
     border: 2px solid #222;
     width: 85%;
-    padding: 1rem 0rem 1rem 0rem;
+    padding: 1rem 2rem 1rem 2rem;
 }
   
 
@@ -303,7 +384,7 @@ img,svg {
 /*=============== WHY US SECTION ===============*/
 
 .whyus__container{
-    padding-bottom: 2.5rem;
+    padding-bottom: 4.5rem;
     padding-top: 2rem;
     background-color: #222;
 } 
@@ -320,12 +401,12 @@ img,svg {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: .8rem;
 }
 
   
 .whyus__reason{
     padding: 1rem;
-    margin: .8rem;
     background-color: #F1F1F1;
     width: 300px;
     height: 300px;
@@ -371,6 +452,7 @@ img,svg {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 340px;
     margin: 2rem .8rem 2rem .8rem;
 }
   
@@ -438,6 +520,7 @@ img,svg {
     padding: 1.2rem;
     color: white;
     cursor: pointer;
+    height: 90px;
 }
   
 .first__howto{
@@ -512,6 +595,11 @@ img,svg {
     .popular__item-title{
         text-wrap: nowrap;
     }
+
+    .mini__cart-container{
+        width: 320px;
+        left: calc(100% - 320px);
+    }
 }
 
 /* for large phones */
@@ -527,6 +615,11 @@ img,svg {
 
     .links__title{
         margin-top: 2rem;
+    }
+
+    .mini__cart-container{
+        width: 350px;
+        left: calc(100% - 350px);
     }
 }
 
@@ -545,8 +638,152 @@ img,svg {
     
 }
 
-/* for desktop */
+@media screen and (min-width: 768px){
 
-@media screen and (min-width: 770px){
+    .home__container{
+        flex-direction: row-reverse;
+        height: 78vh;
+    }
+
+    .home__img{
+        height: 100%;
+        width: 50%;
+    }
+
+    .home__title{
+        font-size: 5.5rem;
+    }
+    
+    .home__info{
+        margin-top: 15rem;
+        align-items: flex-start;
+        margin-left: 3rem;
+    }
+
+    .home__btn{
+        width: 200px;
+    }
+
+    .reasons__container{
+        gap: 6rem;
+    }
+
+    .social__btns-container{
+        width: 300px;
+    }
+
+    .howto__individual{
+        width: 700px;
+    }
+
+    .howto__container{
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+
+}
+
+@media screen and (min-width: 950px){
+    .sell__section{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .sell__info-container{
+        padding-left: 5rem;
+        
+    }
+    
+    .sell__section-title{
+        margin-right: 5rem;
+    }
+
+    .sell__section-desc{
+        width: 320px;
+        margin-right: 5rem;
+    }
+
+    .sell__button{
+        align-self:flex-start;
+    }
+
+    .sell__img-container{
+        flex: 2;
+        max-width: 60%;
+        height: 420px;
+        position: relative;
+        display: block;
+        
+    }
+    .sell__img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/* for desktop */
+@media screen and (min-width: 1024px) {
+    .home__info{
+        margin-top: 25rem;
+    }
+
+    .home__container{
+        height: 100vh;
+    }
+    .home__img{
+        height: 100%;
+        width: 60%;
+    }
+
+    .short__about-p{
+        width: 700px;
+    }
+}
+
+@media screen and (min-width: 1150px){
+    .nav{
+        height: 5.5rem;
+        justify-content: flex-start;
+    }
+
+    .header-logo{
+        margin-left: 4.5rem;
+        margin-right: 10rem;
+        width: 15rem;
+    }
+
+    .home__img{
+        width: 70%;
+    }
+
+
+    .mobile__nav__toggle{
+        display: none;
+    }
+    
+    .nav__list{
+        display: flex;
+        flex-direction: row;
+        gap: 3.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .nav__link{
+        font-weight: 400;
+        font-size: 1.3rem;
+    }
+    .mobile__account__toggle{
+        display: inline;
+        font-size: 1.5rem;
+    }
+    
+    .buttons__container{
+        margin: 1.2rem 6rem 0rem 0rem;
+    }
 
 }

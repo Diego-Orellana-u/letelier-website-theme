@@ -28,6 +28,11 @@
                 "type": "image_picker",
                 "id": "logo-inverted",
                 "label": "Inverted logo"
+            },
+            {
+                "type": "image_picker",
+                "id": "logo__head",
+                "label": "Logo Head"
             }
         ]
     }

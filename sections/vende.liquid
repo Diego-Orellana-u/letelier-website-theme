@@ -1,14 +1,19 @@
-<h2 class="sell__section-title">
-    Vende Tus Antigüedades
-</h2>
-<p class="sell__section-desc">
-    Tienes antigüedades que no quieres? En Letelier te compramos todo. 
-</p>
-<span class="sell__section-desc cta">
-    Haz click y escribenos
-</span>
+<div class="sell__info-container">
+    <h2 class="sell__section-title">
+        Vende Tus Antigüedades
+    </h2>
+    <p class="sell__section-desc">
+        Tienes antigüedades que no quieres? En Letelier te compramos todo. 
+    </p>
+    <span class="sell__section-desc cta">
+        Haz click y escribenos
+    </span>
 
-<button class="sell__button button">Quiero Vender</button>
+    <button class="sell__button button">Quiero Vender</button>
+</div>
+<div class="sell__img-container">
+    <img src="{{ section.settings.sell | img_url: 'master' }}" alt="" class="sell__img">
+</div>
 
 
 {% schema %}
@@ -17,7 +22,11 @@
     "tag": "article",
     "class": "sell__section",
     "settings":[
-
+        {
+            "type": "image_picker",
+            "id": "sell",
+            "label": "Sell image"
+        }
     ]
 }
 {% endschema %}
