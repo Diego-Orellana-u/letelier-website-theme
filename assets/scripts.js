@@ -2,8 +2,8 @@
 const productForms = document.querySelectorAll('form[action="/cart/add"');
 const cartToggle = document.getElementById('cart-toggle');
 const cartDrawer = document.querySelector('.mini__cart-container');
-const cartClose = document.querySelectorAll('.mini__cart-close, .drawer__overlay');
 const overlay = document.querySelector('.drawer__overlay');
+
 
 function openCart(){
     cartDrawer.setAttribute('data-visible', true);
@@ -19,12 +19,6 @@ function closeCart(){
     overlay.style.visibility = "hidden";
 }
 
-cartClose.forEach(c =>{
-    c.addEventListener('click', () => {
-        closeCart()
-    })
-})
-
 async function updateCart(){
     const res = await fetch("/?section_id=cart-drawer");
     const text = await res.text();
@@ -33,15 +27,51 @@ async function updateCart(){
 
     const newContainer = html.querySelector(".mini__cart-container").innerHTML;
     document.querySelector('.mini__cart-container').innerHTML = newContainer;
+
+    addCartListeners();
 }
+
+function addCartListeners(){
+
+    //Update quantities
+    document.querySelectorAll('.mini__cart-item button').forEach(button => {
+        button.addEventListener('click', async () => {
+            //get product key
+            const root = button.closest('.mini__cart-item')
+            const key = root.getAttribute('data-line-item-key')
+
+            //get new quantity
+            const currentQuantity = parseInt(button.parentElement.querySelector('input').value)
+            const isUp = button.classList.contains('mini__cart-quantity-plus')
+            const newQuantity = isUp ? currentQuantity + 1 : currentQuantity - 1;
+ 
+            //ajax update
+            const res = await fetch('/cart/update.js', {
+                method: "post",
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({updates: { [key]: newQuantity}})
+            })
+            // const cart = await res.json();
+
+            //update cart
+            updateCart();
+        })
+    })
+    document.querySelectorAll('.mini__cart-close, .drawer__overlay').forEach(c =>{
+        c.addEventListener('click', closeCart)
+    })
+
+}
+
+addCartListeners()
 
 cartToggle.addEventListener('click', () => {
     openCart()
 })
 
-document.querySelector(".mini__cart-container").addEventListener("click", (e) => {
-    e.stopPropagation();
-})
 
 productForms.forEach(form => {
     form.addEventListener('submit', async (e) => {

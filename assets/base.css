@@ -130,6 +130,25 @@ img,svg {
     font-size: 1.5rem;
 }
 
+.header__cart-count{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    background: #222;
+    font-weight: 500;
+    font-size: 12px;
+    height: 21px;
+    min-width: 21px;
+    line-height: 1;
+    border-radius: 50%;
+    letter-spacing: 0;
+    top: 0;
+    transform: translate(50%,-40%);
+    
+}
+
 .mobile__search__toggle{
     font-size: 1.5rem;
 }
@@ -176,6 +195,7 @@ img,svg {
 .mobile__account__toggle{
     display: none;
 }
+
 
 /*=============== CART ===============*/
 
