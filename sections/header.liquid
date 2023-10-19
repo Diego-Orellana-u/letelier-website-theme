@@ -4,11 +4,12 @@
     </a>
     <div class="buttons__container">
 
+        
         <button aria-expanded="false" class="mobile__cart__toggle icon" id="cart-toggle">
                 <i class="ri-shopping-bag-2-line">
                     <span class="sr-only">Cart</span>
                 </i>
-                {% comment %} <span class="header__cart-count">0</span> {% endcomment %}
+                <span class="header__cart-count"> {{ cart.item_count }} </span>
         </button>
 
         <button aria-expanded="false" class="mobile__account__toggle icon" id="account-toggle">

@@ -2,9 +2,9 @@
 <div class="popular__items-container">
     {% for product in collections['all'].products limit: 4 %}
         <div class="popular__item">
-            <img src="{{ product.featured_image | product_img_url: 'medium' }}" alt="" class="popular__img">
-            <a href="{{ product.url }}" class="popular__item-title">
-                <h3>{{ product.title }}</h3>
+            <a href="{{ product.url }}">
+                <img src="{{ product.featured_image | product_img_url: 'medium' }}" alt="{{ product.title }}" class="popular__img">
+                <h3 class="popular__item-title">{{ product.title }}</h3>
             </a>
             <span class="popular__price">{{ product.price | money }}</span>
             <form action="/cart/add" method="post" enctype="multipart/form-data">

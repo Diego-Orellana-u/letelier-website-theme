@@ -19,6 +19,12 @@ function closeCart(){
     overlay.style.visibility = "hidden";
 }
 
+function updateCartCounter(count){
+    document.querySelectorAll('.header__cart-count').forEach(el => {
+        el.textContent = count
+    })
+}
+
 async function updateCart(){
     const res = await fetch("/?section_id=cart-drawer");
     const text = await res.text();
@@ -27,6 +33,7 @@ async function updateCart(){
 
     const newContainer = html.querySelector(".mini__cart-container").innerHTML;
     document.querySelector('.mini__cart-container').innerHTML = newContainer;
+
 
     addCartListeners();
 }
@@ -54,7 +61,9 @@ function addCartListeners(){
                 },
                 body: JSON.stringify({updates: { [key]: newQuantity}})
             })
-            // const cart = await res.json();
+            const cart = await res.json();
+
+            updateCartCounter(cart.item_count)
 
             //update cart
             updateCart();
@@ -82,6 +91,11 @@ productForms.forEach(form => {
             method: "post",
             body: new FormData(form),
         })
+
+        //get cart count
+        const res = await fetch('/cart.js')
+        const cart = await res.json()
+        updateCartCounter(cart.item_count)
 
         //update cart
         await updateCart()
