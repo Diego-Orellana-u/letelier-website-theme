@@ -1,0 +1,34 @@
+<h2 class="popular__section-title">Otras Antigüedades que te pueden interesar</h2>
+<div class="related__items-container">
+    {% for product in collections['all'].products limit: 4 %}
+        <div class="related__item">
+            <a href="{{ product.url }}" class="related_a-img">
+                <img src="{{ product.featured_image | product_img_url: 'original' }}" alt="{{ product.title }}" class="related__img">
+            </a>
+            <div class="chumi">
+                <a href="{{ product.url }}" class="related_a-title">
+                    <h3 class="related__item-title">{{ product.title }}</h3>
+                </a>
+                <span class="related__price">{{ product.price | money }}</span>
+                <form action="/cart/add" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+                    <input type="hidden" name="quantity" value="1">
+                    <button type="submit" class="related__btn button">Agregar al carrito</button>
+                </form>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+
+
+{% schema %}
+{
+    "name": "Related Products",
+    "tag": "article",
+    "class": "related__container",
+    "settings": [
+
+    ]
+}
+{% endschema %}

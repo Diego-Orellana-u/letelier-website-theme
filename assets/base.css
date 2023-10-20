@@ -1100,3 +1100,23 @@ img,svg {
     text-align: center;
     font-size: var(--h2-font-size);
 }
+
+.product__page-desc-details-title{
+    font-size: var(--h3-font-size);
+}
+
+/*=============== RELATED PRODUCTS ===============*/
+
+.related__container{
+    background-color: #F1F1F1;
+}
+
+.related__items-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.related__img{
+    width: 30vw;
+}
