@@ -1,8 +1,8 @@
 <h2 class="relate__section-title">Otras antigüedades que te pueden interesar</h2>
 <div class="related__items-container">
-    {% for product in collections['all'].products limit: 4 %}
+    {% for product in collections['all'].products limit: 8 %}
         <div class="related__item">
-            <a href="{{ product.url }}">
+            <a href="{{ product.url }}" class="related_a-img">
                 <img src="{{ product.featured_image | product_img_url: 'grande' }}" alt="{{ product.title }}" class="related__img">
                 <h3 class="related__item-title">{{ product.title }}</h3>
             </a>
