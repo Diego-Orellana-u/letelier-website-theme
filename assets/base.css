@@ -933,8 +933,20 @@ img,svg {
 
 /*=============== COLLECTION PAGE ===============*/
 
+.collection__information-container{
+    padding: 5.5rem .8rem 2.5rem .8rem;
+    text-align: center;
+    background-color: #F1F1F1;
+}
+
+.collection__information-title{
+    margin-bottom: .5rem;
+    text-transform: uppercase;
+
+}
+
 .collection__container{
-    margin: 4.5rem .8rem 2rem .8rem;
+    margin: 0rem .8rem 2rem .8rem;
     text-align: center;
 }
 
@@ -978,6 +990,78 @@ img,svg {
     object-position: bottom;
 }
   
+/*=============== FILTER ===============*/
+.filter__container{
+    margin: 2rem 0 1rem 1.2rem ;
+}
+
+.filter__btn{
+    background-color: #222;
+    color: white;
+}
+
+/*=============== FAQ ===============*/
+
+.faq__container{
+    padding: 60px 0;
+    background-color: #F1F1F1;
+}
+
+.faq__width{
+    max-width: 900px;
+    margin: 0 auto;
+    width: calc(100% - 40px);
+}
+
+.faq__header{
+    font-size: 2.5rem;
+    padding-bottom: 30px;
+}
+
+.faq__question{
+    border-bottom: 1px solid #ddd;
+}
+
+.faq__question-header{
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.faq-icon{
+    font-size: 30px;
+    transition: .2s transform;
+}
+
+.faq__question-header h3{
+    font-size: var(--normal-font-size);
+    flex: 1;
+}
+
+.faq__question.faq-visible .faq-icon{
+    transform: rotate(180deg);
+}
+
+.faq__question-body{
+    max-height: 0;
+    overflow: hidden;
+    transition: 1s max-height;
+}
+
+.faq__question.faq-visible .faq__question-body{
+    max-height: 400px;
+}
+
+.faq__question-body-inner > * + * {
+    margin-top: 20px;
+}
+
+.faq__question-body-inner{
+    margin-bottom: 1rem;
+}
+
 
 /*=============== BREAKPOINTS ===============*/
 
@@ -1043,6 +1127,10 @@ img,svg {
     .collection__item{
         width: 45vw;
         height: 550px;
+    }
+
+    .filter__container{
+        margin-left: 2.5rem ;
     }
     
 }
@@ -1223,8 +1311,12 @@ img,svg {
         height: 5.5rem;
     }
 
-    .collection__container{
-        margin-top: 8.5rem;
+    .collection__information-container{
+        padding: 7.5rem 7.5rem 2.5rem 7.5rem;
+    }
+
+    .filter__container{
+        margin-left: 4rem ;
     }
 }
 

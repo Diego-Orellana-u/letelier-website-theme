@@ -1,3 +1,5 @@
+// CART DRAWER
+
 //cart variables
 const productForms = document.querySelectorAll('form[action="/cart/add"');
 const cartToggle = document.getElementById('cart-toggle');
@@ -102,5 +104,16 @@ productForms.forEach(form => {
 
         //open cart
         openCart()
+    })
+})
+
+// FAQ
+
+const faqBody = document.querySelectorAll(".faq__question-body");
+const faqHeader = document.querySelectorAll(".faq__question-header");
+
+faqHeader.forEach(header => {
+    header.addEventListener("click", () => {
+        header.parentElement.classList.toggle('faq-visible')
     })
 })

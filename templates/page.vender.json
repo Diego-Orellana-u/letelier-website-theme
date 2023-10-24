@@ -1,0 +1,15 @@
+{
+    "name": "Vender Page",
+    "sections": {
+        "main": {
+            "type": "vender-hero"
+        },
+        "faq": {
+            "type": "faq"
+        }
+    },
+    "order": [
+        "main",
+        "faq"
+    ]
+}

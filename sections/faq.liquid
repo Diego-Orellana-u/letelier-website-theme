@@ -1,0 +1,52 @@
+<div class="faq__width">
+    <div class="faq__header">
+        <span> Preguntas Frecuentes </span>
+    </div>
+
+    <div class="faq__body">
+        {% for block in section.blocks %}
+            <div class="faq__question">
+                <header class="faq__question-header">
+                    <h3>{{ block.settings.title }}</h3>
+                    <i class="ri-arrow-down-s-line faq-icon"></i>
+                </header>
+
+                <div class="faq__question-body">
+                    <div class="faq__question-body-inner">
+                        {{ block.settings.body }}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+
+{% schema %}
+{
+    "name": "FAQ",
+    "tag": "section",
+    "class": "faq__container",
+    "settings": [],
+    "blocks": [
+        {
+            "type": "question",
+            "name": "Question",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Question Title"
+                },
+                {
+                    "type": "richtext",
+                    "id": "body",
+                    "label": "Question Body"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

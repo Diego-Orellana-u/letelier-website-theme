@@ -1,6 +1,5 @@
 {% paginate collection.products by 4 %}
     <section class="collection__container">
-        <h2 class="collection__section-title">Todas Las Antigüedades</h2>
         <div class="collection__items-container">
             {% for product in collections['all'].products limit: 8 %}
                 <div class="collection__item">
@@ -20,3 +19,4 @@
     </section>
  {{ paginate | default_pagination }}
 {% endpaginate %}
+
