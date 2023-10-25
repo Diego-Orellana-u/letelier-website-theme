@@ -1,0 +1,92 @@
+<div class="contact__img-container">
+    <img src="{{section.settings.contact | img_url: 'master'}}" alt="Imagen Pagina contacto" class="contact__img">
+</div>
+
+<div class="contact__form-info-container">
+    <div class="contact_title-explanation-container">
+        <h3 class="contact__title">Contacta a Letelier Antigüedades</h3>
+        <p class="contact__form-explanation">Contactanos rellenando el siguiente formulario:</p>
+    </div>
+
+    <div class="contact__box">
+        <div class="contact__form-container">
+            <form action="" class="contact__form" id="contact-form">
+                <div class="contact__group">
+                    <div class="contact__form-box">
+                        <label for="name" class="contact__label">Nombre</label>
+                        <input type="text" name="user_name" class="contact__input" id="name" required>
+                    </div>
+
+                    <div class="contact__form-box">
+                        <label for="name" class="contact__label">Apellido</label>
+                        <input type="text" name="user_name" class="contact__input" id="name" required>
+                    </div>
+
+                    <div class="contact__form-box">
+                        <label for="email" class="contact__label">Correo Electronico</label>
+                        <input type="email" name="user_email" class="contact__input" id="email" required>
+                    </div>
+                </div>
+
+                <div class="contact__form-box">
+                    <label for="subject" class="contact__label">Motivo</label>
+                    <input type="text" name="user_subject" class="contact__input" id="subject" required>
+                </div>
+
+                <div class="contact__form-box contact__area">
+                    <label for="message" class="contact__label">Mensaje</label>
+                    <textarea name="user_message" id="message" class="contact__input" required></textarea>
+                </div>
+
+                <button type="submit" class="contact__btn button">
+                    Contactar
+                </button>
+            </form>
+        </div>
+
+        <div class="contact__info-container">
+            <div class="contact__contact-container">
+                <span class="contact__contact-title span">Escribenos directo</span>
+                <p class="contact__contact-p">No dudes en contactarnos a nuestro WhatsApp o correo con cualquier duda que tengas sobre la compra o venta de antigüedades</p>
+                <span class="contact__contact-subtitle span">Contacto</span>
+                <span class="contact__contact span">chumingus@letelier.art</span>
+                <span class="contact__contact span">+569 84192433</span>
+            </div>
+
+            <div class="contact__ubication-container">
+                <span class="contact__contact-subtitle span">Ubicados En</span>
+                <span class="contact__contact span">Providencia,</span>
+                <span class="contact__contact span">Santiago De Chile</span>
+            </div>
+
+            <div class="contact__contact-social-container">
+                <button class="social__btn product__social-btn">
+                    <i class="ri-whatsapp-line"></i>
+                </button>
+                <button class="social__btn product__social-btn">
+                    <i class="ri-instagram-line"></i>
+                </button>
+                <button class="social__btn product__social-btn">
+                    <i class="ri-facebook-circle-fill"></i>
+                </button>    
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% schema %}
+{
+    "name": "Contacto",
+    "tag": "section",
+    "class": "contact__container",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "contact",
+            "label": "Contact"
+        }
+    ]
+}
+{% endschema %}

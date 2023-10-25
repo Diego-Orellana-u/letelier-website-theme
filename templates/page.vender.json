@@ -6,10 +6,19 @@
         },
         "faq": {
             "type": "faq"
+        },
+        "vender": {
+            "type": "vender-desc"
+        },
+        "form": {
+            "type": "vender-form"
         }
     },
     "order": [
         "main",
+        "vender",
+        "form",
         "faq"
     ]
+    
 }
