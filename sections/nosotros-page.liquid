@@ -1,0 +1,63 @@
+<div class="nosotros__first-container">
+    <div class="nosotros__first-img-desc-container">
+        <div class="nosotros__first-img-container">
+            <img src="{{ section.settings.nosotros-first-img | img_url: 'master' }}" class="nosotros__first-img" alt="">
+        </div>
+
+        <div class="nosotros__first-desc-container">
+            <h3 class="nosotros__first-title"><h3>
+            <p class="nosotros__first-desc"></p>
+        </div>
+    </div>
+</div>
+
+<div class="nosotros__sec-container">
+    <div class="nosotros__sec-img-desc-container">
+        <div class="nosotros__sec-img-container">
+            <img src="{{ section.settings.nosotros-sec-img | img_url: 'master' }}" class="nosotros__sec-img" alt="">
+        </div>
+
+        <div class="nosotros__sec-desc-container">
+            <h3 class="nosotros__sec-title"><h3>
+            <p class="nosotros__sec-desc"></p>
+        </div>
+    </div>
+</div>
+
+<div class="nosotros__third-container">
+    <div class="nosotros__third-img-desc-container">
+        <div class="nosotros__third-img-container">
+            <img src="{{ section.settings.nosotros-third-img | img_url: 'master' }}" class="nosotros__third-img" alt="">
+        </div>
+
+        <div class="nosotros__third-desc-container">
+            <h3 class="nosotros__third-title"><h3>
+            <p class="nosotros__third-desc"></p>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Nosotros",
+    "tag": "section",
+    "class": "nosotros__container",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "nosotros-first-img",
+            "label": "Nosotros First Img"
+        },
+        {
+            "type": "image_picker",
+            "id": "nosotros-sec-img",
+            "label": "Nosotros second Img"
+        },
+        {
+            "type": "image_picker",
+            "id": "nosotros-third-img",
+            "label": "Nosotros third Img"
+        }
+    ]
+}
+{% endschema %}

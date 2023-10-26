@@ -1,0 +1,12 @@
+{
+    "name": "Nosotros",
+    "sections": {
+        "main": {
+            "type": "nosotros-page"
+        }
+    },
+    "order":[
+        "main"
+    ]
+    
+}
