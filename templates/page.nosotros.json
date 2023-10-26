@@ -3,10 +3,18 @@
     "sections": {
         "main": {
             "type": "nosotros-page"
+        },
+        "team": {
+            "type": "nosotros-team"
+        },
+        "appear": {
+            "type": "nosotros-appear"
         }
     },
     "order":[
-        "main"
+        "main",
+        "team",
+        "appear"
     ]
     
 }

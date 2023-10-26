@@ -1,0 +1,39 @@
+{
+    "name": "Home",
+    "sections": {
+        "hero":{
+            "type": "hero"
+        },
+        "short_about": {
+            "type": "short_about"
+        },
+        "vende": {
+            "type": "vende"
+        },
+        "popular_products": {
+            "type": "popular_products"
+        },
+        "why_us": {
+            "type": "why_us"
+        },
+        "categories": {
+            "type": "categories"
+        },
+        "social_section": {
+            "type": "social_section"
+        },
+        "howto": {
+            "type": "howto"
+        }
+    },
+    "order": [
+        "hero",
+        "short_about",
+        "vende",
+        "popular_products",
+        "why_us",
+        "categories",
+        "social_section",
+        "howto"
+    ]
+}

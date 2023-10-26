@@ -33,6 +33,21 @@
                 "type": "image_picker",
                 "id": "logo__head",
                 "label": "Logo Head"
+            },
+            {
+                "type": "image_picker",
+                "id": "team__member-img-1",
+                "label": "Foto Miembro Equipo 1"
+            },
+            {
+                "type": "image_picker",
+                "id": "team__member-img-2",
+                "label": "Foto Miembro Equipo 2"
+            },
+            {
+                "type": "image_picker",
+                "id": "team__member-img-3",
+                "label": "Foto Miembro Equipo 2"
             }
         ]
     }
