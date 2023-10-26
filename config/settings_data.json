@@ -1,0 +1,26 @@
+{
+  "current": {
+    "team__member-img-1": "shopify:\/\/shop_images\/pexels-konstantin-mishchenko-2010812_1.jpg",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "navigation": "main-menu"
+        }
+      },
+      "cart-drawer": {
+        "type": "cart-drawer",
+        "settings": {
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  }
+}
