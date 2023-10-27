@@ -1,0 +1,67 @@
+{
+    
+}
+
+// <article class="product__page-container">
+<div class="product__page-img-info-container">
+<div class="product__page-imgs-container">
+    <div class="product__page-main-img-container">
+        <button class="previous-img-btn icon"> <i class="ri-arrow-left-s-line"></i> </button>
+        <div class="main-img-container">
+            <img src="{{ product.featured_image | product_img_url: 'medium'}}" alt="{{ product.title }}" class="main-img">
+        </div>
+        <button class="next-img-btn icon"> <i class="ri-arrow-right-s-line"></i> </button>
+    </div>
+    
+    <div class="product__page-small-imgs-container">
+        {% comment %} a for to create a list with the secondary images {% endcomment %}
+    </div>
+</div>
+
+<div class="product__page-info-container">
+    <div class="product__page-info">
+        <h2 class="product__page-item-title">{{ product.title }}</h2>
+        <span class="product__page-item-year"> Circa 1895 </span>
+        <span class="product__page-item-price">{{ product.price | money }}</span>
+    </div>
+
+    <div class="product__page-main-btns-container">
+        <form action="/cart/add" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+            <input type="hidden" name="quantity" value="1">
+            <button class="product__page-add-cart product_btn button">Agregar al garrito</button>
+        </form>
+        <button class="product__page-request-info product_btn button">Pedir informacion</button>
+    </div>
+
+    <div class="product__page-social-container">
+        <button class="social__btn product__social-btn">
+            <i class="ri-whatsapp-line"></i>
+        </button>
+        <button class="social__btn product__social-btn">
+            <i class="ri-instagram-line"></i>
+        </button>
+        <button class="social__btn product__social-btn">
+            <i class="ri-facebook-circle-fill"></i>
+        </button>    
+    </div>
+</div>
+</div>
+
+<div class="product__page-desc-container">
+<h2 class="product__page-desc-title">DESCRIPCION DE LA ANTIGÜEDAD</h2>
+<h2 class="product__page-desc-details-title">Información de la Antigüedad</h2>
+<ul class="product__page-details-list-container">
+    {% for detail in product %}
+        <li></li>
+    {% endfor %}
+</ul>
+<p class="product__page-item-desc">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco
+</p>
+</div>
+
+{% section 'related_products' %}
+</article>
