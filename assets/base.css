@@ -1485,6 +1485,7 @@ img,svg {
 
     .home__title{
         font-size: 5.5rem;
+        margin-right: 2rem;
     }
     
     .home__info{
