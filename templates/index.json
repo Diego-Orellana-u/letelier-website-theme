@@ -1,39 +1,55 @@
 {
-    "name": "Home",
-    "sections": {
-        "hero":{
-            "type": "hero"
-        },
-        "short_about": {
-            "type": "short_about"
-        },
-        "vende": {
-            "type": "vende"
-        },
-        "popular_products": {
-            "type": "popular_products"
-        },
-        "why_us": {
-            "type": "why_us"
-        },
-        "categories": {
-            "type": "categories"
-        },
-        "social_section": {
-            "type": "social_section"
-        },
-        "howto": {
-            "type": "howto"
-        }
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "hero": "shopify:\/\/shop_images\/Busto_de_marmol_antiguo.webp"
+      }
     },
-    "order": [
-        "hero",
-        "short_about",
-        "vende",
-        "popular_products",
-        "why_us",
-        "categories",
-        "social_section",
-        "howto"
-    ]
+    "short_about": {
+      "type": "short_about",
+      "settings": {
+      }
+    },
+    "vende": {
+      "type": "vende",
+      "settings": {
+      }
+    },
+    "popular_products": {
+      "type": "popular_products",
+      "settings": {
+      }
+    },
+    "why_us": {
+      "type": "why_us",
+      "settings": {
+      }
+    },
+    "categories": {
+      "type": "categories",
+      "settings": {
+      }
+    },
+    "social_section": {
+      "type": "social_section",
+      "settings": {
+      }
+    },
+    "howto": {
+      "type": "howto",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "short_about",
+    "vende",
+    "popular_products",
+    "why_us",
+    "categories",
+    "social_section",
+    "howto"
+  ]
 }
