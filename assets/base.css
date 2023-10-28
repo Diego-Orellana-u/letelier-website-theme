@@ -1577,7 +1577,7 @@ img,svg {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: 100% 50%;
+        object-position: 50% 100%;
     }
 
     .collection__item{
