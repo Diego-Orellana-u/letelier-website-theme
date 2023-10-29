@@ -1538,7 +1538,9 @@ img,svg {
         height: 450px;
     }
 
-
+    .vende__button{
+        width: 70%;
+    }
 }
 
 @media screen and (min-width: 950px){
