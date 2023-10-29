@@ -1516,6 +1516,7 @@ img,svg {
         gap: 2rem;
         margin-top: 3rem;
     }
+
     .mini__cart-container{
         width: 450px;
         left: calc(100% - 450px);
