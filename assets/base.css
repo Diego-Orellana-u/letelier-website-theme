@@ -1543,6 +1543,10 @@ img,svg {
         align-self: left;
         width: 100%;
     }
+
+    .sell__button{
+        width: 70%;
+    }
 }
 
 @media screen and (min-width: 950px){
