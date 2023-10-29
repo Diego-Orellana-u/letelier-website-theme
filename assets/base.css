@@ -1539,6 +1539,7 @@ img,svg {
     }
 
     .vende__button{
+        align-self: left;
         width: 70%;
     }
 }
