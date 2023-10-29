@@ -1821,7 +1821,7 @@ img,svg {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 300;
-  src: url('inter-Light.woff2') format('woff2'); 
+  src: url("{{ 'Inter-Light' | asset_url }}") format('woff2'); 
 }
 
 @font-face {
@@ -1829,7 +1829,7 @@ img,svg {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  src: url('inter-Regular.woff2') format('woff2'); 
+  src: url("{{ 'Inter-Regular' | asset_url }}") format('woff2'); 
 }
 
 @font-face {
