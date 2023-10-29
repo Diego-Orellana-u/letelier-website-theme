@@ -1506,15 +1506,15 @@ img,svg {
         width: 300px;
     }
 
-    .howto__individual{
-        width: 50vw;
-    }
-
     .howto__container{
         display: flex;
         justify-content: center;
         gap: 2rem;
-        margin: 3rem 0 2rem 2rem;
+        margin-top: 3rem;
+    }
+
+    .howto__flex{
+        flex: 1;
     }
     .mini__cart-container{
         width: 450px;
