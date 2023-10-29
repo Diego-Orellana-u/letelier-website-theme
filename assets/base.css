@@ -642,6 +642,10 @@ img,svg {
     font-size: var(--h2-font-size);
     margin-top: 2rem;
 }
+
+.category__link{
+  color: #222;
+}
   
 .category__individual{
     display: flex;
@@ -1304,7 +1308,7 @@ img,svg {
 
 .appear__all-logos-container{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;category__link
     row-gap: 3rem;
     justify-content: center;
 }
