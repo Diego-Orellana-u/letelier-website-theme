@@ -1,54 +1,59 @@
 [
-    {
-        "name": "theme_info",
-        "theme_name": "Letelier Theme",
-        "theme_version": "1.0.0",
-        "theme_support_email": "diego.orellana.git@gmail.com",
-        "theme_author": "Diego Orellana",
-        "theme_documentation_url": "https://diego.orellana.com"
-    },
-    {
-        "name": "Page settings",
-        "settings": [
-            {
-                "type": "range",
-                "id": "page_width",
-                "label": "Page width",
-                "default": 1200,
-                "min": 800,
-                "max": 1600,
-                "step": 50
-            },
-            {
-                "type": "image_picker",
-                "id": "logo",
-                "label": "logo"
-            },
-            {
-                "type": "image_picker",
-                "id": "logo-inverted",
-                "label": "Inverted logo"
-            },
-            {
-                "type": "image_picker",
-                "id": "logo__head",
-                "label": "Logo Head"
-            },
-            {
-                "type": "image_picker",
-                "id": "team__member-img-1",
-                "label": "Foto Miembro Equipo 1"
-            },
-            {
-                "type": "image_picker",
-                "id": "team__member-img-2",
-                "label": "Foto Miembro Equipo 2"
-            },
-            {
-                "type": "image_picker",
-                "id": "team__member-img-3",
-                "label": "Foto Miembro Equipo 2"
-            }
-        ]
-    }
+  {
+    "name": "theme_info",
+    "theme_name": "Letelier Theme",
+    "theme_version": "1.0.0",
+    "theme_support_email": "diego.orellana.git@gmail.com",
+    "theme_author": "Diego Orellana",
+    "theme_documentation_url": "https:\/\/diego.orellana.com"
+  },
+  {
+    "name": "Page settings",
+    "settings": [
+      {
+        "type": "range",
+        "id": "page_width",
+        "label": "Page width",
+        "default": 1200,
+        "min": 800,
+        "max": 1600,
+        "step": 50
+      },
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "logo"
+      },
+      {
+        "type": "image_picker",
+        "id": "logo-inverted",
+        "label": "Inverted logo"
+      },
+      {
+        "type": "image_picker",
+        "id": "logo__head",
+        "label": "Logo Head"
+      },
+      {
+        "type": "image_picker",
+        "id": "team__member-img-1",
+        "label": "Foto Miembro Equipo 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "team__member-img-2",
+        "label": "Foto Miembro Equipo 2"
+      },
+      {
+        "type": "image_picker",
+        "id": "team__member-img-3",
+        "label": "Foto Miembro Equipo 2"
+      },
+      {
+        "type": "image_picker",
+        "id": "favicon",
+        "label": "Favicon"
+      }
+    ]
+  }
 ]
