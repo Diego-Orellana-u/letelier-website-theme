@@ -1514,7 +1514,7 @@ img,svg {
         display: flex;
         justify-content: center;
         gap: 2rem;
-        margin-top: 3rem;
+        margin: 3rem 0 2rem 2rem;
     }
     .mini__cart-container{
         width: 450px;
