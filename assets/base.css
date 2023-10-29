@@ -1837,7 +1837,7 @@ img,svg {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
-  src: url('inter-Bold.woff2') format('woff2'); 
+  src: url("{{ 'Inter-Bold' | asset_url }}") format('woff2'); 
 }
 
 
