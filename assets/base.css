@@ -1515,6 +1515,7 @@ img,svg {
 
     .howto__flex{
         flex: 1;
+        justify-content: space-evenly;
     }
     .mini__cart-container{
         width: 450px;
