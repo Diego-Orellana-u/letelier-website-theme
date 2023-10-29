@@ -6,11 +6,23 @@
 {% for collection in collections limit: 4 %}
     {% comment %} when shop page is ready, write a <a> tag to the category {% endcomment %}
         <div class="category__individual">  
-            <img src="{{ collection.image | img_url: 'medium' }}" alt="{{ collection.title }}" class="category__img">
-            <h3 class="category__title">
-                {{ collection.title }}
-            </h3>
-            <button class="category__btn button">Ir a la categoría</button>
+            <div>
+                <a href="" target="_blank">
+                  <img src="{{ collection.image | img_url: 'master' }}" alt="{{ collection.title }}" class="category__img" loading="lazy">
+                </a>
+            </div>
+            <div>
+                <a href="" target="_blank">
+                  <h3 class="category__title">
+                    {{ collection.title }}
+                  </h3>
+                </a>
+            </div>
+            <div>
+                <a href="" target="_blank">
+                  <button class="category__btn button">Ir a la categoría</button>
+                </a>
+            </div>
         </div>
     {% endfor %}
 </div>

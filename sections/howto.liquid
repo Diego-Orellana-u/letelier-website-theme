@@ -1,10 +1,13 @@
-<div class="howto__individual first__howto">
-    <span class="howto__upper-title">MAS INFORMACION</span>
-    <span class="howto__title">Comprar una antigüedad</span>
-    <a href=""></a>
+<div class="howto__flex">
+    <a href="https://letelier.art/collections/all" target="_blank">
+        <div class="howto__individual first__howto">
+            <span class="howto__upper-title">MAS INFORMACION</span>
+            <span class="howto__title">Comprar una antigüedad</span>
+        </div>
+    </a> 
 </div>
-<div >
-    <a href="">
+<div class="howto__flex">
+    <a href="https://letelier.art/pages/vender" target="_blank">
         <div class="howto__individual second__howto">
             <span class="howto__upper-title">MAS INFORMACION</span>
             <span class="howto__title">Vender una antigüedad</span>
@@ -20,7 +23,7 @@
 
     .second__howto{
         background-image: url('{{ section.settings.second-background | img_url: 'master' }}');
-        background-position:top;
+        background-position: 50% 38%;
         background-size: cover;
     }
 {%- endstyle -%}

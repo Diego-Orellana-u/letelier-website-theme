@@ -1,11 +1,13 @@
 {
-    "name": "Contacto",
-    "sections": {
-        "main": {
-            "type": "contact-main"
-        }
-    },
-    "order": [
-        "main"
-    ]
+  "sections": {
+    "main": {
+      "type": "contact-main",
+      "settings": {
+        "contact": "shopify:\/\/shop_images\/Foto_duena_de_letelier.webp"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
 }

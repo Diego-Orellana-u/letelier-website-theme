@@ -513,11 +513,14 @@ img,svg {
 }  
 .sell__button{
     background-color: white;
-    width: min-content;
-    align-self: center; 
     color: #333;
     width: 100%;
     margin: 2rem 0rem 2rem 0rem;
+}
+
+.vende__button{
+  align-self: center; 
+  width:100%;
 }
 
 
@@ -659,6 +662,7 @@ img,svg {
     font-size: var(--h3-font-size);
     margin: 1rem;
     text-align: center;
+    color: #222;
 }
   
 .category__btn{
@@ -1405,10 +1409,6 @@ img,svg {
         margin-top: 0;
     }
 
-    .sell__button{
-        width: 70%;
-    }
-
     .links__title{
         margin-top: 2rem;
     }
@@ -1432,6 +1432,7 @@ img,svg {
     }
     .footer__logo{
         margin-right: 5rem;
+        align-self: center;
     }
     .links__container{
         margin-top: 5rem;
@@ -1506,10 +1507,6 @@ img,svg {
         width: 300px;
     }
 
-    .howto__individual{
-        width: 700px;
-    }
-
     .howto__container{
         display: flex;
         justify-content: center;
@@ -1517,6 +1514,10 @@ img,svg {
         margin-top: 3rem;
     }
 
+    .howto__flex{
+        flex: 1;
+        justify-content: space-evenly;
+    }
     .mini__cart-container{
         width: 450px;
         left: calc(100% - 450px);
@@ -1538,7 +1539,9 @@ img,svg {
         height: 450px;
     }
 
-
+    .sell__button{
+        width: 70%;
+    }
 }
 
 @media screen and (min-width: 950px){
@@ -1578,6 +1581,7 @@ img,svg {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: 50% 70%;
     }
 
     .collection__item{
