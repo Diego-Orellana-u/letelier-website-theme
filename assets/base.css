@@ -641,10 +641,7 @@ img,svg {
     font-weight: 400;
     font-size: var(--h2-font-size);
     margin-top: 2rem;
-}
-
-.category__link{
-  color: #222;
+    color: #222;
 }
   
 .category__individual{
