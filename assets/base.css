@@ -12,7 +12,7 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  src: url("{{ 'Inter-Regular' | asset_url }}") format('woff2'); 
+  src: url("{{ 'Inter-Regular.woff2' | asset_url }}") format('woff2'); 
 }
 
 @font-face {
@@ -20,7 +20,7 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
-  src: url("{{ 'Inter-Bold' | asset_url }}") format('woff2'); 
+  src: url("{{ 'Inter-Bold.woff2' | asset_url }}") format('woff2'); 
 }
 
 
