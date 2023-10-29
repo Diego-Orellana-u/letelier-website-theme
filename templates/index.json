@@ -40,6 +40,8 @@
     "howto": {
       "type": "howto",
       "settings": {
+        "first-background": "shopify:\/\/shop_images\/roberto_matta_pintura.webp",
+        "second-background": "shopify:\/\/shop_images\/Johannes_Vermeer_The_Girl_With_The_Pearl_Earring_1.webp"
       }
     }
   },
