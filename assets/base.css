@@ -1541,7 +1541,7 @@ img,svg {
     .vende__button{
         display:block;
         align-self: left;
-        width: 70%;
+        width: 100%;
     }
 }
 
