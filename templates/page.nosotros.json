@@ -3,7 +3,8 @@
     "main": {
       "type": "nosotros-page",
       "settings": {
-        "nosotros-first-img": "shopify:\/\/shop_images\/Caja_antigua_de_hueso_cerrada_1.webp"
+        "nosotros-first-img": "shopify:\/\/shop_images\/Caja_antigua_de_hueso_cerrada_1.webp",
+        "nosotros-sec-img": "shopify:\/\/shop_images\/Escultura_de_madera_epoca_colonial.webp"
       }
     },
     "team": {
