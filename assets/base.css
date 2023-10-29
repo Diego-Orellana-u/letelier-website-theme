@@ -641,7 +641,6 @@ img,svg {
     font-weight: 400;
     font-size: var(--h2-font-size);
     margin-top: 2rem;
-    color: #222;
 }
   
 .category__individual{
@@ -663,6 +662,7 @@ img,svg {
     font-size: var(--h3-font-size);
     margin: 1rem;
     text-align: center;
+    color: #222;
 }
   
 .category__btn{
