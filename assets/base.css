@@ -1432,6 +1432,7 @@ img,svg {
     }
     .footer__logo{
         margin-right: 5rem;
+        align-self: center;
     }
     .links__container{
         margin-top: 5rem;
