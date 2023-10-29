@@ -1,20 +1,25 @@
 {
-    "name": "Nosotros",
-    "sections": {
-        "main": {
-            "type": "nosotros-page"
-        },
-        "team": {
-            "type": "nosotros-team"
-        },
-        "appear": {
-            "type": "nosotros-appear"
-        }
+  "sections": {
+    "main": {
+      "type": "nosotros-page",
+      "settings": {
+        "nosotros-first-img": "shopify:\/\/shop_images\/Caja_antigua_de_hueso_cerrada_1.webp"
+      }
     },
-    "order":[
-        "main",
-        "team",
-        "appear"
-    ]
-    
+    "team": {
+      "type": "nosotros-team",
+      "settings": {
+      }
+    },
+    "appear": {
+      "type": "nosotros-appear",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "team",
+    "appear"
+  ]
 }
