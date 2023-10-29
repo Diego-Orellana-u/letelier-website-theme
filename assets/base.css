@@ -514,10 +514,13 @@ img,svg {
 .sell__button{
     background-color: white;
     width: min-content;
-    align-self: center; 
     color: #333;
     width: 100%;
     margin: 2rem 0rem 2rem 0rem;
+}
+
+.vende__button{
+  align-self: center; 
 }
 
 
