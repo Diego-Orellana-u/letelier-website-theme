@@ -8,7 +8,7 @@
         <div class="category__individual">  
             <div>
                 <a href="" target="_blank">
-                  <img src="{{ collection.image | img_url: 'master' }}" alt="{{ collection.title }}" class="category__img" loading="lazy">
+                  <img src="{{ collection.image | img_url: 'master' }}" alt="{{ collection.title }}" class="category__img" loading="lazy" decoding=“async”>
                 </a>
             </div>
             <div>
@@ -19,7 +19,7 @@
                 </a>
             </div>
             <div>
-                <a href="" target="_blank">
+                <a href="" target="_blank" class="category__link">
                   <button class="category__btn button">Ir a la categoría</button>
                 </a>
             </div>
