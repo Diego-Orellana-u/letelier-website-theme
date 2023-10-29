@@ -1507,7 +1507,7 @@ img,svg {
     }
 
     .howto__individual{
-        width: 100%;
+        width: 50vw;
     }
 
     .howto__container{
