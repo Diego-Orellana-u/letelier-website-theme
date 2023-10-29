@@ -16,6 +16,7 @@
     "appear": {
       "type": "nosotros-appear",
       "settings": {
+        "logo-1": "shopify:\/\/shop_images\/elmercurio_1.png"
       }
     }
   },
