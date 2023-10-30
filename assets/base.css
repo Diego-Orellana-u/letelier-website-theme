@@ -27,12 +27,8 @@
     box-sizing: border-box;
 }
 
-h3{
-    padding: 0px;
-    margin: 0px;
-}
-
 body {
+    
     font-size: 1.2rem;
     background-color: #FFFFFF;
     color: #222;
@@ -40,8 +36,16 @@ body {
     overflow-x: hidden;
   }
 
-a{
+p, a{
+    font-weight: 400;
+    font-family: 'Inter';
     text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Playfair Display';
 }
 
 ul{
