@@ -1789,9 +1789,9 @@ img,svg {
     }
 }
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
     font-family: 'Playfair Display';
-    font-style: normal;
+    src: url(https://cdn.shopify.com/s/files/1/0671/3370/2394/files/playfair-display-regular.woff2?v=1698625837) format('woff2');
     font-weight: 400;
-    src: url('./playfair-display-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    font-style: normal;
+    font-display: swap;
 }
