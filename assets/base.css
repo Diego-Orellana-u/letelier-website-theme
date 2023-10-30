@@ -1788,6 +1788,7 @@ img,svg {
         object-position: bottom;
     }
 }
+
 @font-face {
     font-family: 'Playfair Display';
     src: url(https://cdn.shopify.com/s/files/1/0671/3370/2394/files/playfair-display-regular.woff2?v=1698625837) format('woff2');
@@ -1795,3 +1796,37 @@ img,svg {
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url(https://cdn.shopify.com/s/files/1/0671/3370/2394/files/playfair-display-700.woff2?v=1698626100) format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+  /* inter-regular*/
+@font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    src: url(https://cdn.shopify.com/s/files/1/0671/3370/2394/files/Inter-Light.woff2?v=1698626086) format("woff2"); 
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://cdn.shopify.com/s/files/1/0671/3370/2394/files/Inter-Regular.woff2?v=1698626062) format("woff2"); 
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    src: url(https://cdn.shopify.com/s/files/1/0671/3370/2394/files/Inter-Bold.woff2?v=1698626071) format("woff2"); 
+}
+
