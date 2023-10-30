@@ -1788,4 +1788,51 @@ img,svg {
         object-position: bottom;
     }
 }
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./playfair-display-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+  /* /* playfair-display-700 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./playfair-display-700.woff2') format('woff2'); 
+}
+  /* playfair-display-700italic - latin */
+@font-face {
+    font-display: swap; 
+    font-family: 'Playfair Display';
+    font-style: italic;
+    font-weight: 700;
+    src: url('./playfair-display-700italic.woff2') format('woff2'); 
+}
 
+  /* inter-regular*/
+@font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    src: url("./Inter-Light.woff2") format("woff2"); 
+  }
+  
+@font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url("./Inter-Regular.woff2") format("woff2"); 
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    src: url("./Inter-Bold.woff2") format("woff2"); 
+} */
