@@ -1793,5 +1793,5 @@ img,svg {
     font-family: 'Playfair Display';
     font-style: normal;
     font-weight: 400;
-    src: url('./playfair-display-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('playfair-display-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
