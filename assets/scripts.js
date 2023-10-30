@@ -117,3 +117,32 @@ faqHeader.forEach(header => {
         header.parentElement.classList.toggle('faq-visible')
     })
 })
+
+
+// FILTER
+
+const filterDrawer = document.getElementById('filter-container')
+const openFilterBtn = document.getElementById('filter-openBtn')
+const closeFilterBtn = document.getElementById('filter-closeBtn')
+
+function openFilter(){
+    filterDrawer.setAttribute('data-visible', true)
+    openFilterBtn.setAttribute('aria-expanded', true)
+    overlay.style.opacity = '0.3';  //reusing overlay of cart drawer
+    overlay.style.visibility = 'visible';
+}
+
+function closeFilter(){
+    filterDrawer.setAttribute('data-visible', false)
+    openFilterBtn.setAttribute('aria-expanded', false)
+    overlay.style.opacity = "0";
+    overlay.style.visibility = "hidden";
+}
+
+openFilterBtn.addEventListener('click', () => {
+    openFilter()
+})
+
+document.querySelectorAll('.filter__closebtn, .drawer__overlay').forEach(c =>{
+    c.addEventListener('click', closeFilter)
+})
