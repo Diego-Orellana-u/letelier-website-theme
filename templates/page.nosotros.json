@@ -1,20 +1,28 @@
 {
-    "name": "Nosotros",
-    "sections": {
-        "main": {
-            "type": "nosotros-page"
-        },
-        "team": {
-            "type": "nosotros-team"
-        },
-        "appear": {
-            "type": "nosotros-appear"
-        }
+  "sections": {
+    "main": {
+      "type": "nosotros-page",
+      "settings": {
+        "nosotros-first-img": "shopify:\/\/shop_images\/Caja_antigua_de_hueso_cerrada_1.webp",
+        "nosotros-sec-img": "shopify:\/\/shop_images\/Escultura_de_madera_epoca_colonial.webp",
+        "nosotros-third-img": "shopify:\/\/shop_images\/Jarra-de-laca-china-antigua.webp"
+      }
     },
-    "order":[
-        "main",
-        "team",
-        "appear"
-    ]
-    
+    "team": {
+      "type": "nosotros-team",
+      "settings": {
+      }
+    },
+    "appear": {
+      "type": "nosotros-appear",
+      "settings": {
+        "logo-1": "shopify:\/\/shop_images\/elmercurio_1.png"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "team",
+    "appear"
+  ]
 }
