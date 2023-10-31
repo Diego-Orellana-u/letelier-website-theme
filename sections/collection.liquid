@@ -1,22 +1,155 @@
-{% paginate collection.products by 8 %}
-    <section class="collection__container">
-        <div class="collection__items-container">
-            {% for product in collections['all'].products limit: 8 %}
-                <div class="collection__item">
-                    <a href="{{ product.url }}" class="collection_a-img">
-                        <img src="{{ product.featured_image | product_img_url: 'grande' }}" alt="{{ product.title }}" class="collection__img">
-                        <h3 class="collection__item-title">{{ product.title }}</h3>
-                        <span class="collection__price">{{ product.price | money }}</span>
-                    </a>
-                    <form action="/cart/add" method="post" enctype="multipart/form-data">
-                        <input type="hidden" name="id" value="{{ product.variants.first.id }}">
-                        <input type="hidden" name="quantity" value="1">
-                        <button type="submit" class="collection__btn button">Agregar al carrito</button>
+<section class="collection__page-container">
+
+    <section class="filter__section-container">
+            <div class="filter__btn-container">
+                <button aria-controls="filter-container" aria-expanded="false" class="filter__openBtn filter__desktop-btn button">Filtrar</button>
+            </div>
+
+            <span class="drawer__overlay"></span>
+
+            <div data-visible="false" class="filter__container" id="filter-container">
+                <div class="filter__header">
+                    <div class="filter__title-container">
+                        <span class="filter__title">Filtrar por:</span>
+                    </div>
+
+                    <div class="filter__closebtn-container">
+                        <button aria-controls="filter-container" class="filter__closebtn" id="filter-closeBtn">
+                            <i class="ri-close-line filter-icon icon"></i>
+                        </button>
+                    </div>
+                </div>
+
+                
+                <div class="filter__data-container">
+                    <form class="filter-form">
+                        {% for filter in collection.filters %}
+                            <div class="filter__label-container">
+                                <div class="filter__label">
+                                    <span class="filter__label-title">{{ filter.label }}</span>
+                                    <i class="ri-arrow-down-s-line collapse-icon faq-icon"></i>
+                                </div>
+                            
+                            
+                                <div class="filter__content">
+                                    {%- case filter.type -%}
+                                        {%- when 'boolean' or 'list' -%}
+                                            {%- for filter_value in filter.values -%}
+                                            <div class="filter__collapsible">
+                                                <div class="checkbox__container">
+                                                    <input onChange="this.form.submit()" class="filter__checkbox" type="checkbox"
+                                                    name="{{ filter_value.param_name }}"
+                                                    value="{{ filter_value.value }}"
+                                                    id="Filter-{{ filter.param_name }}-{{ forloop.index }}"
+                                                    {% if filter_value.active -%}checked{%- endif %}
+                                                    {% if filter_value.count == 0 and filter_value.active == false -%}disabled{%- endif %}
+                                                    >
+                                                    <label class="filter__label-value" for="Filter-{{ filter.param_name }}-{{ forloop.index }}">
+                                                        {{ filter_value.label }}
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            {%- endfor -%}
+                                            
+                                        {%- when 'price_range' -%}
+                                            <div class="filter-group-display__price-range">
+                                            <div class="filter-group-display__price-range-from">
+                                                <span>{{ cart.currency.symbol }}</span>
+
+                                                <input name="{{ filter.min_value.param_name }}"
+                                                id="Filter-{{ filter.min_value.param_name }}"
+                                                {% if filter.min_value.value -%}
+                                                    value="{{ filter.min_value.value | money_without_currency | replace: ',', '' }}"
+                                                {%- endif %}
+                                                type="number"
+                                                placeholder="0"
+                                                min="0"
+                                                max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
+                                                >
+
+                                                <label for="Filter-{{ filter.min_value.param_name }}">From</label>
+                                            </div>
+                                            <div class="filter-group-display__price-range-to">
+                                                <span>{{ cart.currency.symbol }}</span>
+
+                                                <input name="{{ filter.max_value.param_name }}"
+                                                id="Filter-{{ filter.max_value.param_name }}"
+                                                {% if filter.max_value.value -%}
+                                                    value="{{ filter.max_value.value | money_without_currency | replace: ',', '' }}"
+                                                {%- endif %}
+                                                type="number"
+                                                placeholder="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
+                                                min="0"
+                                                max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
+                                                >
+
+                                                <label for="Filter-{{ filter.max_value.param_name }}">To</label>
+                                            </div>
+                                            </div>
+
+                                            <div class="filter-group-display__submit">
+                                            <input type="submit" value="Apply">
+                                            </div>
+                                        {%- endcase -%}
+
+                            </div>
+                        </div>
+                        {% endfor %}
                     </form>
                 </div>
-            {% endfor %}
-        </div>
+            </div>
     </section>
- {{ paginate | default_pagination }}
-{% endpaginate %}
 
+    
+
+    <section class="collection__section-container">
+
+        <div class="collection__information-container">
+            <div class="collection__information-title-container">
+                <h2 class="collection__information-title">Todas Las Antigüedades</h2>
+            </div>
+            <div class="collection__information-desc-container">
+                <p class="collection__information-desc">
+                    Lorem ipsum dolor sit amet, 
+                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                </p>
+            </div>
+        </div>
+
+        <div class="filter__btn-container">
+            <button aria-controls="filter-container" aria-expanded="false" class="filter__openBtn filter__mobile-btn button">Filtrar</button>
+        </div>
+
+        {% paginate collection.products by 12 %}
+            <section class="collection__container">
+                <div class="collection__items-container">
+                    {% for product in collection.products limit: 8 %}
+                        <div class="collection__item">
+                            <a href="{{ product.url }}" class="collection_a-img">
+                                <img src="{{ product.featured_image | product_img_url: 'grande' }}" alt="{{ product.title }}" class="collection__img">
+                                <h3 class="collection__item-title">{{ product.title }}</h3>
+                                <span class="collection__price">{{ product.price | money }}</span>
+                            </a>
+                            <form action="/cart/add" method="post" enctype="multipart/form-data">
+                                <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+                                <input type="hidden" name="quantity" value="1">
+                                <button type="submit" class="collection__btn button">Agregar al carrito</button>
+                            </form>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
+            {{ paginate | default_pagination }}
+        {% endpaginate %}
+    </section>
+</section>
+
+{% schema %}
+{
+    "name": "Collection Page",
+    "settings": [
+    ]
+}
+{% endschema %}

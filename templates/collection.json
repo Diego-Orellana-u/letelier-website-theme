@@ -3,17 +3,9 @@
     "sections": {
         "main": {
             "type": "collection"
-        },
-        "filter":{
-            "type": "filter-collection"
-        },
-        "info":{
-            "type": "collection-info"
         }
     },
     "order": [
-        "info",
-        "filter",
         "main"
     ]
 }

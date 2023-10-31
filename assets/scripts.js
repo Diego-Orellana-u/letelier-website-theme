@@ -122,27 +122,38 @@ faqHeader.forEach(header => {
 // FILTER
 
 const filterDrawer = document.getElementById('filter-container')
-const openFilterBtn = document.getElementById('filter-openBtn')
+const openFilterBtn = document.querySelectorAll('.filter__openBtn')
 const closeFilterBtn = document.getElementById('filter-closeBtn')
+const filterLabel = document.querySelectorAll('.filter__label')
+
+
 
 function openFilter(){
     filterDrawer.setAttribute('data-visible', true)
-    openFilterBtn.setAttribute('aria-expanded', true)
+    openFilterBtn.forEach(btn => btn.setAttribute('aria-expanded', true))
     overlay.style.opacity = '0.3';  //reusing overlay of cart drawer
     overlay.style.visibility = 'visible';
 }
 
 function closeFilter(){
     filterDrawer.setAttribute('data-visible', false)
-    openFilterBtn.setAttribute('aria-expanded', false)
+    openFilterBtn.forEach(btn => btn.setAttribute('aria-expanded', false))
     overlay.style.opacity = "0";
     overlay.style.visibility = "hidden";
 }
 
-openFilterBtn.addEventListener('click', () => {
-    openFilter()
+openFilterBtn.forEach(btn => {
+    btn.addEventListener('click', () => {
+        openFilter()
+    })
 })
 
 document.querySelectorAll('.filter__closebtn, .drawer__overlay').forEach(c =>{
     c.addEventListener('click', closeFilter)
+})
+
+filterLabel.forEach(label => {
+    label.addEventListener('click', () => {
+        label.parentElement.classList.toggle('filter-visible')
+    })
 })

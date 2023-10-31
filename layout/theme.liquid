@@ -22,6 +22,6 @@
 
         {% section 'footer' %}
 
-        {{ 'scripts.js' | asset_url | script_tag }}
+        <script src="{{ 'scripts.js' | asset_url }}" defer="defer"></script>
     </body>
 </html>

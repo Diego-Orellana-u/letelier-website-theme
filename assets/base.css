@@ -949,6 +949,7 @@ img,svg {
 
 /*=============== COLLECTION PAGE ===============*/
 
+
 .collection__information-container{
     padding: 5.5rem .8rem 2.5rem .8rem;
     text-align: center;
@@ -1008,7 +1009,15 @@ img,svg {
   
 /*=============== FILTER ===============*/
 .filter__section-container{
-    margin: 2rem 0 1rem 1.2rem ;
+    margin: 4rem 0 1rem 1.2rem ;
+}
+
+.filter__mobile-btn{
+    margin: 1rem 0 1rem 1.2rem;
+}
+
+.filter__desktop-btn{
+    display: none;
 }
 
 .filter__openBtn{
@@ -1022,7 +1031,7 @@ img,svg {
     position: fixed;
     height: 100vh;
     width: 280px;
-    background-color: #F1F1F1;
+    background-color: #FFFFFF;
     top: 0;
     z-index: 999;
     right: calc(100% - 280px);
@@ -1038,6 +1047,11 @@ img,svg {
 
 .filter__closebtn{
     border: none;
+    background-color: #FFF;
+}
+
+.collapse-icon{
+    color: #b71e07;
 }
 
 .filter__header{
@@ -1051,6 +1065,104 @@ img,svg {
 
 .filter__title{
     font-size: var(--h3-font-size);
+}
+
+.filter__data-container{
+    padding: 0 24px;
+}
+
+.filter__label{
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3.5rem;
+    border-top: 1px solid rgb(213, 213, 213);
+}
+
+.filter-group-display__submit{
+    margin-bottom: 1rem;
+}
+
+
+.filter__label-container.filter-visible .faq-icon{
+    transform: rotate(180deg);
+}
+
+.filter__content{
+    max-height: 0;
+    overflow: hidden;
+    transition: .1s max-height;
+}
+
+.filter__label-value{
+    margin-bottom: .5rem;
+    font-size: 1rem;
+}
+
+.filter__label-value::before{
+    font-size: 1.2rem;
+}
+
+.filter__label-container.filter-visible .filter__content{
+    max-height: 400px;
+    transition: .5s max-height;
+}
+
+.checkbox__container{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.filter__collapsible{
+    padding-left: 8px;
+}
+
+.filter__label-title{
+    font-size: 1.1rem;
+}
+
+
+.checkbox__container{
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.checkbox__container label{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox__container input[type='checkbox']{
+    cursor: pointer;
+    opacity: 0;
+}
+
+.checkbox__container label::before{
+    content: '';
+    width: .8em;
+    height: .8em;
+    border: 1px solid rgb(162, 162, 162);
+    border-radius: 1px;
+    margin-right: .6em;
+}
+
+.checkbox__container input[type='checkbox']:checked + label::before{
+    content: '\002714';
+    color: #FFF;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #333;
+}
+
+.filter-icon{
+    background-color: #FFF;
+    border: none;
 }
 
 /*=============== FAQ ===============*/
@@ -1491,10 +1603,6 @@ img,svg {
         height: 550px;
     }
 
-    .filter__section-container{
-        margin-left: 2.5rem ;
-    }
-
     .contact__img{
         object-position: center;
     }
@@ -1718,6 +1826,19 @@ img,svg {
     .appear__logo{
         width: 350px;
     }
+
+    .filter__header{
+        height: 5.5rem;
+    }
+
+    .filter__title{
+        font-size: 1.5rem;
+    }
+
+    .filter__label-title{
+        font-size: 1.25rem;
+    }
+    
 }
 
 /* for desktop */
@@ -1786,9 +1907,6 @@ img,svg {
         padding: 7.5rem 7.5rem 2.5rem 7.5rem;
     }
 
-    .filter__section-container{
-        margin-left: 4rem ;
-    }
 
     .nosotros__container{
         margin-top: 5.5rem;
@@ -1827,6 +1945,51 @@ img,svg {
 
     .short__about-title{
         font-size: 3rem;
+    }
+
+    .collection__page-container{
+        display: flex;
+    }
+
+    .filter__mobile-btn{
+        display: none;
+    }
+
+    .filter__desktop-btn{
+        display: block;
+    }
+
+    .filter__section-container{
+        width: 25vw;
+    }
+
+    .collection__section-container{
+        width: 75vw;
+    }
+
+    .collection__container{
+        background-color: #F1F1F1;
+        padding-top: 4rem;
+    }
+
+    .collection__information-container{
+        background-color: #FFFFFF;
+    }
+
+    .collection__information-title{
+        font-size: 3.5rem;
+    }
+
+    .collection__information-desc{
+        line-height: 28px;
+    }
+
+    .collection__btn{
+        font-family: 'Inter';
+        font-weight: 300;
+        background-color: #222;
+        color: #FFFFFF;
+        padding: 1rem 2rem;
     }
 
 }
