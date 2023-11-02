@@ -157,3 +157,101 @@ filterLabel.forEach(label => {
         label.parentElement.classList.toggle('filter-visible')
     })
 })
+
+//MOBILE PRICE FILTER
+
+// const rangeInput = document.querySelectorAll('.range__input input');
+// const priceInput = document.querySelectorAll('.filter__price-container input');
+// const progress = document.querySelector('.filter__slider-container .filter__slider-progress');
+
+// let priceGap = 30000;
+
+
+// priceInput.forEach(input => {
+//     input.addEventListener("input", e => {
+//         let minVal = parseInt(priceInput[0].value);
+//         let maxVal = parseInt(priceInput[1].value);
+           
+
+//         if((minVal >= priceInput[0].value) || (maxVal <= priceInput[1].value)){
+//             if(e.target.className === "input__min"){
+//                 rangeInput[0].value = minVal;
+//                 progress.style.left = (minVal / rangeInput[0].max) * 100 + "%";
+//             }else{
+//                 rangeInput[1].value = maxVal;
+//                 progress.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+//             }
+//         }
+//     })
+// })
+
+// rangeInput.forEach(input => {
+//     input.addEventListener("input", e => {
+
+//         let minVal = parseInt(rangeInput[0].value),
+//         maxVal = parseInt(rangeInput[1].value);
+
+
+//         if(maxVal - minVal < priceGap){
+//             if(e.target.className === "range__min"){
+//                 rangeInput[0].value = maxVal - priceGap;
+//             }else{
+//                 rangeInput[1].value = minVal + priceGap;
+//             }
+//         }else{
+//             priceInput[0].value = minVal;
+//             priceInput[1].value = maxVal;
+//             progress.style.left = (minVal / rangeInput[0].max) * 100 + "%";
+//             progress.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+//         }
+//     })
+// })
+
+//DESKTOP PRICE FILTER
+
+const rangeInput = document.querySelectorAll('.range__input input');
+const priceInput = document.querySelectorAll('.filter__price-container input');
+const progress = document.querySelector('.filter__slider-container .filter__slider-progress');
+
+let priceGap = 30000;
+
+
+priceInput.forEach(input => {
+    input.addEventListener("input", e => {
+        let minVal = parseInt(priceInput[0].value);
+        let maxVal = parseInt(priceInput[1].value);
+           
+
+        if((minVal >= priceInput[0].value) || (maxVal <= priceInput[1].value)){
+            if(e.target.className === "input__min"){
+                rangeInput[0].value = minVal;
+                progress.style.left = (minVal / rangeInput[0].max) * 100 + "%";
+            }else{
+                rangeInput[1].value = maxVal;
+                progress.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+            }
+        }
+    })
+})
+
+rangeInput.forEach(input => {
+    input.addEventListener("input", e => {
+
+        let minVal = parseInt(rangeInput[0].value),
+        maxVal = parseInt(rangeInput[1].value);
+
+
+        if(maxVal - minVal < priceGap){
+            if(e.target.className === "range__min"){
+                rangeInput[0].value = maxVal - priceGap;
+            }else{
+                rangeInput[1].value = minVal + priceGap;
+            }
+        }else{
+            priceInput[0].value = minVal;
+            priceInput[1].value = maxVal;
+            progress.style.left = (minVal / rangeInput[0].max) * 100 + "%";
+            progress.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+        }
+    })
+})
