@@ -1051,7 +1051,7 @@ img,svg {
 }
 
 .collapse-icon{
-    color: #b71e07;
+    color: #666;
 }
 
 .filter__header{
@@ -1145,8 +1145,8 @@ img,svg {
     content: '';
     width: .8em;
     height: .8em;
-    border: 1px solid rgb(162, 162, 162);
-    border-radius: 1px;
+    border: 2px solid rgb(162, 162, 162);
+    border-radius: 2px;
     margin-right: .6em;
 }
 
@@ -1163,6 +1163,13 @@ img,svg {
 .filter-icon{
     background-color: #FFF;
     border: none;
+}
+
+
+/*=============== DESKTOP FILTER ===============*/
+
+.filter__desktop-section-container{
+    display: none;
 }
 
 /*=============== FAQ ===============*/
@@ -1836,7 +1843,7 @@ img,svg {
     }
 
     .filter__label-title{
-        font-size: 1.25rem;
+        font-size: 1.1rem;
     }
     
 }
@@ -1963,10 +1970,6 @@ img,svg {
         width: 25vw;
     }
 
-    .collection__section-container{
-        width: 75vw;
-    }
-
     .collection__container{
         background-color: #F1F1F1;
         padding-top: 4rem;
@@ -1977,11 +1980,12 @@ img,svg {
     }
 
     .collection__information-title{
-        font-size: 3.5rem;
+        font-size: 2.5rem;
     }
 
     .collection__information-desc{
-        line-height: 28px;
+        font-size: 1rem;
+        line-height: 24px;
     }
 
     .collection__btn{
@@ -1989,9 +1993,69 @@ img,svg {
         font-weight: 300;
         background-color: #222;
         color: #FFFFFF;
-        padding: 1rem 2rem;
+        width: 95%;
+        height: max-content;
     }
 
+    .filter__section-container{
+        display: none;
+    }
+
+    .filter__desktop-section-container{
+        display: block;
+        font-family: "Inter";
+    }
+
+    .filter__data-container{
+        width: 370px;
+        margin-top: 8.5rem;
+        padding: 0 0 0 40px;
+    }
+
+    .filter__content{
+        max-height: 400px;
+    }
+
+    .filter__label-container.filter-visible .filter__content{
+        max-height: 0px;
+        transition: .1s max-height;
+    }
+
+    .collection__items-container{
+        gap: 1.5rem;
+    }
+
+    .collection__item{
+        width: 19vw;
+    }
+
+    .collection__img{
+        height: 24vw;
+    }
+
+    .collection__item{
+        height: 475px;
+    }
+
+    .filter__collapsible{
+        padding: 0;
+    }
+
+    .filter__label-value{
+        margin-bottom: 1.4rem;
+    }
+
+    .collapse-icon{
+        font-size: 22px;
+    }
+
+    
+}
+
+@media screen and (min-width: 1200px){
+    .collection__btn{
+        height: 4rem;
+    }
 }
 
 
@@ -2017,6 +2081,23 @@ img,svg {
     }
     .contact__img{
         object-position: bottom;
+    }
+
+    .collection__item{
+        width: 21vw;
+    }
+
+    .collection__img{
+        height: 29vw;
+    }
+
+    .collection__information-title{
+        font-size: 3.5rem;
+    }
+
+    .collection__information-desc{
+        font-size: 1.2rem;
+        line-height: 22px;
     }
 }
 
