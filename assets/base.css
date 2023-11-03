@@ -1168,6 +1168,70 @@ img,svg {
     border: none;
 }
 
+.filter__price-apply-btn{
+    font-size: 17px;
+    background-color: #222;
+    color: #FFF;
+}
+
+.filter__mobile__slider-container{
+    height: 5px;
+    background: #ddd;
+    border-radius: 5px;
+    margin: 0 0 25px 0;
+    position: relative;
+}
+
+.filter__mobile__slider-container .filter__mobile__slider-progress{
+    height: 5px;
+    left: 0%;
+    right: 0%;
+    position: absolute;
+    border-radius: 5px;
+    background: #666;
+}
+
+.filter__mobile__price-container{
+    width: 100%;
+    margin:0 0 30px 0; 
+    display: flex;
+}
+
+.filter__mobile__price-container .field{
+    height: 45px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.filter__mobile__price-container .filter__money-separator{
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.range__mobile__input{
+    position: relative;
+}
+
+.range__mobile__input input{
+    position: absolute;
+    top: -30px;
+    height: 5px;
+    width: 100%;
+    background: none;
+    pointer-events: none;
+    -webkit-appearance: none;
+}
+
+
+/*=============== DESKTOP FILTER ===============*/
+
+.filter__desktop-section-container{
+    display: none;
+}
+
 .filter__price-container{
     width: 100%;
     margin:0 0 30px 0; 
@@ -1258,19 +1322,6 @@ input[type="range"]::-moz-range-thumb{
 
 .filter__price-apply-btn-container{
     margin-bottom: 20px;
-}
-
-.filter__price-apply-btn{
-    font-size: 17px;
-    background-color: #222;
-    color: #FFF;
-}
-
-
-/*=============== DESKTOP FILTER ===============*/
-
-.filter__desktop-section-container{
-    display: none;
 }
 
 /*=============== FAQ ===============*/

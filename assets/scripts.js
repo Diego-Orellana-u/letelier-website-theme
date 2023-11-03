@@ -160,52 +160,52 @@ filterLabel.forEach(label => {
 
 //MOBILE PRICE FILTER
 
-// const rangeInput = document.querySelectorAll('.range__input input');
-// const priceInput = document.querySelectorAll('.filter__price-container input');
-// const progress = document.querySelector('.filter__slider-container .filter__slider-progress');
+const rangeMobileInput = document.querySelectorAll('.range__mobile__input input');
+const priceMobileInput = document.querySelectorAll('.filter__mobile__price-container input');
+const progressMobile = document.querySelector('.filter__mobile__slider-container .filter__mobile__slider-progress');
 
-// let priceGap = 30000;
+let mobilePriceGap = 30000;
 
 
-// priceInput.forEach(input => {
-//     input.addEventListener("input", e => {
-//         let minVal = parseInt(priceInput[0].value);
-//         let maxVal = parseInt(priceInput[1].value);
+priceMobileInput.forEach(input => {
+    input.addEventListener("input", e => {
+        let minVal = parseInt(priceMobileInput[0].value);
+        let maxVal = parseInt(priceMobileInput[1].value);
            
 
-//         if((minVal >= priceInput[0].value) || (maxVal <= priceInput[1].value)){
-//             if(e.target.className === "input__min"){
-//                 rangeInput[0].value = minVal;
-//                 progress.style.left = (minVal / rangeInput[0].max) * 100 + "%";
-//             }else{
-//                 rangeInput[1].value = maxVal;
-//                 progress.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
-//             }
-//         }
-//     })
-// })
+        if((minVal >= priceMobileInput[0].value) || (maxVal <= priceMobileInput[1].value)){
+            if(e.target.className === "input__mobile__min"){
+                rangeMobileInput[0].value = minVal;
+                progressMobile.style.left = (minVal / rangeMobileInput[0].max) * 100 + "%";
+            }else{
+                rangeMobileInput[1].value = maxVal;
+                progressMobile.style.right = 100 - (maxVal / rangeMobileInput[1].max) * 100 + "%";
+            }
+        }
+    })
+})
 
-// rangeInput.forEach(input => {
-//     input.addEventListener("input", e => {
+rangeMobileInput.forEach(input => {
+    input.addEventListener("input", e => {
 
-//         let minVal = parseInt(rangeInput[0].value),
-//         maxVal = parseInt(rangeInput[1].value);
+        let minVal = parseInt(rangeMobileInput[0].value),
+        maxVal = parseInt(rangeMobileInput[1].value);
 
 
-//         if(maxVal - minVal < priceGap){
-//             if(e.target.className === "range__min"){
-//                 rangeInput[0].value = maxVal - priceGap;
-//             }else{
-//                 rangeInput[1].value = minVal + priceGap;
-//             }
-//         }else{
-//             priceInput[0].value = minVal;
-//             priceInput[1].value = maxVal;
-//             progress.style.left = (minVal / rangeInput[0].max) * 100 + "%";
-//             progress.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
-//         }
-//     })
-// })
+        if(maxVal - minVal < mobilePriceGap){
+            if(e.target.className === "range__mobile__min"){
+                rangeMobileInput[0].value = maxVal - mobilePriceGap;
+            }else{
+                rangeMobileInput[1].value = minVal + mobilePriceGap;
+            }
+        }else{
+            priceMobileInput[0].value = minVal;
+            priceMobileInput[1].value = maxVal;
+            progressMobile.style.left = (minVal / rangeMobileInput[0].max) * 100 + "%";
+            progressMobile.style.right = 100 - (maxVal / rangeMobileInput[1].max) * 100 + "%";
+        }
+    })
+})
 
 //DESKTOP PRICE FILTER
 

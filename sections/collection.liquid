@@ -53,7 +53,7 @@
                                             
                                         {%- when 'price_range' -%}
                                             <div class="filter-group-display__price-range">
-                                                <div class="filter__price-container">
+                                                <div class="filter__mobile__price-container">
                                                     <div class="filter-group-display__price-range-from field">
                                                         <span>{{ cart.currency.symbol }}</span>
                                                         <input name="{{ filter.min_value.param_name }}"
@@ -65,7 +65,7 @@
                                                         placeholder="0"
                                                         min="0"
                                                         max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
-                                                        class="input__min"
+                                                        class="input__mobile__min"
                                                         >
                                                     </div>
 
@@ -82,17 +82,17 @@
                                                         placeholder="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
                                                         min="0"
                                                         max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
-                                                        class="input__max"
+                                                        class="input__mobile__max"
                                                         >
                                                     </div>
                                                 </div>
-                                                <div class="filter__slider-container">
-                                                    <div class="filter__slider-progress">
+                                                <div class="filter__mobile__slider-container">
+                                                    <div class="filter__mobile__slider-progress">
                                                     </div>
                                                 </div>
-                                                <div class="range__input">
-                                                    <input type="range" class="range__min" min="0" max="{{ filter.range_max | money_without_currency | replace: ',', '' }}" value=0 step="5000">
-                                                    <input type="range" class="range__max" min="0" max="{{ filter.range_max | money_without_currency | replace: ',', '' }}" value="{{ filter.range_max | money_without_currency | replace: ',', '' }}">
+                                                <div class="range__mobile__input">
+                                                    <input type="range" class="range__mobile__min" min="0" max="{{ filter.range_max | money_without_currency | replace: ',', '' }}" value=0 step="5000">
+                                                    <input type="range" class="range__mobile__max" min="0" max="{{ filter.range_max | money_without_currency | replace: ',', '' }}" value="{{ filter.range_max | money_without_currency | replace: ',', '' }}">
                                                 </div>
 
                                                 <div class="filter__price-apply-btn-container">
