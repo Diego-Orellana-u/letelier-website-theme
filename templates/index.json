@@ -3,18 +3,29 @@
     "hero": {
       "type": "hero",
       "settings": {
-        "hero": "shopify:\/\/shop_images\/Hero_Yadro_porcelana.webp"
+        "hero": "shopify:\/\/shop_images\/Hero_Yadro_porcelana.webp",
+        "hero__title": "ESCULTURAS",
+        "hero__desc": "Descubre nuestras esculturas exclusivamente seleccionadas",
+        "hero__button-title": "Ir a esculturas",
+        "hero__button-link": "https:\/\/letelier.art\/collections\/all"
       }
     },
     "short_about": {
       "type": "short_about",
       "settings": {
+        "shortAbout__title": "",
+        "shortAbout__desc": "",
+        "shortAbout__button-title": ""
       }
     },
     "vende": {
       "type": "vende",
       "settings": {
-        "sell": "shopify:\/\/shop_images\/Camara_antigua.webp"
+        "sell": "shopify:\/\/shop_images\/Camara_antigua.webp",
+        "vendeHome__title": "",
+        "vendeHome__desc": "",
+        "vendeHome__cta": "",
+        "vendeHome__button": ""
       }
     },
     "popular_products": {
@@ -25,6 +36,13 @@
     "why_us": {
       "type": "why_us",
       "settings": {
+        "whyus__section-title": "",
+        "whyus__individual-title-1": "",
+        "whyus__individual-title-2": "",
+        "whyus__individual-title-3": "",
+        "whyus__individual-desc-1": "",
+        "whyus__individual-desc-2": "",
+        "whyus__individual-desc-3": ""
       }
     },
     "categories": {
@@ -35,13 +53,19 @@
     "social_section": {
       "type": "social_section",
       "settings": {
+        "socials__title": "",
+        "socials__link-1": "",
+        "socials__link-2": "",
+        "socials__link-3": ""
       }
     },
     "howto": {
       "type": "howto",
       "settings": {
         "first-background": "shopify:\/\/shop_images\/roberto_matta_pintura.webp",
-        "second-background": "shopify:\/\/shop_images\/Johannes_Vermeer_The_Girl_With_The_Pearl_Earring_1.webp"
+        "second-background": "shopify:\/\/shop_images\/Johannes_Vermeer_The_Girl_With_The_Pearl_Earring_1.webp",
+        "howto__link-1": "",
+        "howto__link-2": ""
       }
     }
   },
