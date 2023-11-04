@@ -22,10 +22,10 @@
       "type": "vende",
       "settings": {
         "sell": "shopify:\/\/shop_images\/Camara_antigua.webp",
-        "vendeHome__title": "",
-        "vendeHome__desc": "",
-        "vendeHome__cta": "",
-        "vendeHome__button": ""
+        "vendeHome__title": "Vende Tus Antigüedades",
+        "vendeHome__desc": "¡Escríbenos para vender tus antigüedades! +569 84192433",
+        "vendeHome__cta": "Haz click en el botón y escríbenos",
+        "vendeHome__button": "QUIERO VENDER"
       }
     },
     "popular_products": {
