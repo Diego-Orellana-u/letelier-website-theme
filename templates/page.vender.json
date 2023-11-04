@@ -3,17 +3,26 @@
     "main": {
       "type": "vender-hero",
       "settings": {
-        "vender-hero": "shopify:\/\/shop_images\/Busto_de_marmol_hero.webp"
+        "vender-hero": "shopify:\/\/shop_images\/Busto_de_marmol_hero.webp",
+        "vender__hero-title": "VENDER",
+        "vender__hero-desc": "Si tienes antigüedades que quieras vender comunícate con nosotros",
+        "vender__hero-btn": "Contactanos"
       }
     },
     "vender": {
       "type": "vender-desc",
       "settings": {
+        "vender__about-title": "",
+        "vender__about-desc": ""
       }
     },
     "form": {
       "type": "vender-form",
       "settings": {
+        "sell__contact-title": "",
+        "sell__contact-desc": "",
+        "sell__contact-link": "",
+        "sell__contact-btn": ""
       }
     },
     "faq": {
