@@ -1,38 +1,34 @@
 <h2 class="whyus__container-title">
-    ¿Por que comprar en Letelier?
+    {{ section.settings.whyus__section-title }}
 </h2>
 <div class="reasons__container">
     <div class="whyus__reason">
         <i class="ri-truck-line reason__icon"></i>
         <h3 class="whyus__title">
-            Envío gratis y rapido
+            {{ section.settings.whyus__individual-title-1 }}
         </h3>
         <p class="whyus__desc">
-            Tenemos envío gratis dentro de Santiago por compras sobre 50.000.
-            Recibe tus antigüedades de forma rapida y segura
+            {{ section.settings.whyus__individual-desc-1 }}
         </p>
     </div>
 
     <div class="whyus__reason">
         <i class="ri-money-dollar-circle-line reason__icon"></i>
         <h3 class="whyus__title">
-            Sin riesgo
+            {{ section.settings.whyus__individual-title-2 }}
         </h3>
         <p class="whyus__desc">
-            Poseemos garantía de satisfacción en la mayoría de nuestras antigüedades.
-            Si por cualquier motivo no te sientes conforme con tu compra, comunicate con nosotros y te
-            devolveremos tu dinero.
+            {{ section.settings.whyus__individual-desc-2 }}
         </p>
     </div>
 
     <div class="whyus__reason">
         <i class="ri-search-line reason__icon"></i>
         <h3 class="whyus__title">
-            Buscamos por ti
+            {{ section.settings.whyus__individual-title-3 }}
         </h3>
         <p class="whyus__desc">
-            Llevamos años buscando en diferentes partes del mundo piezas diferenciadoras. 
-            Si no encuentras lo que buscas, escribenos y te ayudaremos.
+            {{ section.settings.whyus__individual-desc-3 }}
         </p>
     </div>
 </div>
@@ -45,6 +41,41 @@
     "tag": "article",
     "class": "whyus__container",
     "settings":[
+        {
+            "type": "text",
+            "id": "whyus__section-title",
+            "label": "Why Us Section Title"
+        },
+        {
+            "type": "text",
+            "id": "whyus__individual-title-1",
+            "label": "Why Us title 1"
+        },
+        {
+            "type": "text",
+            "id": "whyus__individual-title-2",
+            "label": "Why Us title 2"
+        },
+        {
+            "type": "text",
+            "id": "whyus__individual-title-3",
+            "label": "Why Us title 3"
+        },
+        {
+            "type": "textarea",
+            "id": "whyus__individual-desc-1",
+            "label": "Why Us desc 1"
+        },
+        {
+            "type": "textarea",
+            "id": "whyus__individual-desc-2",
+            "label": "Why Us desc 2"
+        },
+        {
+            "type": "textarea",
+            "id": "whyus__individual-desc-3",
+            "label": "Why Us desc 3"
+        }
     ]
 }
 {% endschema %}

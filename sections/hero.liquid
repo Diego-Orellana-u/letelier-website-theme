@@ -2,10 +2,10 @@
     <section class="home__container">
         <img src="{{section.settings.hero | img_url: 'master'}}" alt="home-image" class="home__img" decoding=“async”>
         <section class="home__info">
-            <span class="home__title">PORCELANA</span>
-            <p class="home__p">Descubre nuestra porcelana exclusivamente seleccionada</p>
-            <a href="https://letelier.art/collections/porcelana" target="_blank">
-                <button class="home__btn button" id="home-btn">Ir a porcelana</button>
+            <span class="home__title">{{ section.settings.hero__title}}</span>
+            <p class="home__p">{{ section.settings.hero__desc }}</p>
+            <a href="{{ section.settings.hero__button-link }}" target="_blank">
+                <button class="home__btn button" id="home-btn">{{ section.settings.hero__button-title }}</button>
             </a>
         </section>
     </section>
@@ -21,6 +21,26 @@
             "type": "image_picker",
             "id": "hero",
             "label": "Hero"
+        },
+        {
+            "type": "text",
+            "id": "hero__title",
+            "label": "Hero title"
+        },
+        {
+            "type": "textarea",
+            "id": "hero__desc",
+            "label": "Hero description"
+        },
+        {
+            "type": "text",
+            "id": "hero__button-title",
+            "label": "Hero button title"
+        },
+        {
+            "type": "text",
+            "id": "hero__button-link",
+            "label": "Hero button link"
         }
     ]
 }

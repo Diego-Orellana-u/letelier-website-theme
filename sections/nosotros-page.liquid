@@ -5,10 +5,9 @@
         </div>
 
         <div class="nosotros__desc-container">
-            <h3 class="nosotros__title">Nuestra Visión</h3>
+            <h3 class="nosotros__title">{{ section.settings.aboutus__title-1}}</h3>
             <p class="nosotros__desc">
-              Creemos que una antigüedad ubicada en el lugar correcto impulsa y mejora la decoración del hogar. 
-              En Letelier nos encargamos de buscar por ti la antigüedad precisa que necesitas en este momento.
+                {{ section.settings.aboutus__desc-1}}
             </p>
         </div>
     </div>
@@ -21,11 +20,9 @@
         </div>
 
         <div class="nosotros__desc-container">
-            <h3 class="nosotros__title">Nuestra Historia</h3>
+            <h3 class="nosotros__title">{{ section.settings.aboutus__title-2}}</h3>
             <p class="nosotros__desc">
-              Llevamos más de 30 años buscando antigüedades que cuenten una historia y que den vida a los hogares de nuestros clientes.
-              Ahora con tienda online, llevamos la pasión por los objetos antiguos a todos los rincones de Chile, ofreciendo una forma 
-              fácil y segura de comprar.
+                {{ section.settings.aboutus__desc-2}}
             </p>
         </div>
     </div>
@@ -38,11 +35,9 @@
         </div>
 
         <div class="nosotros__desc-container">
-            <h3 class="nosotros__title">Nuestro Compromiso</h3>
+            <h3 class="nosotros__title">{{ section.settings.aboutus__title-3}}</h3>
             <p class="nosotros__desc">
-              Somos coleccionistas y eso impregna todo lo que hacemos. Nuestra tienda esta hecha por y para amantes de las antigüedades.
-              Por este motivo, nos comprometemos a entregar el mejor servicio y los mejores objetos coleccionables, reinventando la forma
-              de vender antigüedades en Chile.
+                {{ section.settings.aboutus__desc-3}}
             </p>
         </div>
     </div>
@@ -68,6 +63,36 @@
             "type": "image_picker",
             "id": "nosotros-third-img",
             "label": "Nosotros third Img"
+        },
+        {
+            "type": "text",
+            "id": "aboutus__title-1",
+            "label": "About Us title 1"
+        },
+        {
+            "type": "text",
+            "id": "aboutus__title-2",
+            "label": "About Us title 2"
+        },
+        {
+            "type": "text",
+            "id": "aboutus__title-3",
+            "label": "About Us title 3"
+        },
+        {
+            "type": "textarea",
+            "id": "aboutus__desc-1",
+            "label": "About Us description 1"
+        },
+        {
+            "type": "textarea",
+            "id": "aboutus__desc-2",
+            "label": "About Us description 2"
+        },
+        {
+            "type": "textarea",
+            "id": "aboutus__desc-3",
+            "label": "About Us description 3"
         }
     ]
 }

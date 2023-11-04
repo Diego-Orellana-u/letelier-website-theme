@@ -1,17 +1,16 @@
 <div class="sell__info-container">
     <h2 class="sell__section-title">
-        Vende Tus Antigüedades
+        {{ section.settings.vendeHome__title }}
     </h2>
     <p class="sell__section-desc">
-         ¡Escribenos para vender tus antigüedades!
-      +569 84192433
+        {{ section.settings.vendeHome__desc }}
     </p>
     <span class="sell__section-desc cta">
-        Haz click y escribenos
+        {{ section.settings.vendeHome__cta }}
     </span>
 
     <a href="https://letelier.art/pages/vender" target="_blank" class="vende__button">
-      <button class="sell__button button">Quiero Vender</button>
+      <button class="sell__button button">{{ section.settings.vendeHome__button }}</button>
     </a>
 </div>
 <div class="sell__img-container">
@@ -29,6 +28,26 @@
             "type": "image_picker",
             "id": "sell",
             "label": "Sell image"
+        },
+        {
+            "type": "text",
+            "id": "vendeHome__title",
+            "label": "Vende home title"
+        },
+        {
+            "type": "textarea",
+            "id": "vendeHome__desc",
+            "label": "Vende home desc"
+        },
+        {
+            "type": "text",
+            "id": "vendeHome__cta",
+            "label": "Vende home cta"
+        },
+        {
+            "type": "text",
+            "id": "vendeHome__button",
+            "label": "Vende home button text"
         }
     ]
 }

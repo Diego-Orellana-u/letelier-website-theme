@@ -1,15 +1,13 @@
 <img src="{{ settings.logo__head | img_url: 'master'}}" alt="" class="short__about-img" decoding=“async”>
 <h1 class="short__about-title">
-    LETELIER COMPRA Y VENTA DE ANTIGÜEDADES
+    {{section.settings.shortAbout__title}}
 </h1>
 <p class="short__about-p">
-    Queremos ayudarte a que la decoración de tus espacios represente tu forma de ver el mundo. Letelier cumple 40 años buscando dentro 
-    y fuera de Chile arte, antigüedades, coleccionismo y objetos decorativos, entregando un amplio y exclusivo catalogo. Hemos
-    decidido inaugurar nuestra tienda online, ofreciendo así una forma fácil y segura de comprar.
+    {{section.settings.shortAbout__desc}}
 </p>
 <a href="https://letelier.art/pages/nosotros" target="_blank">
     <button class="short__about-btn button">
-        SABER MAS
+        {{section.settings.shortAbout__button-title}}
     </button>
 </a>
 
@@ -20,7 +18,21 @@
     "tag": "article",
     "class": "short__about-container",
     "settings":[
-
+        {
+            "type": "text",
+            "id": "shortAbout__title",
+            "label": "Short About home title"
+        },
+        {
+            "type": "textarea",
+            "id": "shortAbout__desc",
+            "label": "Short About home desc"
+        },
+        {
+            "type": "text",
+            "id": "shortAbout__button-title",
+            "label": "Short About home button title"
+        }
     ]
 }
 {% endschema %}

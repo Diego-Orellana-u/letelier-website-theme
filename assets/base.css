@@ -666,7 +666,8 @@ img,svg {
   
 .category__title{
     font-family: "Inter";
-    font-size: var(--h3-font-size);
+    font-size: 1.2rem;
+    text-transform: uppercase;
     margin: 1rem;
     text-align: center;
     color: #222;
@@ -688,9 +689,10 @@ img,svg {
   
 .social__title{
     font-family: "Inter";
+    text-transform: uppercase;
     color: white;
     font-weight: 400;
-    font-size: var(--h2-font-size);
+    font-size: 1.5rem;
     margin: 3rem 0rem 3rem 0rem;
     text-align: center;
 }
@@ -737,6 +739,7 @@ img,svg {
 }
   
 .howto__upper-title{
+    font-family: "Inter";
     font-size: 1rem;
     font-weight: 500;
     margin-bottom: .2rem;
@@ -744,6 +747,7 @@ img,svg {
   
 .howto__title{
     font-size: 1.45rem;
+    font-family: "Inter";
 }
   
 
@@ -1349,6 +1353,7 @@ input[type="range"]::-moz-range-thumb{
 }
 
 .faq__question-header{
+    font-family: "Inter";
     padding: 20px 0;
     display: flex;
     align-items: center;
@@ -1413,6 +1418,10 @@ input[type="range"]::-moz-range-thumb{
 .sell__contact-desc-container{
     margin-bottom: 1rem;
     text-align: center;
+    color: #FFF;
+}
+
+.sell__contact-desc{
     color: #FFF;
 }
 
@@ -1882,6 +1891,7 @@ input[type="range"]::-moz-range-thumb{
     }
 
     .sell__section-desc{
+        font-family: "Inter";
         width: 320px;
         margin-right: 5rem;
     }

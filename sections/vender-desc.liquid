@@ -1,12 +1,9 @@
 <img src="{{ settings.logo__head | img_url: 'master'}}" alt="" class="short__about-img" decoding=“async”>
 <h3 class="short__sell-page-title">
-    COMPRAMOS TUS ANTIGÜEDADES
+    {{ section.settings.vender__about-title}}
 </h3>
 <p class="short__about-p">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    {{ section.settings.vender__about-desc}}
 </p>
 
 {% schema %}
@@ -15,7 +12,16 @@
     "tag": "article",
     "class": "short__about-container",
     "settings":[
-
+        {
+            "type": "text",
+            "id": "vender__about-title",
+            "label": "Vender about Title"
+        },
+        {
+            "type": "textarea",
+            "id": "vender__about-desc",
+            "label": "Vender about Desc"
+        }
     ]
 }
 {% endschema %}

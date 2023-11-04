@@ -12,10 +12,7 @@
             <span class="team__member-name">Oscar Orellana</span>
             <span class="team__member-role">Dueño - Anticuario</span>
             <p class="team__member-p">
-              Musico de profesión, hace 40 años empezó su interes por las antigüedades. Desde entonces ha viajado por
-              multiples países buscando objetos coleccionables y aprendiendo sobre antigüedades y arte, entre otros temas de interés.
-              Antes de que internet existiera, fue una de las primeras personas en traer cientos de catalogos de coleccionismo, arte y antigüedades desde
-              Estados Unidos, buscando así saciar su sed de conocimiento.
+                {{section.settings.team__desc-1}}
             </p>
         </div>
     </div>
@@ -29,8 +26,7 @@
             <span class="team__member-name">María Soledad</span>
             <span class="team__member-role">Dueña - Anticuaria</span>
             <p class="team__member-p">
-              Educadora diferencial de profesión, Soledad comienza trabajando como vendedora de antigüedades en la tienda de su suegro,
-              ubicada en ese entonces en el Drugstore de Providencia, Santiago. Ahí conoce a Oscar, 
+                {{section.settings.team__desc-2}}
             </p>
         </div>
     </div>
@@ -44,10 +40,7 @@
             <span class="team__member-name">Diego Orellana</span>
             <span class="team__member-role">Encargado Tienda Online</span>
             <p class="team__member-p">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
+                {{section.settings.team__desc-3}}
             </p>
         </div>
     </div>
@@ -59,7 +52,21 @@
     "tag": "section",
     "class": "team__container",
     "settings":[
-
+        {
+            "type": "textarea",
+            "id": "team__desc-1",
+            "label": "Team description 1"
+        },
+        {
+            "type": "textarea",
+            "id": "team__desc-2",
+            "label": "Team description 2"
+        },
+        {
+            "type": "textarea",
+            "id": "team__desc-3",
+            "label": "Team description 3"
+        }
     ]
 }
 {% endschema %}

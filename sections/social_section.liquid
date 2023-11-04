@@ -1,20 +1,20 @@
 <span class="social__title">
-    Siguenos en redes sociales
+    {{ section.settings.socials__title }}
 </span>
 <div class="social__btns-container">
-    <a href="">
+    <a href="{{ section.settings.socials__link-1 }}">
       <button class="social__btn wsp__btn">
         <i class="ri-whatsapp-line social__icon"></i>
       </button>
     </a>
 
-    <a>
+    <a href="{{ section.settings.socials__link-2 }}">
       <button class="social__btn ig__btn">
         <i class="ri-instagram-line social__icon"></i>
       </button>
     </a>
 
-    <a>
+    <a href="{{ section.settings.socials__link-3 }}">
       <button class="social__btn fb__btn">
         <i class="ri-facebook-circle-fill social__icon"></i>
       </button>   
@@ -27,7 +27,26 @@
     "tag": "article",
     "class": "social__container",
     "settings": [
-
+      {
+        "type": "text",
+        "id": "socials__title",
+        "label": "Socials title"
+      },
+      {
+        "type": "text",
+        "id": "socials__link-1",
+        "label": "Socials Link 1"
+      },
+      {
+        "type": "text",
+        "id": "socials__link-2",
+        "label": "Socials Link 2"
+      },
+      {
+        "type": "text",
+        "id": "socials__link-3",
+        "label": "Socials Link 3"
+      }
     ]
 }
 {% endschema %}

@@ -1,11 +1,11 @@
-<span class="sell__contact-title">Contactate con nosotros</span>
+<span class="sell__contact-title">{{ section.settings.sell__contact-title }}</span>
 <div class="sell__contact-desc-container">
-    <p class="sell__contact-desc">Envíanos fotos de las antigüedades que quieras vender y te responderemos a la brevedad</p>
+    <p class="sell__contact-desc">{{ section.settings.sell__contact-desc }}</p>
 </div>
 
 <div class="sell__contact-btn-container">
-    <a href="">
-        <button class="sell__contact-btn button">Escribenos Por WhatsApp</button>
+    <a href="{{ section.settings.sell__contact-link }}">
+        <button class="sell__contact-btn button">{{ section.settings.sell__contact-btn }}</button>
     </a>
 </div>
 
@@ -14,6 +14,28 @@
 {
     "name": "Vender form",
     "tag": "section",
-    "class": "sell__form-container"
+    "class": "sell__form-container",
+    "settings": [
+        {
+            "type": "text",
+            "id": "sell__contact-title",
+            "label": "Vender Contact Title"
+        },
+        {
+            "type": "textarea",
+            "id": "sell__contact-desc",
+            "label": "Vender Contact Desc"
+        },
+        {
+            "type": "text",
+            "id": "sell__contact-link",
+            "label": "Vender Contact link"
+        },
+        {
+            "type": "text",
+            "id": "sell__contact-btn",
+            "label": "Vender Contact Button"
+        }
+    ]
 }
 {% endschema %}
