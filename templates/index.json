@@ -36,13 +36,13 @@
     "why_us": {
       "type": "why_us",
       "settings": {
-        "whyus__section-title": "",
-        "whyus__individual-title-1": "",
-        "whyus__individual-title-2": "",
-        "whyus__individual-title-3": "",
-        "whyus__individual-desc-1": "",
-        "whyus__individual-desc-2": "",
-        "whyus__individual-desc-3": ""
+        "whyus__section-title": "¿Por que comprar en Letelier?",
+        "whyus__individual-title-1": "Envío gratis y rapido",
+        "whyus__individual-title-2": "Sin riesgo",
+        "whyus__individual-title-3": "Buscamos por ti",
+        "whyus__individual-desc-1": "Tenemos envío gratis dentro de Santiago por compras sobre 50.000. Recibe tus antigüedades de forma rápida y segura",
+        "whyus__individual-desc-2": "Poseemos garantía de satisfacción en la mayoría de nuestras antigüedades. Si por cualquier motivo no te sientes conforme con tu compra, comunícate con nosotros y te devolveremos tu dinero.",
+        "whyus__individual-desc-3": "Llevamos años buscando en diferentes partes del mundo piezas diferenciadoras. Si no encuentras lo que buscas, escríbenos y te ayudaremos."
       }
     },
     "categories": {
