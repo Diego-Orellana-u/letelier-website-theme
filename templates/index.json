@@ -53,7 +53,7 @@
     "social_section": {
       "type": "social_section",
       "settings": {
-        "socials__title": "",
+        "socials__title": "Síguenos en redes sociales",
         "socials__link-1": "",
         "socials__link-2": "",
         "socials__link-3": ""
