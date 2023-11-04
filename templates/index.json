@@ -13,9 +13,9 @@
     "short_about": {
       "type": "short_about",
       "settings": {
-        "shortAbout__title": "",
-        "shortAbout__desc": "",
-        "shortAbout__button-title": ""
+        "shortAbout__title": "LETELIER COMPRA Y VENTA DE ANTIGÜEDADES",
+        "shortAbout__desc": "Queremos ayudarte a que la decoración de tus espacios represente tu forma de ver el mundo. Letelier cumple 40 años buscando dentro y fuera de Chile arte, antigüedades, coleccionismo y objetos decorativos, entregando un amplio y exclusivo catalogo. Hemos decidido inaugurar nuestra tienda online, ofreciendo así una forma fácil y segura de comprar.",
+        "shortAbout__button-title": "SABER MAS"
       }
     },
     "vende": {
