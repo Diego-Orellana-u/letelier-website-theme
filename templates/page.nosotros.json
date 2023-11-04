@@ -5,12 +5,21 @@
       "settings": {
         "nosotros-first-img": "shopify:\/\/shop_images\/Caja_antigua_de_hueso_cerrada_1.webp",
         "nosotros-sec-img": "shopify:\/\/shop_images\/Escultura_de_madera_epoca_colonial.webp",
-        "nosotros-third-img": "shopify:\/\/shop_images\/Jarra-de-laca-china-antigua.webp"
+        "nosotros-third-img": "shopify:\/\/shop_images\/Jarra-de-laca-china-antigua.webp",
+        "aboutus__title-1": "Nuestra Visión",
+        "aboutus__title-2": "Nuestra Historia",
+        "aboutus__title-3": "Nuestro Compromiso",
+        "aboutus__desc-1": "Creemos que una antigüedad ubicada en el lugar correcto impulsa y mejora la decoración del hogar. En Letelier nos encargamos de buscar por ti la antigüedad precisa que necesitas en este momento.",
+        "aboutus__desc-2": "Llevamos más de 30 años buscando antigüedades que cuenten una historia y que den vida a los hogares de nuestros clientes. Ahora con tienda online, llevamos la pasión por los objetos antiguos a todos los rincones de Chile, ofreciendo una forma fácil y segura de comprar.",
+        "aboutus__desc-3": "Somos coleccionistas y eso impregna todo lo que hacemos. Nuestra tienda esta hecha por y para amantes de las antigüedades. Por este motivo, nos comprometemos a entregar el mejor servicio y los mejores objetos coleccionables, reinventando la forma de vender antigüedades en Chile."
       }
     },
     "team": {
       "type": "nosotros-team",
       "settings": {
+        "team__desc-1": "",
+        "team__desc-2": "",
+        "team__desc-3": ""
       }
     },
     "appear": {
