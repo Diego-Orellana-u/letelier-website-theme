@@ -19,10 +19,10 @@
     "form": {
       "type": "vender-form",
       "settings": {
-        "sell__contact-title": "",
-        "sell__contact-desc": "",
+        "sell__contact-title": "Contáctate con nosotros",
+        "sell__contact-desc": "Envíanos fotos de las antigüedades que quieras vender y te responderemos a la brevedad",
         "sell__contact-link": "",
-        "sell__contact-btn": ""
+        "sell__contact-btn": "Escribenos por WhatsApp"
       }
     },
     "faq": {
