@@ -3,18 +3,29 @@
     "hero": {
       "type": "hero",
       "settings": {
-        "hero": "shopify:\/\/shop_images\/Hero_Yadro_porcelana.webp"
+        "hero": "shopify:\/\/shop_images\/Hero_Yadro_porcelana.webp",
+        "hero__title": "ESCULTURAS",
+        "hero__desc": "Descubre nuestras esculturas exclusivamente seleccionadas",
+        "hero__button-title": "Ir a esculturas",
+        "hero__button-link": "https:\/\/letelier.art\/collections\/all"
       }
     },
     "short_about": {
       "type": "short_about",
       "settings": {
+        "shortAbout__title": "LETELIER COMPRA Y VENTA DE ANTIGÜEDADES",
+        "shortAbout__desc": "Queremos ayudarte a que la decoración de tus espacios represente tu forma de ver el mundo. Letelier cumple 40 años buscando dentro y fuera de Chile arte, antigüedades, coleccionismo y objetos decorativos, entregando un amplio y exclusivo catalogo. Hemos decidido inaugurar nuestra tienda online, ofreciendo así una forma fácil y segura de comprar.",
+        "shortAbout__button-title": "SABER MAS"
       }
     },
     "vende": {
       "type": "vende",
       "settings": {
-        "sell": "shopify:\/\/shop_images\/Camara_antigua.webp"
+        "sell": "shopify:\/\/shop_images\/Camara_antigua.webp",
+        "vendeHome__title": "Vende Tus Antigüedades",
+        "vendeHome__desc": "¡Escríbenos para vender tus antigüedades! +569 84192433",
+        "vendeHome__cta": "Haz click en el botón y escríbenos",
+        "vendeHome__button": "QUIERO VENDER"
       }
     },
     "popular_products": {
@@ -25,6 +36,13 @@
     "why_us": {
       "type": "why_us",
       "settings": {
+        "whyus__section-title": "¿Por que comprar en Letelier?",
+        "whyus__individual-title-1": "Envío gratis y rapido",
+        "whyus__individual-title-2": "Sin riesgo",
+        "whyus__individual-title-3": "Buscamos por ti",
+        "whyus__individual-desc-1": "Tenemos envío gratis dentro de Santiago por compras sobre 50.000. Recibe tus antigüedades de forma rápida y segura",
+        "whyus__individual-desc-2": "Poseemos garantía de satisfacción en la mayoría de nuestras antigüedades. Si por cualquier motivo no te sientes conforme con tu compra, comunícate con nosotros y te devolveremos tu dinero.",
+        "whyus__individual-desc-3": "Llevamos años buscando en diferentes partes del mundo piezas diferenciadoras. Si no encuentras lo que buscas, escríbenos y te ayudaremos."
       }
     },
     "categories": {
@@ -35,13 +53,19 @@
     "social_section": {
       "type": "social_section",
       "settings": {
+        "socials__title": "Síguenos en redes sociales",
+        "socials__link-1": "",
+        "socials__link-2": "",
+        "socials__link-3": ""
       }
     },
     "howto": {
       "type": "howto",
       "settings": {
         "first-background": "shopify:\/\/shop_images\/roberto_matta_pintura.webp",
-        "second-background": "shopify:\/\/shop_images\/Johannes_Vermeer_The_Girl_With_The_Pearl_Earring_1.webp"
+        "second-background": "shopify:\/\/shop_images\/Johannes_Vermeer_The_Girl_With_The_Pearl_Earring_1.webp",
+        "howto__link-1": "",
+        "howto__link-2": ""
       }
     }
   },
