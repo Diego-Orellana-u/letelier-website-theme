@@ -19,6 +19,9 @@
     --paragraph-font-size: 1rem;
     --small-font-size: .813rem;
     --smaller-font-size: .75rem;
+    --background-color: #F5F1E9;
+    --primary-color: #2E4F25;
+    --accent-color: #AF492C;
 }
 
 *{
@@ -30,7 +33,7 @@
 body {
     
     font-size: 1.2rem;
-    background-color: #FFFFFF;
+    background-color: #FFF;
     color: #222;
     transition: background-color .4s;
     overflow-x: hidden;
@@ -97,7 +100,7 @@ img,svg {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
+    background-color: #FFF;
 }
 
 /*box-shadow*/
@@ -575,8 +578,12 @@ img,svg {
 }
   
 .popular__btn{
+    font-weight: 300;
+    font-family: "Inter";
     border: 2px solid #222;
     padding: 1rem 3rem 1rem 3rem;
+    background-color: #222;
+    color: white;
 }
   
 
@@ -674,6 +681,9 @@ img,svg {
 }
   
 .category__btn{
+    background-color: #222;
+    font-weight: 300;
+    color: #FFFFFF;
     border: 2px solid #222;
     padding: 1rem 2rem 1rem 2rem;
 }
