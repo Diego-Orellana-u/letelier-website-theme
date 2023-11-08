@@ -1,50 +1,95 @@
-<div class="footer__logo-container footer__logo">
-  <a href="https://letelier.art" target="_blank">
-    <img src="{{ settings.logo-inverted | img_url: 'master'}}" alt="letelier-logo" class="logo" loading="lazy" decoding=“async”>
-  </a>
-</div>
+<footer class="footer__container">
+    <div class="width">
+        <div class="footer__top">
+            <div class="footer__logo-container">
+                <a href="https://letelier.art" target="_blank" class="footer__logo-link">
+                    <img src="{{ settings.logo-inverted | img_url: 'master'}}" alt="letelier-logo" class="logo footer__logo" loading="lazy" decoding=“async”>
+                </a>
+            </div>
 
-<div class="links__container">
-    <span class="links__title">Nuestra Tienda</span>
-    <ul class="footer__list-container">
-        <li><a class="footer__link" href="https://letelier.art/collections/all" target="_blank">Tienda</a></li>
-        <li><a class="footer__link" href="https://letelier.art/pages/vender" target="_blank">Vender</a></li>
-        <li><a class="footer__link" href="https://letelier.art/pages/contacto" target="_blank">Contacto</a></li>
-        <li><a class="footer__link" href="https://letelier.art/pages/nosotros" target="_blank">Nosotros</a></li>
-    </ul>
-</div>
+            <div class="footer__aboutshop-container footer__column">
+                <div class="footer__column-title-container">
+                    <h3 class="footer__column-title">{{ section.settings.footer-about-title}}</h3>
+                </div>
 
-<div class="links__container">
-    <span class="links__title">Terminos y Condiciones</span>
-    <ul class="footer__list-container">
-        <li><a class="footer__link" href="">Condiciones Legales</a></li>
-        <li><a class="footer__link" href="">Condiciones de Envío</a></li>
-        <li><a class="footer__link" href="">Devoluciones</a></li>
-    </ul>
-</div>
+                <div>
+                    <p class="footer__aboutshop">
+                        {{ section.settings.footer-about }}
+                    </p>
+                </div>
+            </div>
 
-<div class="links__container socials__container">
-    <span class="links__title">Siguenos</span>
-    <div class="social__btns-container">
-        <button class="social__btn wsp__btn">
-            <i class="ri-whatsapp-line social__icon"></i>
-        </button>
-        <button class="social__btn ig__btn">
-            <i class="ri-instagram-line social__icon"></i>
-        </button>
-        <button class="social__btn fb__btn">
-            <i class="ri-facebook-circle-fill social__icon"></i>
-        </button>        
+            <div class="footer__column-container">
+                {% for block in section.blocks %}
+                    {% if block.type == 'navigation' %}
+                        <div class="footer__column">
+                            <div class="footer__column-title-container">
+                                <h3 class="footer__column-title">{{block.settings.linklist.title}}</h3>
+                            </div>
+
+                            <div class="footer__column-links-container">
+                                <ul class="footer__linklist">
+                                    {% for link in block.settings.linklist.links %}
+                                        <li class="footer__link"><a class="footer__column-link" href="{{ link.url }}">{{ link.title }}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="footer__copy">
+                <span>{{ section.settings.copyright }}</span>
+                <span class="madeby">{{ section.settings.madeby }}</span>
+            </div>
+        </div>
     </div>
-</div>
+
+</footer>
+
 
 {% schema %}
 {
     "name": "Footer",
-    "tag": "footer",
-    "class": "footer__container",
     "settings": [
-
+        {
+            "id": "copyright",
+            "label": "Copyright text",
+            "type": "text"
+        },
+        {
+            "id": "madeby",
+            "label": "Hecho por",
+            "type": "text"
+        },
+        {
+            "id": "footer-about",
+            "label": "Sobre la tienda",
+            "type": "textarea"
+        },
+        {
+            "id": "footer-about-title",
+            "label": "Titulo about",
+            "type": "text"
+        }
+    ],
+    "max_blocks": 5,
+    "blocks": [
+        {
+            "name": "Navigation Column",
+            "type": "navigation",
+            "settings": [
+                {
+                    "type": "link_list",
+                    "id": "linklist",
+                    "label": "Navigation Menu"
+                }
+            ]
+        }
     ]
 }
 {% endschema %}

@@ -29,7 +29,21 @@
         </div>
     {% endfor %}
 </div>
+{% comment %} 
+{% if cart.item_count > 0 %}
+    {% assign relatedId = cart.items[0].product_id %}
+{% else %}
+    {% assign relatedId = 6973777051714 %}
+{% endif %}
 
+<script>
+    fetch(window.Shopify.routes.root + "recommendations/products.json?product_id={{ relatedId }}&limit=4")
+        .then(response => response.json())
+        .then(({ products }) => {
+            console.log(products)
+        }
+    );
+</script> {% endcomment %}
 
 
 {% schema %}

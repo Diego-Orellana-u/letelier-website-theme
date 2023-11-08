@@ -768,41 +768,80 @@ img,svg {
   
 
 /*=============== FOOTER ===============*/
-
 .footer__container{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
     background-color: #222;
-    padding: 1rem 0rem 3rem 1rem;
+    color: #FFF;
+    padding: 1.5rem 0 ;
 }
-  
-.footer__logo{
-    margin: 1rem 0rem 0rem .5rem;
-    width: 13rem;
-}
-  
-.links__container{
-    margin: 0rem .8rem 0rem .8rem;
-}
-  
-.links__title{
+
+.footer__column-title{
+    font-weight: 400;
     font-family: "Inter";
-    display: block;
-    color: #b71e07;
-    font-size: var(--h3-font-size);
-    margin-bottom: .3rem;
-}
-  
-.footer__link{
-    color: white;
+    text-transform: uppercase;
     font-size: 1rem;
-    cursor: pointer;
+    margin-bottom: .5rem;
 }
-  
-.social__btns-container{
+
+.footer__column-link{
+    color: #bcbbbb;
+    font-size: .8rem;
+}
+
+.footer__column-link:hover{
+    color: #FFF;
+}
+
+.footer__aboutshop{
+    color: #bcbbbb;
+    font-size: .8rem;
+    padding-right: 1rem;
+    margin-bottom: 2rem;
+}
+
+.footer__linklist{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.footer__logo-link{
+    display: block;
+    width: 11rem;
+    margin: 0 0 2rem .5rem;
+}
+
+.footer__copyright-container{
+    color: #FFF;
+    font-family: "Inter";
+    font-weight: 300;
+}
+
+.footer__column{
+    margin: 0 0 1rem 1.2rem;
+}
+
+.footer__copy{
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.2rem;
+    font-family: "Inter";
     gap: 1rem;
+    color: #bcbbbb;
+    font-size: .8rem;
 }
+
+.footer__bottom::before{
+    content: '';
+    display: block;
+    margin: 1.5rem auto;
+    width: 90%;
+    border: .5px solid #474747;
+}
+
+.madeby:hover{
+    color: #FFF;
+}
+
 
 /*=============== PRODUCT TEMPLATE ===============*/
 
@@ -870,7 +909,6 @@ img,svg {
 
 .product__page-item-year{
     font-size: var(--normal-font-size);
-    /* change font to a formal one */
     margin-bottom: 1.5rem;
     text-align: center;
 }
@@ -1797,6 +1835,10 @@ input[type="range"]::-moz-range-thumb{
     .related__btn{
         padding: 1rem 0;
     }
+
+    .footer__logo-link{
+        width: 13rem;
+    }
 }
 
 /* for large phones */
@@ -1831,17 +1873,6 @@ input[type="range"]::-moz-range-thumb{
 /* for tablets */
 
 @media screen and (min-width: 600px){
-    .footer__container{
-        padding: 0rem 0rem 10rem 1rem;
-    }
-    .footer__logo{
-        margin-right: 5rem;
-        align-self: center;
-    }
-    .links__container{
-        margin-top: 5rem;
-    }
-
     .collection__item{
         width: 45vw;
         height: 550px;
@@ -1853,6 +1884,22 @@ input[type="range"]::-moz-range-thumb{
 
     .related__item-img{
         height: 400px;
+    }
+
+    .footer__column-container{
+        display: flex;
+        justify-content: space-between;
+        padding-right: 2rem;
+    }
+
+    .footer__copy{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer__aboutshop{
+        padding-right: 2rem;
+        width: 40%;
     }
     
 }
@@ -1967,7 +2014,7 @@ input[type="range"]::-moz-range-thumb{
     }
 
     .related__item-img{
-        height: 300px;
+        height: 30vw;
     }
 
     .related__item-container{
@@ -2113,6 +2160,27 @@ input[type="range"]::-moz-range-thumb{
         font-size: 1.1rem;
     }
     
+    .footer__column{
+        margin: 0 6rem 2rem 6rem;
+    }
+    
+    .footer__copy{
+        padding: 0;
+    }
+
+    .footer__bottom{
+        padding: 0 6rem;
+    }
+
+    .footer__bottom:before{
+        width: 100%;
+    }
+
+    .footer__logo-link{
+        width: 15rem;
+        margin: 1rem 0 2rem 5.5rem;
+    }
+
 }
 
 /* for desktop */
@@ -2328,6 +2396,7 @@ input[type="range"]::-moz-range-thumb{
 
     .product__page-info-container{
         width: 50%;
+        height: 540px;
     }
 
     .product__page-top-container{
@@ -2356,8 +2425,6 @@ input[type="range"]::-moz-range-thumb{
     .related__items-container{
         gap: 1.5rem;
     }
-
-    
 
 }
 
