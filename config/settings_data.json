@@ -21,6 +21,17 @@
       },
       "footer": {
         "type": "footer",
+        "blocks": {
+          "a46ebb40-40fa-4a1e-bcff-75b0fa07c090": {
+            "type": "navigation",
+            "settings": {
+              "linklist": "footer"
+            }
+          }
+        },
+        "block_order": [
+          "a46ebb40-40fa-4a1e-bcff-75b0fa07c090"
+        ],
         "settings": {
           "copyright": "&copy; Letelier, todos los derechos reservados 2023.",
           "madeby": "Sitio web creado por Diego Orellana.",
