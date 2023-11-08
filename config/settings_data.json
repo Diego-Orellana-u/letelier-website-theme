@@ -27,10 +27,17 @@
             "settings": {
               "linklist": "footer"
             }
+          },
+          "c15fe079-6cb6-493f-a78d-097d02337d69": {
+            "type": "navigation",
+            "settings": {
+              "linklist": "soporte"
+            }
           }
         },
         "block_order": [
-          "a46ebb40-40fa-4a1e-bcff-75b0fa07c090"
+          "a46ebb40-40fa-4a1e-bcff-75b0fa07c090",
+          "c15fe079-6cb6-493f-a78d-097d02337d69"
         ],
         "settings": {
           "copyright": "&copy; Letelier, todos los derechos reservados 2023.",
