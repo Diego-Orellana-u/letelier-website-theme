@@ -4,9 +4,16 @@
       "type": "product-page",
       "settings": {
       }
+    },
+    "related": {
+      "type": "related_products",
+      "settings":{
+
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "related"
   ]
 }

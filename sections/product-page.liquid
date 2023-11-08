@@ -2,11 +2,11 @@
     <div class="product__page-top-container">
         <div class="product__page-imgs-container">
             <div class="product__page-main-img-container">
-                <button class="previous-img-btn icon"> <i class="ri-arrow-left-s-line"></i> </button>
+                <button class="previous-img-btn img-icon icon"> <i class="ri-arrow-left-s-line"></i> </button>
                 <div class="main-img-container">
                     <img src="{{ product.featured_image | image_url: width: 1024, height: 1024}}" alt="{{ product.title }}" class="main-img">
                 </div>
-                <button class="next-img-btn icon"> <i class="ri-arrow-right-s-line"></i> </button>
+                <button class="next-img-btn img-icon icon"> <i class="ri-arrow-right-s-line"></i> </button>
             </div>
             
             <div class="product__page-small-imgs-container">
@@ -26,7 +26,7 @@
                 <form action="/cart/add" method="post" enctype="multipart/form-data">
                     <input type="hidden" name="id" value="{{ product.variants.first.id }}">
                     <input type="hidden" name="quantity" value="1">
-                    <button class="product__page-add-cart product_btn button">Agregar al garrito</button>
+                    <button class="product__page-add-cart product_btn button">Añadir al carrito</button>
                 </form>
                 <button class="product__page-request-info product_btn button">Pedir informacion</button>
             </div>
@@ -47,16 +47,24 @@
 
     <div class="product__page-desc-container">
         <h2 class="product__page-desc-title">DESCRIPCION DE LA ANTIGÜEDAD</h2>
-        <h2 class="product__page-desc-details-title">Información de la Antigüedad</h2>
-        <ul class="product__page-details-list-container">
-            {% for detail in product %}
-                <li></li>
-            {% endfor %}
-        </ul>
-        <p class="product__page-item-desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        </p>
+        <div class="product__page-desc-details-container">
+            <h3 class="product__page-desc-details-title">Detalles y especificaciones</h3>
+        </div>
+        <div class="product__page-details-list-container">
+            <ul class="product__page-details-ul">
+                <li>Alto: {{ product.metafields.producto.alto.value }}</li>
+                <li>Ancho: {{ product.metafields.producto.ancho.value }}</li>
+                <li>Peso: {{ product.metafields.producto.peso.value }}</li>
+                <li>Material: {{ product.metafields.producto.material.value }}</li>
+                <li>Origen: {{ product.metafields.producto.origen.value }}</li>
+                <li>Condicion: {{ product.metafields.producto.condicion.value }}</li>
+            </ul>
+        </div>
+        <div class="product__page-item-p-container">
+            <h3 class="product__page-desc-details-title">Información de la antigüedad</h3>
+            <p class="product__page-item-desc">
+                {{ product.description }}
+            </p>
+        </div>
     </div>
 </article>

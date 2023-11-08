@@ -2,7 +2,7 @@
 <div class="popular__items-container">
     {% for product in collections['all'].products limit: 4 %}
         <div class="popular__item">
-            <a href="{{ product.url }}">
+            <a href="{{ product.url }}" class="popular__item-a">
                 <img src="{{ product.featured_image | product_img_url: 'grande' }}" alt="{{ product.title }}"  loading="lazy" class="popular__img" decoding=“async”>
                 <h3 class="popular__item-title">{{ product.title }}</h3>
             </a>
