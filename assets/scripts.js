@@ -107,6 +107,10 @@ productForms.forEach(form => {
     })
 })
 
+// SEARCH
+
+
+
 // FAQ
 
 const faqBody = document.querySelectorAll(".faq__question-body");

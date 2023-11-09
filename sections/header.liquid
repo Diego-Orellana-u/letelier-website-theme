@@ -6,19 +6,19 @@
 
         
         <button aria-expanded="false" class="mobile__cart__toggle icon" id="cart-toggle">
-                <i class="ri-shopping-bag-2-line">
+                <svg width="25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.005 22h-16a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1Zm-1-2V4h-14v16h14Zm-10-14v2a3 3 0 1 0 6 0V6h2v2a5 5 0 0 1-10 0V6h2Z"/>
                     <span class="sr-only">Cart</span>
-                </i>
+                </svg>
                 <span class="header__cart-count"> {{ cart.item_count }} </span>
         </button>
 
-        <button aria-expanded="false" class="mobile__account__toggle icon" id="account-toggle">
+        {% comment %} <button aria-expanded="false" class="mobile__account__toggle icon" id="account-toggle">
                 <i class="ri-account-circle-line">
                     <span class="sr-only">Account</span>
                 </i>
-        </button>
+        </button> {% endcomment %}
 
-        <button aria-expanded="false" class="mobile__search__toggle icon" id="search-toggle">
+        <button aria-controls="nav-search" aria-expanded="false" class="mobile__search__toggle icon" id="search-toggle">
                 <i class="ri-search-line">
                     <span class="sr-only">Search</span>
                 </i>
@@ -41,6 +41,20 @@
             </li>
         {% endfor %}
     </ul>
+
+    <div data-visible="false" class="navmenu__search-container" id="nav-search">
+        <form action="{{ routes.search_url }}" class="search__form" autocomplete="off">
+            <input type="text"
+                placeholder="Buscar"
+                name="q"
+                value="{{ search.terms | escape }}"
+                class="search__input"
+            >
+            <button type="submit" class="mobile__search__toggle icon">
+                <i class="ri-search-line"><span class="sr-only">Search</span></i>    
+            </button>
+        </form>
+    </div>
 </nav>
 
 
@@ -60,6 +74,23 @@ toggleButton.addEventListener('click', () => {
         navMenu.setAttribute('data-visible', false)
         toggleButton.setAttribute('aria-expanded',false)
         toggleButton.firstElementChild.classList.replace('ri-close-line','ri-menu-line')
+    }
+})
+
+const navSearchBtn = document.getElementById('search-toggle');
+const navSearchContainer = document.querySelector('.navmenu__search-container');
+
+navSearchBtn.addEventListener('click', () => {
+    const visibility = navSearchContainer.getAttribute('data-visible');
+
+    if(visibility === "false"){
+        navSearchContainer.setAttribute('data-visible', true); //show menu on mobile
+        navSearchBtn.setAttribute('aria-expanded',true) //search purpose
+        navSearchBtn.firstElementChild.classList.replace('ri-search-line','ri-close-line') //change icon
+    }else{
+        navSearchContainer.setAttribute('data-visible', false)
+        navSearchBtn.setAttribute('aria-expanded',false)
+        navSearchBtn.firstElementChild.classList.replace('ri-close-line','ri-search-line')
     }
 })
 </script>

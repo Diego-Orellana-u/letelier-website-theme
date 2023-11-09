@@ -4,8 +4,8 @@
 
 <div class="contact__form-info-container">
     <div class="contact_title-explanation-container">
-        <h3 class="contact__title">Contacta a Letelier Antigüedades</h3>
-        <p class="contact__form-explanation">Contactanos rellenando el siguiente formulario:</p>
+        <h3 class="contact__title">{{ section.settings.contact-main-title }}</h3>
+        <p class="contact__form-explanation">{{ section.settings.contact-main-subtitle }}</p>
     </div>
 
     <div class="contact__box">
@@ -46,11 +46,11 @@
 
         <div class="contact__info-container">
             <div class="contact__contact-container">
-                <span class="contact__contact-title span">Escribenos directo</span>
-                <p class="contact__contact-p">No dudes en contactarnos a nuestro WhatsApp o correo con cualquier duda que tengas sobre la compra o venta de antigüedades</p>
+                <span class="contact__contact-title span">{{ section.settings.contact-sec-title }}</span>
+                <p class="contact__contact-p">{{ section.settings.contact-cta }}</p>
                 <span class="contact__contact-subtitle span">Contacto</span>
-                <span class="contact__contact span">chumingus@letelier.art</span>
-                <span class="contact__contact span">+569 84192433</span>
+                <span class="contact__contact span">{{ section.settings.contact-mail }}</span>
+                <span class="contact__contact span">{{ section.settings.contact-phone }}</span>
             </div>
 
             <div class="contact__ubication-container">
@@ -94,6 +94,36 @@
             "type": "image_picker",
             "id": "contact",
             "label": "Contact"
+        },
+        {
+            "type": "text",
+            "id": "contact-main-title",
+            "label": "Titulo Principal"
+        },
+        {
+            "type": "textarea",
+            "id": "contact-main-subtitle",
+            "label": "Subtitulo Principal"
+        },
+        {
+            "type": "text",
+            "id": "contact-sec-title",
+            "label": "Titulo Secundario"
+        },
+        {
+            "type": "textarea",
+            "id": "contact-cta",
+            "label": "Texto cta"
+        },
+        {
+            "type": "text",
+            "id": "contact-mail",
+            "label": "Correo"
+        },
+        {
+            "type": "text",
+            "id": "contact-phone",
+            "label": "telefono"
         }
     ]
 }
