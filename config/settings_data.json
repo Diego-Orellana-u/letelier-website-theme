@@ -21,7 +21,36 @@
       },
       "footer": {
         "type": "footer",
+        "blocks": {
+          "a46ebb40-40fa-4a1e-bcff-75b0fa07c090": {
+            "type": "navigation",
+            "settings": {
+              "linklist": "footer"
+            }
+          },
+          "c15fe079-6cb6-493f-a78d-097d02337d69": {
+            "type": "navigation",
+            "settings": {
+              "linklist": "soporte"
+            }
+          },
+          "6663091f-5713-4de2-ab7c-b1349b9fa544": {
+            "type": "navigation",
+            "settings": {
+              "linklist": "informacion"
+            }
+          }
+        },
+        "block_order": [
+          "a46ebb40-40fa-4a1e-bcff-75b0fa07c090",
+          "c15fe079-6cb6-493f-a78d-097d02337d69",
+          "6663091f-5713-4de2-ab7c-b1349b9fa544"
+        ],
         "settings": {
+          "copyright": "&copy; Letelier, todos los derechos reservados 2023.",
+          "madeby": "Sitio web creado por Diego Orellana.",
+          "footer-about": "Letelier es la tienda líder en venta de antigüedades y coleccionismo en Chile con más de 30 años de experiencia.",
+          "footer-about-title": "Sobre Letelier"
         }
       }
     },
