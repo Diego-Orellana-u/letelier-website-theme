@@ -64,8 +64,8 @@
       "settings": {
         "first-background": "shopify:\/\/shop_images\/roberto_matta_pintura.webp",
         "second-background": "shopify:\/\/shop_images\/Johannes_Vermeer_The_Girl_With_The_Pearl_Earring_1.webp",
-        "howto__link-1": "",
-        "howto__link-2": ""
+        "howto__link-1": "https:\/\/letelier.art\/collections\/all",
+        "howto__link-2": "https:\/\/letelier.art\/pages\/vender"
       }
     }
   },
