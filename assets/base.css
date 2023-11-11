@@ -1075,6 +1075,10 @@ img,svg {
     margin: .5rem 0 .5rem 0;
 }
 
+.collection__section-container{
+    padding-right: 2rem;
+}
+
 
 .collection_a-img{
     display: flex;
@@ -1108,6 +1112,12 @@ img,svg {
     background-color: #222;
     color: white;
     cursor: pointer;
+}
+
+.filter-close-icon{
+    position: absolute;
+    top: 20px;
+    right: 15px;
 }
 
 .filter__container{
