@@ -2092,8 +2092,8 @@ input[type="range"]::-moz-range-thumb{
     }
 
     .contact__img-container{
-        width: 60vw;
-        margin-right: 4rem;
+        width: 100vw;
+        margin-right: 1rem;
     }
     
     .contact__box{
@@ -2460,6 +2460,11 @@ input[type="range"]::-moz-range-thumb{
 
     .product__page-desc-container{
         padding: 4.5rem 7rem;
+    }
+
+    .contact__img-container{
+        width: 60vw;
+        margin-right: 4rem;
     }
 
 }
