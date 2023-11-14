@@ -3,7 +3,13 @@
     "main": {
       "type": "contact-main",
       "settings": {
-        "contact": "shopify:\/\/shop_images\/Foto_duena_de_letelier.webp"
+        "contact": "shopify:\/\/shop_images\/Busto_de_marmol_hero.webp",
+        "contact-main-title": "CONTACTA A LETELIER ANTIGÜEDADES",
+        "contact-main-subtitle": "Contáctanos rellenando el siguiente formulario:",
+        "contact-sec-title": "ESCRIBENOS DIRECTO",
+        "contact-cta": "No dudes en contactarnos a nuestro WhatsApp o correo con cualquier duda que tengas sobre la compra o venta de antigüedades.",
+        "contact-mail": "chumingus@letelier.art",
+        "contact-phone": "+569 84192433"
       }
     }
   },
