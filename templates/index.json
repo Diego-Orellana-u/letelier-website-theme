@@ -4,6 +4,7 @@
       "type": "hero",
       "settings": {
         "hero__desktop-img": "shopify:\/\/shop_images\/Hero_Yadro_porcelana.webp",
+        "hero__mobile-img": "shopify:\/\/shop_images\/yadro_nina_vestido_mobile_1.webp",
         "hero__title": "ESCULTURAS",
         "hero__desc": "Descubre nuestras esculturas exclusivamente seleccionadas",
         "hero__button-title": "Ir a esculturas",
