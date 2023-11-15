@@ -1,14 +1,14 @@
 <div class="faq__width">
     <div class="faq__header">
-        <span> Preguntas Frecuentes </span>
+        <h2 class="faq_title">Preguntas Frecuentes </h2>
     </div>
 
     <div class="faq__body">
         {% for block in section.blocks %}
             <div class="faq__question">
                 <header class="faq__question-header">
-                    <h3>{{ block.settings.title }}</h3>
-                    <i class="ri-arrow-down-s-line faq-icon"></i>
+                    <span>{{ block.settings.title }}</span>
+                    <svg class="ri-arrow-down-s-line faq-icon" width="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 13.171 4.95-4.95 1.414 1.415L12 16 5.636 9.636 7.05 8.222l4.95 4.95Z"/></svg>
                 </header>
 
                 <div class="faq__question-body">

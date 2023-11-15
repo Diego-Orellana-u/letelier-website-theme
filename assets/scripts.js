@@ -1,3 +1,41 @@
+// HEADER
+const navMenu = document.querySelector('.nav__list');
+const toggleButton = document.getElementById('nav-toggle');
+
+
+toggleButton.addEventListener('click', () => {
+    const visibility = navMenu.getAttribute('data-visible');
+    const menuIcon = document.getElementById('menu-icon-path')
+
+    if(visibility === "false"){
+        navMenu.setAttribute('data-visible', true); //show menu on mobile
+        toggleButton.setAttribute('aria-expanded',true) //search purpose
+        menuIcon.setAttribute("d", "m12 10.586 4.95-4.95 1.415 1.415-4.95 4.95 4.95 4.95-1.415 1.414-4.95-4.95-4.95 4.95-1.413-1.415 4.95-4.95-4.95-4.95L7.05 5.638l4.95 4.95Z")
+    }else{
+        navMenu.setAttribute('data-visible', false)
+        toggleButton.setAttribute('aria-expanded',false)
+        menuIcon.setAttribute("d", "M3 4h18v2H3V4Zm0 7h18v2H3v-2Zm0 7h18v2H3v-2Z")
+    }
+})
+
+const navSearchBtn = document.getElementById('search-toggle');
+const navSearchContainer = document.querySelector('.navmenu__search-container');
+
+navSearchBtn.addEventListener('click', () => {
+    const visibility = navSearchContainer.getAttribute('data-visible');
+    const navSearchIcon = document.getElementById('search-icon-path');
+
+    if(visibility === "false"){
+        navSearchContainer.setAttribute('data-visible', true); //show menu on mobile
+        navSearchBtn.setAttribute('aria-expanded',true); //search purpose
+        navSearchIcon.setAttribute('d', 'm12 10.586 4.95-4.95 1.415 1.415-4.95 4.95 4.95 4.95-1.415 1.414-4.95-4.95-4.95 4.95-1.413-1.415 4.95-4.95-4.95-4.95L7.05 5.638l4.95 4.95Z') //change icon
+    }else{
+        navSearchContainer.setAttribute('data-visible', false);
+        navSearchBtn.setAttribute('aria-expanded',false);
+        navSearchIcon.setAttribute('d', 'm18.031 16.617 4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617Zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.867-3.133-7-7-7s-7 3.133-7 7 3.133 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15Z')
+    }
+})
+
 // CART DRAWER
 
 //cart variables

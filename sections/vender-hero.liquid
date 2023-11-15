@@ -1,11 +1,18 @@
 <section class="home__container">
-        <img src="{{section.settings.vender-hero | img_url: 'master'}}" alt="home-image" class="home__img" decoding=“async”>
-        <section class="home__info">
-            <h2 class="home__title">{{ section.settings.vender__hero-title }}</h2>
-            <p class="home__p">{{ section.settings.vender__hero-desc }}</p>
-            <a href="https://letelier.art/pages/contacto" target="_blank">
-                <button class="home__btn button" id="home-btn">{{ section.settings.vender__hero-btn }}</button>
-            </a>
+        <section class="home__container">
+            <div class="home__img-container">
+                <picture>
+                    <source srcset="{{ section.settings.vender-hero | img_url: 'master'}}" media="(min-width: 600px)" alt="home-image"> 
+                    <img src="{{ section.settings.vender-hero-m | img_url: 'master'}}" alt="Imagen de un busto del hero" height=“600” width=“600” loading=“lazy” decoding=“async” class="hero__img-tag"> 
+                </picture>
+            </div>
+            <section class="home__info">
+                <span class="home__title">{{ section.settings.vender__hero-title }}</span>
+                <p class="home__p">{{ section.settings.vender__hero-desc }}</p>
+                <a href="https://letelier.art/pages/contacto" target="_blank">
+                    <button class="home__btn button" id="home-btn">{{ section.settings.vender__hero-btn }}</button>
+                </a>
+            </section>
         </section>
 </section>
 
@@ -19,7 +26,12 @@
         {
             "type": "image_picker",
             "id": "vender-hero",
-            "label": "Vender Hero"
+            "label": "Vender Hero desktop"
+        },
+        {
+            "type": "image_picker",
+            "id": "vender-hero-m",
+            "label": "Vender Hero mobile"
         },
         {
             "type": "text",

@@ -166,7 +166,7 @@ img,svg {
     .nav__list{
       position: fixed;
       background-color: #F1F1F1;
-      top: -215px;
+      top: -220px;
       width: 100%;
       padding: 2rem 0rem 2rem 1rem;
       display: flex;
@@ -1103,11 +1103,6 @@ img,svg {
     margin: .5rem 0 .5rem 0;
 }
 
-.collection__section-container{
-    padding-right: 2rem;
-}
-
-
 .collection_a-img{
     display: flex;
     flex-direction: column;
@@ -1144,8 +1139,8 @@ img,svg {
 
 .filter-close-icon{
     position: absolute;
-    top: 20px;
-    right: 15px;
+    top: 18px;
+    right: 8px;
 }
 
 .filter__container{
@@ -1350,7 +1345,6 @@ img,svg {
 
 .search__section-container{
     width: 100%;
-    padding-right: 30px;
 }
 /*=============== DESKTOP FILTER ===============*/
 
@@ -1464,7 +1458,6 @@ input[type="range"]::-moz-range-thumb{
 }
 
 .faq__header{
-    font-size: 2.5rem;
     padding-bottom: 30px;
 }
 
@@ -1472,7 +1465,12 @@ input[type="range"]::-moz-range-thumb{
     border-bottom: 1px solid #ddd;
 }
 
+.faq_title{
+    font-size: 3.5rem;
+}
+
 .faq__question-header{
+    font-size: 1.3rem;
     font-family: "Inter";
     padding: 20px 0;
     display: flex;
@@ -1498,7 +1496,7 @@ input[type="range"]::-moz-range-thumb{
 .faq__question-body{
     max-height: 0;
     overflow: hidden;
-    transition: 1s max-height;
+    transition: .4s max-height;
 }
 
 .faq__question.faq-visible .faq__question-body{
@@ -1511,6 +1509,7 @@ input[type="range"]::-moz-range-thumb{
 
 .faq__question-body-inner{
     margin-bottom: 1rem;
+    font-size: 1.1rem;
 }
 
 /*=============== SELL CONTACT ===============*/
@@ -2132,7 +2131,7 @@ input[type="range"]::-moz-range-thumb{
     .contact__img{
         max-height: 700px;
         height: auto;
-        padding-top: .8rem;
+        padding-top: 1rem;
     }
 
     .contact__container{
@@ -2444,6 +2443,14 @@ input[type="range"]::-moz-range-thumb{
     .navmenu__search-container{
         top: -17px;
     }
+
+    .search__section-container{
+        padding-right: 30px;
+    }
+
+    .collection__section-container{
+        padding-right: 30px;
+    } 
 
 }
 

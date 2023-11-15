@@ -6,28 +6,30 @@
 
         
         <button aria-expanded="false" class="mobile__cart__toggle icon" id="cart-toggle">
-                <svg width="25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.005 22h-16a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1Zm-1-2V4h-14v16h14Zm-10-14v2a3 3 0 1 0 6 0V6h2v2a5 5 0 0 1-10 0V6h2Z"/>
-                    <span class="sr-only">Cart</span>
-                </svg>
-                <span class="header__cart-count"> {{ cart.item_count }} </span>
+            <svg width="25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.005 22h-16a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1Zm-1-2V4h-14v16h14Zm-10-14v2a3 3 0 1 0 6 0V6h2v2a5 5 0 0 1-10 0V6h2Z"/>
+                <span class="sr-only">Cart</span>
+            </svg>
+            <span class="header__cart-count"> {{ cart.item_count }} </span>
         </button>
 
         {% comment %} <button aria-expanded="false" class="mobile__account__toggle icon" id="account-toggle">
-                <i class="ri-account-circle-line">
-                    <span class="sr-only">Account</span>
-                </i>
+            <i class="ri-account-circle-line">
+                <span class="sr-only">Account</span>
+            </i>
         </button> {% endcomment %}
 
         <button aria-controls="nav-search" aria-expanded="false" class="mobile__search__toggle icon" id="search-toggle">
-                <i class="ri-search-line">
-                    <span class="sr-only">Search</span>
-                </i>
+            <svg width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path id="search-icon-path" d="m18.031 16.617 4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617Zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.867-3.133-7-7-7s-7 3.133-7 7 3.133 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15Z"/>
+                <span class="sr-only">Search</span>
+            </svg>
         </button>
 
         <button aria-controls="nav-list" aria-expanded="false" class="mobile__nav__toggle icon" id="nav-toggle">
-                <i class="ri-menu-line">
-                    <span class="sr-only">Menu</span>
-                </i>
+            <svg width="31" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path id="menu-icon-path" d="M3 4h18v2H3V4Zm0 7h18v2H3v-2Zm0 7h18v2H3v-2Z"/>
+                <span class="sr-only">Menu</span>
+            </svg>
         </button>
     </div>
 
@@ -51,51 +53,14 @@
                 class="search__input"
             >
             <button type="submit" class="mobile__search__toggle icon">
-                <i class="ri-search-line"><span class="sr-only">Search</span></i>    
+                <svg width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="m18.031 16.617 4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617Zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.867-3.133-7-7-7s-7 3.133-7 7 3.133 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15Z"/>
+                    <span class="sr-only">Search</span>
+                </svg>  
             </button>
         </form>
     </div>
 </nav>
-
-
-<script>
-const navMenu = document.querySelector('.nav__list');
-const toggleButton = document.getElementById('nav-toggle');
-
-
-toggleButton.addEventListener('click', () => {
-    const visibility = navMenu.getAttribute('data-visible');
-
-    if(visibility === "false"){
-        navMenu.setAttribute('data-visible', true); //show menu on mobile
-        toggleButton.setAttribute('aria-expanded',true) //search purpose
-        toggleButton.firstElementChild.classList.replace('ri-menu-line','ri-close-line') //change icon
-    }else{
-        navMenu.setAttribute('data-visible', false)
-        toggleButton.setAttribute('aria-expanded',false)
-        toggleButton.firstElementChild.classList.replace('ri-close-line','ri-menu-line')
-    }
-})
-
-const navSearchBtn = document.getElementById('search-toggle');
-const navSearchContainer = document.querySelector('.navmenu__search-container');
-
-navSearchBtn.addEventListener('click', () => {
-    const visibility = navSearchContainer.getAttribute('data-visible');
-
-    if(visibility === "false"){
-        navSearchContainer.setAttribute('data-visible', true); //show menu on mobile
-        navSearchBtn.setAttribute('aria-expanded',true) //search purpose
-        navSearchBtn.firstElementChild.classList.replace('ri-search-line','ri-close-line') //change icon
-    }else{
-        navSearchContainer.setAttribute('data-visible', false)
-        navSearchBtn.setAttribute('aria-expanded',false)
-        navSearchBtn.firstElementChild.classList.replace('ri-close-line','ri-search-line')
-    }
-})
-</script>
-
-
 
 {% schema %}
 {

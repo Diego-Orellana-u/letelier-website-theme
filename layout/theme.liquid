@@ -6,9 +6,8 @@
         <meta name="description" content="Tienda lider en compra y venta de antigüedades, arte y coleccionismo. Entra y añade un toque distintivo a tu hogar">
         <title>Letelier - Compra y Venta de Antigüedades</title>
         <script src="{{ 'scripts.js' | asset_url }}" defer></script>
-        {{ 'base.css' | asset_url | stylesheet_tag }}
+        <link rel="stylesheet" href="{{ 'base.css' | asset_url}}"
         <link rel="stylesheet" href="{{ 'normalize.css' | asset_url }}">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
         <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
 
         {{ content_for_header }}
