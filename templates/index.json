@@ -3,7 +3,7 @@
     "hero": {
       "type": "hero",
       "settings": {
-        "hero": "shopify:\/\/shop_images\/Hero_Yadro_porcelana.webp",
+        "hero__desktop-img": "shopify:\/\/shop_images\/Hero_Yadro_porcelana.webp",
         "hero__title": "ESCULTURAS",
         "hero__desc": "Descubre nuestras esculturas exclusivamente seleccionadas",
         "hero__button-title": "Ir a esculturas",
