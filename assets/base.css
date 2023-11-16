@@ -321,7 +321,7 @@ img,svg {
   
 .mini__cart-item-main{
     flex: 1;
-    padding: 0 24px;
+    padding: 0 5px;
 }
   
 .mini__cart-item-main-flex{
@@ -441,9 +441,10 @@ img,svg {
     padding-top: 3rem;
 }
   
-.hero__img-tag{
+.home__img-container .hero__img-tag{
     width: 100vw;
     object-fit: cover;
+    aspect-ratio: 2/3;
 }
 
 .home__title{
@@ -1883,6 +1884,10 @@ input[type="range"]::-moz-range-thumb{
     .related__item-title-container{
         height: 52px;
     }
+
+    .mini__cart-item-main{
+        padding: 0 16px;
+    }
     
 }
 
@@ -2037,7 +2042,9 @@ input[type="range"]::-moz-range-thumb{
         padding: 0;
     }
 
-
+    .mini__cart-item-main{
+        padding: 0 24px;
+    }
 }
 
 @media screen and (min-width: 950px){
@@ -2131,7 +2138,7 @@ input[type="range"]::-moz-range-thumb{
     .contact__img{
         max-height: 700px;
         height: auto;
-        padding-top: 1rem;
+        padding-top: 1.4rem;
     }
 
     .contact__container{

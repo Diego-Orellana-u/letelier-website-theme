@@ -226,7 +226,7 @@
                     {% for product in collection.products limit: 8 %}
                         <div class="collection__item">
                             <a href="{{ product.url }}" class="collection_a-img">
-                                <img src="{{ product.featured_image | product_img_url: 'grande' }}" alt="{{ product.title }}" class="collection__img">
+                                <img src="{{ product.featured_image | product_img_url: 'grande' }}" width="302" height="417" alt="{{ product.title }}" class="collection__img" decoding=“async”>
                                 <h3 class="collection__item-title">{{ product.title }}</h3>
                                 <span class="collection__price">{{ product.price | money }}</span>
                             </a>

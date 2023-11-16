@@ -1,22 +1,14 @@
 <nav class="nav">
     <a href="https://letelier.art" class="header-logo" aria-label="To go to home page of letelier.art">
-    <img src="{{ settings.logo | img_url: 'master' }}" alt="{{ site.name }}" class="logo">
+        <img src="{{ settings.logo | img_url: 'master' }}" width="240" height="58" alt="Letelier logo" class="logo" decoding=“async”>
     </a>
     <div class="buttons__container">
-
-        
         <button aria-expanded="false" class="mobile__cart__toggle icon" id="cart-toggle">
             <svg width="25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.005 22h-16a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1Zm-1-2V4h-14v16h14Zm-10-14v2a3 3 0 1 0 6 0V6h2v2a5 5 0 0 1-10 0V6h2Z"/>
                 <span class="sr-only">Cart</span>
             </svg>
             <span class="header__cart-count"> {{ cart.item_count }} </span>
         </button>
-
-        {% comment %} <button aria-expanded="false" class="mobile__account__toggle icon" id="account-toggle">
-            <i class="ri-account-circle-line">
-                <span class="sr-only">Account</span>
-            </i>
-        </button> {% endcomment %}
 
         <button aria-controls="nav-search" aria-expanded="false" class="mobile__search__toggle icon" id="search-toggle">
             <svg width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
