@@ -8,7 +8,7 @@
         <svg class="icon mini__cart-close" width="30"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 10.586 4.95-4.95 1.415 1.415-4.95 4.95 4.95 4.95-1.415 1.414-4.95-4.95-4.95 4.95-1.413-1.415 4.95-4.95-4.95-4.95L7.05 5.638l4.95 4.95Z"/></svg>
     </div>
 
-    {% form 'cart', cart, class: 'cart-drawer-form' %}
+    {% form 'cart', cart %}
         {% if cart.empty? %}
             <span class="mini__cart-empty">Tu carro está vacío</span>
             <a href="https://letelier.art/collections/all" class="cart__to-store">
@@ -19,14 +19,14 @@
                 {% for item in cart.items %}
                     <div class="mini__cart-item" data-line-item-key="{{ item.key }}">
                         <div class="mini__cart-item-img">
-                            <img src="{{ item.image | img_url: '200x' }}" alt="{{ item.title }}" width="120" height="120" loading="lazy" decoding=“async”>
+                            <img src="{{ item.image | image_url: width: 150 }}" alt="{{ item.title }}" width="120" height="120" loading="lazy" decoding=“async”>
                         </div>
                         <div class="mini__cart-item-main">
                             <div class="mini__cart-item-main-flex">
                                 <div class="mini__cart-item-main-flex-left">
-                                    <h3>
+                                    <span>
                                         <a href="{{ item.url }}"> {{ item.product.title}}</a>
-                                    </h3>
+                                    </span>
                                     <div class="mini__cart-quantity-selector">
                                         <button class="mini__cart-quantity-minus" type="button">
                                             <svg width="25" fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 11v2h14v-2H5Z"/></svg>
@@ -57,7 +57,7 @@
                     <span>Subtotal:</span>
                     <span> {{cart.total_price | money }} </span>
                 </div>
-                <button type="submit" name="checkout" class="mini__cart-btn button">Finalizar Compra</button>
+                <button type="submit" name="checkout" class="black__btn">Finalizar Compra</button>
             </div>
         {% endif %}
     {% endform %}
