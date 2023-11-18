@@ -1,11 +1,11 @@
 
-<h2 class="categories__title">
+<h2 class="serif__title">
     Categorías de antigüedades populares
 </h2>
 <div class="popular__categories-container">
 {% for collection in collections limit: 4 %}
         <div class="category__individual">  
-            <div class="category__img-container">
+            <div>
                 <a href="{{ collection.url }}" target="_blank">
                   <img src="{{ collection.image | img_url: 'master' }}" alt="{{ collection.title }}" class="category__img" width="320" height="432" loading="lazy" decoding=“async”>
                 </a>
@@ -17,7 +17,7 @@
                   </h3>
                 </a>
             </div>
-            <div class="category__btn-container">
+            <div>
                 <a href="{{ collection.url }}" target="_blank" class="category__link">
                   <button class="black__btn extended__btn">Ir a la categoría</button>
                 </a>

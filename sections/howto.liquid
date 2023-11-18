@@ -1,4 +1,4 @@
-<div class="howto__flex">
+<div>
     <a href="{{ section.settings.howto__link-1}}" target="_blank">
         <div class="howto__individual first__howto">
             <span class="howto__upper-title">MAS INFORMACION</span>
@@ -6,9 +6,9 @@
         </div>
     </a> 
 </div>
-<div class="howto__flex">
+<div>
     <a href="{{ section.settings.howto__link-1}}" target="_blank">
-        <div class="howto__individual second__howto">
+        <div class="howto__individual">
             <span class="howto__upper-title">MAS INFORMACION</span>
             <span class="howto__title">Vender una antigüedad</span>
         </div>
@@ -20,7 +20,6 @@
         background-image: url('{{ section.settings.first-background | img_url: 'master' }}');
         background-size: cover;
     }
-
     .second__howto{
         background-image: url('{{ section.settings.second-background | img_url: 'master' }}');
         background-position: 50% 38%;
