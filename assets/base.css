@@ -82,6 +82,8 @@ img,svg {
 .header{
     position: fixed;
     z-index: 100;
+    top: 0;
+    left: 0;
 }
 .nav{
     position: relative;
@@ -474,6 +476,9 @@ img,svg {
 .howto__container{
     padding: 2rem .8rem;
 }
+.howto__individual-container{
+    width: 100%;
+}
 .howto__individual{
     display: flex;
     flex-direction: column;
@@ -493,6 +498,7 @@ img,svg {
 .howto__title{
     font-size: 1.45rem;
 }
+
 /*=============== FOOTER ===============*/
 .footer__container{
     background-color: #222;
@@ -611,19 +617,13 @@ img,svg {
 
 .product__page-container{
     margin-top: 4rem;
-    height: fit-content;
-    background-color: white;
 }
-
-
 .product__page-top-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: #f1f1f1;   
-    height: fit-content;
 }
-
 .product__page-imgs-container{
     margin-top: 4rem;
     flex: 1;
@@ -631,8 +631,6 @@ img,svg {
 
 .product__page-main-img-container{
     display: flex;
-    align-items: center;
-    height: fit-content;
 }
 
 .product__page-info-container{
@@ -643,7 +641,6 @@ img,svg {
     align-items: center;
     border: 1px solid #222;
     border-radius: 2px;
-    height: fit-content;
     margin: 3rem 1rem 1rem 1rem;
 }
 
@@ -1712,7 +1709,6 @@ input[type="range"]::-moz-range-thumb{
         display: flex;
         justify-content: center;
         gap: 2rem;
-        margin-top: 3rem;
     }
 
     .howto__flex{
