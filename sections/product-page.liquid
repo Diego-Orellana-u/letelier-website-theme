@@ -32,7 +32,7 @@
                     <input type="hidden" name="quantity" value="1">
                     <button class="product__page-add-cart product_btn black__btn">Añadir al carrito</button>
                 </form>
-                <button class="product__page-request-info product_btn black__btn">Pedir informacion</button>
+                {% comment %} <button class="product__page-request-info product_btn black__btn">Pedir informacion</button> {% endcomment %}
             </div>
 
             <div class="product__page-social-container">
@@ -54,7 +54,7 @@
         <div class="product__page-desc-details-container">
             <h3 class="product__page-desc-details-title">Detalles y especificaciones</h3>
         </div>
-        <div class="product__page-details-list-container">
+        <div>
             <ul class="product__page-details-ul">
                 <li>Alto: {{ product.metafields.producto.alto.value }}</li>
                 <li>Ancho: {{ product.metafields.producto.ancho.value }}</li>

@@ -6,7 +6,7 @@
         <div class="related__item-container">
                 <div class="related__item-img-container">
                     <a href="{{ product.url }}" class="related__item-a" target="_blank">
-                        <img src="{{ product.featured_image | product_img_url: 'grande' }}" alt="{{ product.title }}"  loading="lazy" decoding=“async” class="related__item-img">
+                        <img src="{{ product.featured_image | product_img_url: 'grande' }}" alt="{{ product.title }}" loading="lazy" decoding=“async” class="related__item-img">
                     </a>
                 </div>
                 <div class="related__item-title-container">
@@ -16,10 +16,10 @@
                 </div>
                 <div class="related__item-price-container">
                     <a href="{{ product.url }}" class="related__item-a" target="_blank">
-                        <span class="related__item-price">{{ product.price | money }}</span>
+                        <span>{{ product.price | money }}</span>
                     </a>
                 </div>
-                <div class="related__item-btn-container">
+                <div>
                     <form action="/cart/add" method="post" enctype="multipart/form-data" class="related__form">
                         <input type="hidden" name="id" value="{{ product.variants.first.id }}">
                         <input type="hidden" name="quantity" value="1">

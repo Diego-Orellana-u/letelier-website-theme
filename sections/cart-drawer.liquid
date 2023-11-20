@@ -10,10 +10,12 @@
 
     {% form 'cart', cart %}
         {% if cart.empty? %}
-            <span class="mini__cart-empty">Tu carro está vacío</span>
-            <a href="https://letelier.art/collections/all" class="cart__to-store">
-                <button class="mini__cart-btn button">Ir a la tienda</button>
-            </a>
+            <div class="mini__cart-empty-container">
+                <span class="mini__cart-empty">Tu carro está vacío</span>
+                <a href="https://letelier.art/collections/all" class="cart__to-store">
+                    <button class="mini__cart-btn black__btn">Ir a la tienda</button>
+                </a>
+            </div>
         {% else %}
             <div class="mini__cart-items">
                 {% for item in cart.items %}
