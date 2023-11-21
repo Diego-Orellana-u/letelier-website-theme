@@ -3,7 +3,8 @@
     "main": {
       "type": "vender-hero",
       "settings": {
-        "vender-hero": "shopify:\/\/shop_images\/Busto_de_marmol_hero.webp",
+        "vender-hero": "shopify:\/\/shop_images\/Arbol_de_jade_cloisonne_antiguo_1.webp",
+        "vender-hero-m": "shopify:\/\/shop_images\/Arbol_de_jade_cloisonne_antiguo_m.webp",
         "vender__hero-title": "VENDER",
         "vender__hero-desc": "Si tienes antigüedades que quieras vender comunícate con nosotros",
         "vender__hero-btn": "Contactanos"
