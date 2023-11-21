@@ -40,6 +40,9 @@ ul, li, input, p, a, label{
     color: rgba(22,22,44,.8);
     list-style: none;
 }
+p{
+    line-height: 1.7rem
+}
 span{
     font-family: 'Inter';
 }
@@ -55,13 +58,13 @@ img,svg {
     height: auto;
 }
 .black__btn{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     border: none;
     font-family: "Inter";
     font-weight: 300;
     background-color: #222;
     color: #fff;
-    padding: .5rem 0;
+    padding: 1rem 0;
     width: 100%;
     cursor: pointer;
     text-transform: uppercase;
@@ -352,12 +355,11 @@ img,svg {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem 1rem 5rem 1rem;
+    padding: 4rem 1rem;
     text-align: center;
     gap: 1rem;
 }
 .short__about-p{
-    font-size: 1.1rem;
     margin-bottom: 2rem;
 }
 .short__about-btn{
@@ -885,13 +887,11 @@ img,svg {
     cursor: pointer;
     display: flex;
 }
-
 .checkbox__container input[type='checkbox']{
     position: absolute;
     cursor: pointer;
     opacity: 0;
 }
-
 .checkbox__container label::before{
     content: '';
     width: .8em;
@@ -900,28 +900,17 @@ img,svg {
     border-radius: 2px;
     margin-right: .6em;
 }
-
 .checkbox__container input[type='checkbox']:checked + label::before{
     content: '\002714';
     color: #FFF;
     background-color: #333;
     display: flex;
-    justify-content: center;
     align-items: center;
     border: 1px solid #333;
 }
-
-.filter-icon{
-    background-color: #FFF;
-    border: none;
-}
-
 .filter__price-apply-btn{
     font-size: 17px;
-    background-color: #222;
-    color: #FFF;
 }
-
 .filter__mobile__slider-container{
     height: 5px;
     background: #ddd;
@@ -929,41 +918,34 @@ img,svg {
     margin: 0 0 25px 0;
     position: relative;
 }
-
 .filter__mobile__slider-container .filter__mobile__slider-progress{
     height: 5px;
     left: 0%;
     right: 0%;
     position: absolute;
-    border-radius: 5px;
     background: #666;
 }
-
-.filter__mobile__price-container{
-    width: 100%;
+.price-container{
     margin:0 0 30px 0; 
     display: flex;
 }
-
-.filter__mobile__price-container .field{
+.price-container .field{
     height: 45px;
     width: 100%;
     display: flex;
     align-items: center;
 }
-.filter__mobile__price-container .filter__money-separator{
+.price-container .filter__money-separator{
     width: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 16px;
 }
-
-.range__mobile__input{
+.range__css{
     position: relative;
 }
-
-.range__mobile__input input{
+.range__css input{
     position: absolute;
     top: -30px;
     height: 5px;
@@ -972,31 +954,10 @@ img,svg {
     pointer-events: none;
     -webkit-appearance: none;
 }
-
-/*=============== SEARCH PAGE ===============*/
-
-.search__section-container{
-    width: 100%;
-}
 /*=============== DESKTOP FILTER ===============*/
-
 .filter__desktop-section-container{
     display: none;
 }
-
-.filter__price-container{
-    width: 100%;
-    margin:0 0 30px 0; 
-    display: flex;
-}
-
-.filter__price-container .field{
-    height: 45px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
-
 .field input{
     width: 100%;
     height: 100%;
@@ -1008,51 +969,10 @@ img,svg {
     border: 1px solid #999;
     -moz-appearance: textfield;
 }
-
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button{
     -webkit-appearance: none;
 }
-
-.filter__price-container .filter__money-separator{
-    width: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-}
-
-.filter__slider-container{
-    height: 5px;
-    background: #ddd;
-    border-radius: 5px;
-    margin: 0 0 25px 0;
-    position: relative;
-}
-
-.filter__slider-container .filter__slider-progress{
-    height: 5px;
-    left: 0%;
-    right: 0%;
-    position: absolute;
-    border-radius: 5px;
-    background: #666;
-}
-
-.range__input{
-    position: relative;
-}
-
-.range__input input{
-    position: absolute;
-    top: -30px;
-    height: 5px;
-    width: 100%;
-    background: none;
-    pointer-events: none;
-    -webkit-appearance: none;
-}
-
 input[type="range"]::-webkit-slider-thumb{
     height: 18px;
     width: 18px;
@@ -1061,7 +981,6 @@ input[type="range"]::-webkit-slider-thumb{
     -webkit-appearance: none;
     background: #222;
 }
-
 input[type="range"]::-moz-range-thumb{
     height: 18px;
     width: 18px;
@@ -1071,135 +990,89 @@ input[type="range"]::-moz-range-thumb{
     -moz-appearance: none;
     background: #222;
 }
-
 .filter__price-apply-btn-container{
     margin-bottom: 20px;
 }
-
 /*=============== FAQ ===============*/
-
 .faq__container{
     padding: 60px 0;
     background-color: #F1F1F1;
 }
-
 .faq__width{
     max-width: 900px;
     margin: 0 auto;
     width: calc(100% - 40px);
 }
-
 .faq__header{
     padding-bottom: 30px;
+    font-size: 1.8rem;
 }
-
 .faq__question{
     border-bottom: 1px solid #ddd;
 }
-
-.faq_title{
-    font-size: 3.5rem;
-}
-
 .faq__question-header{
-    font-size: 1.3rem;
-    font-family: "Inter";
     padding: 20px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
 }
-
 .faq-icon{
-    font-size: 30px;
     transition: .2s transform;
 }
-
-.faq__question-header h3{
-    font-size: var(--normal-font-size);
-    flex: 1;
-}
-
 .faq__question.faq-visible .faq-icon{
     transform: rotate(180deg);
 }
-
 .faq__question-body{
     max-height: 0;
     overflow: hidden;
     transition: .4s max-height;
 }
-
 .faq__question.faq-visible .faq__question-body{
     max-height: 400px;
 }
-
 .faq__question-body-inner > * + * {
     margin-top: 20px;
 }
-
 .faq__question-body-inner{
     margin-bottom: 1rem;
     font-size: 1.1rem;
 }
-
 /*=============== SELL CONTACT ===============*/
-
 .short__sell-page-title{
-    font-size: 1.5em;
+    font-size: 2em;
     margin-bottom: 1rem;
 }
-
 .sell__contact-title{
     font-size: var(--h1-font-size);
-    margin-bottom: .5rem;
     text-align: center;
-    color: #FFF;
 }
-
 .sell__form-container{
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #222 ; 
-    padding-top: 2rem;
-}
-
-.sell__contact-desc-container{
-    margin-bottom: 1rem;
-    text-align: center;
     color: #FFF;
+    padding: 4rem .8rem;
+    gap: 1.5rem;
 }
-
 .sell__contact-desc{
     color: #FFF;
 }
-
-.sell__contact-btn-container{
-    margin-bottom: 3rem;
+.sell__contact-desc-container{
+    margin-bottom: 1rem;
     text-align: center;
 }
-
 .sell__contact-btn{
     background-color: #FFF;
-    color: #222;
     font-size:25px;
-	box-shadow: 1px 1px 2px #999;
-    border-radius: 10px;
-    width: 100%;
     padding: .8rem .5rem .8rem .5rem;
-
+    border: none;
 }
-
 /*=============== CONTACT US ===============*/
-
 .contact__container{
     margin-top: 3.5rem;
-    display: flex;
-    flex-direction: column;
 }
-
 .contact__img{
     width: 100%;
     height: 130vw;
@@ -1207,260 +1080,158 @@ input[type="range"]::-moz-range-thumb{
     object-fit: cover;
     object-position: bottom;
 }
-
 .contact__form-container{
-    padding: 1rem 2.2rem 0 1.2rem;
+    padding: 1rem 2.2rem 0 1rem;
 }
-
-/*=============== CONTACT US FORM ===============*/
-
 .contact__title{
     font-size: 2rem;
-    text-align: center;
-    font-weight: 300;
     text-transform: uppercase;
     margin: 2rem 0 2.5rem 0;
 }
-
 .contact_title-explanation-container{
     margin: 0 2.2rem 0 1.2rem;
 }
-
-
 .contact__form,
 .contact__group{
     display: grid;
     row-gap: 2.5rem;
 }
-
-.contact__form{
-    position: relative;
-}
-
 .contact__form-box{
-    position: relative;
-    width: 100%;
     height: 40px;
 }
-
-.contact__input,
-.contact__btn{
-    font-family: "Roboto", sans-serif;
-    font-size: var(--normal-font-size);
-    outline: none;
-    border: none;
-}
-
-.contact__label{
-    display:block;
-}
-
 .contact__input{
     width: 100%;
     height: 100%;
     border: 1px solid #aeadad;
     padding-left: .7rem;
 }
-
-.contact__input:focus{
-    border: 2px solid #999;
-}
-
 .contact__input:-webkit-autofill{
     transition: background-color 6000s, color 6000s;
 }
-
 .contact__form .contact__area{
     height: 10rem;
 }
-
 .contact__area textarea{
     resize: none;
 }
-
-.contact__btn{
-    background-color: #222;
-    color: #FFF;
-    text-transform: uppercase;
-    font-size: var(--h3-font-size);
-    padding: 1rem 0 1rem 0;
-}
-
 /*=============== CONTACT US INFO ===============*/
 .span{
     display: block;
-    width: 100%;
 }
-
 .contact__info-container{
     margin: 3rem 1rem;
     border: 1px solid #444;
     background-color: #F1F1F1;
     padding: 1rem;
 }
-
 .contact__contact-title{
     font-weight: 300;
     font-size: var(--h1-font-size);
     text-align: center;
-    text-transform: uppercase;
     margin-bottom: 1.5rem;
 }
-
 .contact__contact-subtitle{
     text-transform: uppercase;
     font-size: var(--h3-font-size);
     margin: 1rem 0 .3rem 0;
 }
-
 .contact__contact-p{
-    text-align: center;
     font-weight: 300;
 }
-
 .contact__contact{
     font-weight: 300;
 }
-
 .contact__contact-social-container{
     display: flex;
     justify-content: space-evenly;
     margin-top: 2rem;
 }
-
 /*=============== ABOUT US MAIN ===============*/
-
 .nosotros__container{
     margin-top: 4rem;
 }
-
 .nosotros__img-desc-container{
     display: flex;
     flex-direction: column;
 }
-
 .nosotros__desc-container{
-    background-color: #F1F1F1;
-    padding: 3.5rem 1.5rem 7.5rem 1.5rem;
+    background-color: #F7F0EA;
+    padding: 7.5rem 1.5rem;
 }
-
 .nosotros__title{
     font-size: var(--h1-font-size);
-    font-weight: 400;
     margin-bottom: 1rem;
 }
-
-.nosotros__desc{
-    font-size: 1.15rem;
-    font-weight: 400;
-}
-
 .nosotros__img{
     width: 100%;
     max-height: 950px;
     object-fit: cover;
 }
-
 /*=============== ABOUT US APPEARS ===============*/
-
 .appear__container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 3rem 0;
-    background-color: #F1F1F1;
+    background-color: #F7F0EA;
 }
-
 .appear__title{
     display: block;
-    width: 100%;
     font-size: 3rem;
-    font-weight: 400;
+    font-family: 'Playfair Display';
     margin-bottom: 3rem;
     text-align: center;
 }
-
 .appear__all-logos-container{
     display: flex;
     flex-wrap: wrap;
     row-gap: 3rem;
     justify-content: center;
 }
-
 .appear__logo{
     width: 250px;
-}
-
-.appear__logo-container{
     padding: 0 2rem;
 }
-
 /*=============== ABOUT US TEAM ===============*/
-
 .team__all-members-container{
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
 }
-
 .team__container{
     padding: 3rem 0 6rem 0;
 }
-
 .team__title-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
     margin-bottom: 7rem;
 }
-
 .team__title{
     font-size: 3rem;
-    font-weight: 400;
     text-transform: uppercase;
     color: #b71e07;
 }
-
 .team__img-container{
     margin-bottom: 2.5rem;
 }
-
 .team__member-name{
     display: block;
-    width: 100%;
     text-transform: uppercase;
-    font-weight: 400;
     font-size: 2rem;
     margin-bottom: .3rem;
     color: #b71e07;
 }
-
 .team__member-role{
     display: block;
-    width: 100%;
     text-transform: uppercase;
     font-weight: 300;
-    font-size: 1.2rem;
     margin-bottom: 2rem;
 }
-
 .team__member-p{
-    font-weight: 400;
     font-size: 1.1rem;
-    color: rgba(22,22,44,.8);
-    line-height: 1.7rem;
 }
-
 .team__individual-member-container{
     flex: 1;
     padding: 0 1.1rem;
 }
-
-
 /*=============== BREAKPOINTS ===============*/
-
 /* for medium phones */
-
 @media screen and (min-width: 360px) {
     .header-logo{
         width: 13rem;
@@ -1482,6 +1253,7 @@ input[type="range"]::-moz-range-thumb{
 
     .black__btn{
         padding: 1rem 1rem;
+        font-size: 1.2rem;
     }
 
     .footer__logo-link{
@@ -1712,10 +1484,8 @@ input[type="range"]::-moz-range-thumb{
     }
 
     .contact__form-container{
-        padding: 0;
-        padding-top: 1rem;
         width: 100%;
-        padding: 2rem 0 0 2rem;
+        padding: 2rem 0 3rem 2rem;
     }
 
     .contact__info-container{
@@ -1730,16 +1500,10 @@ input[type="range"]::-moz-range-thumb{
     .contact__contact-p{
         text-align: left;
     }
-
-    .contact__btn{
-        margin-bottom: 3rem;
-    }
-
-
     .contact__img{
         max-height: 700px;
         height: auto;
-        padding-top: 1.4rem;
+        padding-top: 1.2rem;
     }
 
     .contact__container{
@@ -1752,7 +1516,7 @@ input[type="range"]::-moz-range-thumb{
     
     .contact__title{
         text-align: left;
-        font-size: 4rem;
+        font-size: 3rem;
         margin-top: 0;
     }
 
@@ -1899,6 +1663,7 @@ input[type="range"]::-moz-range-thumb{
         flex-direction: column;
         justify-content: center;
         flex: 1;
+        padding: 0 4rem;
     }
 
     .nosotros__img{
@@ -1908,11 +1673,6 @@ input[type="range"]::-moz-range-thumb{
     .nosotros__title{
         font-size: 3.5rem;
     }
-    
-    .nosotros__desc-container{
-        padding: 0 3.2rem;
-    }
-
     .short__about-title{
         font-size: 3rem;
     }
@@ -1996,7 +1756,7 @@ input[type="range"]::-moz-range-thumb{
     .filter__label-value{
         margin-bottom: 1.4rem;
     }
-    .filter__price-container .filter__money-separator{
+    .filter__mobile__price-container .filter__money-separator{
         width: 100px;
     }
 
@@ -2044,7 +1804,10 @@ input[type="range"]::-moz-range-thumb{
     .mini__cart-items {
         padding: 24px;
     }
-
+    .contact__img-container{
+        width: 75vw;
+        margin-right: 4rem;
+    }
 }
 
 @media screen and (min-width: 1200px){
@@ -2059,12 +1822,9 @@ input[type="range"]::-moz-range-thumb{
     .product__page-desc-container{
         padding: 4.5rem 7rem;
     }
-
-    .contact__img-container{
-        width: 60vw;
-        margin-right: 4rem;
+    .contact__title{
+        font-size: 4rem;
     }
-
 }
 
 
@@ -2102,7 +1862,6 @@ input[type="range"]::-moz-range-thumb{
         line-height: 22px;
     }
 }
-
 @font-face {
     font-family: 'Playfair Display';
     src: url(https://cdn.shopify.com/s/files/1/0671/3370/2394/files/playfair-display-regular.woff2?v=1698625837) format('woff2');
