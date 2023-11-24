@@ -604,6 +604,20 @@ img,svg {
     border-radius: 2px;
     margin: 3rem 1rem 1rem 1rem;
 }
+#magnifying-area{
+    width: 600px;
+    height: 900px;
+    overflow: hidden;
+    position: relative;
+}
+#magnifying-img{
+    max-width: 100%;
+    min-width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
 .product__page-info{
     display: flex;
     flex-direction: column;
