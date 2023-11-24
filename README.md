@@ -43,8 +43,6 @@ I structured the development into four phases:
     The MVP was succesfully achieved in 2 weeks. The main difficulties along the way was the implementation of elements like filters and search pages, mainly because the connection with the backend provided by Shopify wasn't easy due to limited documentation. However, these difficulties were solved succesfully within a few days.
 
 
-
-
 ## Help
 
 Any advise for common problems or issues.

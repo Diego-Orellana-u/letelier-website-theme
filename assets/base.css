@@ -353,6 +353,7 @@ img,svg {
 .home__btn{
     background-color: #FFF;
     color: #222;
+    width: 200px;
 }
 /*=============== SHORT ABOUT US ===============*/
 .short__about-container{
@@ -435,32 +436,6 @@ img,svg {
 .whyus__desc{
     font-size: var(--paragraph-font-size);
 }
-/*=============== POPULAR CATEGORIES SECTION ===============*/
-.categories__container{
-    padding: 2rem 0 2.5rem 0;
-}
-.popular__categories-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-} 
-.category__individual{
-    width: 340px;
-    margin: 2rem .8rem 2rem .8rem;
-} 
-.category__img{
-    height: 27rem;
-    width: 100%;
-    object-fit: cover;
-    object-position: bottom;
-} 
-.category__title{
-    font-family: "Inter";
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    margin: 1rem;
-    text-align: center;
-}
 /*=============== SOCIAL BAR ===============*/
 .social__container{
     background-color: #222;
@@ -510,14 +485,12 @@ img,svg {
 .howto__title{
     font-size: 1.45rem;
 }
-
 /*=============== FOOTER ===============*/
 .footer__container{
     background-color: #222;
     color: #FFF;
     padding: 1.5rem 0 ;
 }
-
 .footer__column-title{
     font-weight: 400;
     font-family: "Inter";
@@ -525,55 +498,45 @@ img,svg {
     font-size: 1rem;
     margin-bottom: .5rem;
 }
-
 .footer__column-link{
     color: #bcbbbb;
     font-size: .8rem;
 }
-
 .footer__column-link:hover{
     color: #FFF;
 }
-
 .footer__aboutshop{
     color: #bcbbbb;
     font-size: .8rem;
     padding-right: 1rem;
     margin-bottom: 2rem;
 }
-
 .footer__linklist{
     display: flex;
     flex-direction: column;
     gap: .5rem;
 }
-
 .footer__logo-link{
     display: block;
     width: 11rem;
     margin: 0 0 2rem .5rem;
 }
-
 .footer__copyright-container{
     color: #FFF;
     font-family: "Inter";
     font-weight: 300;
 }
-
 .footer__column{
     margin: 0 0 1rem 1.2rem;
 }
-
 .footer__copy{
     display: flex;
     flex-direction: column;
     padding: 0 1.2rem;
-    font-family: "Inter";
     gap: 1rem;
     color: #bcbbbb;
     font-size: .8rem;
 }
-
 .footer__bottom::before{
     content: '';
     display: block;
@@ -581,52 +544,40 @@ img,svg {
     width: 90%;
     border: .5px solid #474747;
 }
-
 .madeby:hover{
     color: #FFF;
 }
-
 /*=============== SEARCH FORM ===============*/
-
 .navmenu__search-container{
     position: fixed;
     background-color: #F1F1F1;
     top: -40px;
     width: 100%;
     padding: 2rem 0rem 2rem 1rem;
-    display: flex;
-    flex-direction: column;
     z-index: -1;
     transition: transform .2s ease-out;
 }
- 
 .navmenu__search-container[data-visible="true"]{
     transform: translateY(100%);
     transition: transform .2s ease-out;
 }
-
 .search__form{
     display: flex;
     gap: .5rem;
 }
-
 .search__input{
     padding: .5rem;
     font-family: "Inter";
     border: 1px solid #adadad;
     width: 85%;
 }
-
 .search__input:focus{
     border: 1px solid #7f7e7e;
 }
-
 .search__input:-webkit-autofill{
     transition: background-color 6000s, color 6000s;
 }
-
 /*=============== PRODUCT TEMPLATE ===============*/
-
 .product__page-container{
     margin-top: 4rem;
 }
@@ -1497,7 +1448,7 @@ input[type="range"]::-moz-range-thumb{
 }
 @media screen and (min-width: 1024px) {
     .home__info{
-        padding-top: 25rem;
+        padding-top: 40vh;
     }
     .home__container{
         height: 100vh;

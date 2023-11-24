@@ -1,37 +1,33 @@
-
-<h2 class="title">
-    Categorías de antigüedades populares
-</h2>
-<div class="popular__categories-container">
-{% for collection in collections limit: 4 %}
-        <div class="category__individual">  
-            <div>
-                <a href="{{ collection.url }}" target="_blank">
-                  <img src="{{ collection.image | img_url: 'master' }}" alt="{{ collection.title }}" class="category__img" width="320" height="432" loading="lazy" decoding=“async”>
-                </a>
-            </div>
-            <div>
-                <a href="{{ collection.url }}" target="_blank">
-                  <h3 class="category__title">
-                    {{ collection.title }}
-                  </h3>
-                </a>
-            </div>
-            <div>
-                <a href="{{ collection.url }}" target="_blank" class="category__link">
-                  <button class="black__btn extended__btn">Ir a la categoría</button>
-                </a>
-            </div>
+<div class="related__section-title-container">
+    <h2 class="related__section-title title">Categorías de antigüedades populares</h2>
+</div>
+<div class="related__items-container">
+    {% for collection in collections limit: 4 %}
+      <div class="related__item-container">
+        <div class="related__item-img-container">
+            <a href="{{ collection.url }}" class="related__item-a" target="_blank">
+                <img src="{{ collection.image | img_url: 'master' }}}" alt="{{ collection.title }}" width="320" height="432" loading="lazy" decoding=“async” class="related__item-img">
+            </a>
         </div>
+        <div>
+          <a href="{{ collection.url }}" class="related__item-a" target="_blank">
+              <h3 class="related__item-title">{{ collection.title }}</h3>
+          </a>
+        </div>
+        <div class="related__item-btn-container">
+          <a href="{{ collection.url }}" target="_blank" class="category__link">
+            <button class="black__btn extended__btn">Ir a la categoría</button>
+          </a>
+        </div>
+      </div>
     {% endfor %}
 </div>
-
 
 {% schema %}
 {
     "name": "Popular Categories",
-    "tag": "section",
-    "class": "categories__container",
+    "tag": "article",
+    "class": "related__container",
     "settings": [
 
     ]
