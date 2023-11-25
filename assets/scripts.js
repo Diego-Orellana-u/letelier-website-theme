@@ -297,3 +297,26 @@ rangeInput.forEach(input => {
         }
     })
 })
+
+// PRODUCT ZOOM
+const magnifyingArea = document.getElementById("magnifying_area");
+const magnifyingImg = document.getElementById("magnifying_img");
+
+magnifyingArea.addEventListener('mousemove', function(e){
+    clientX = e.clientX - magnifyingArea.offsetLeft
+    clientY = e.clientY - magnifyingArea.offsetTop
+
+    mWidth = magnifyingArea.offsetWidth
+    mHeight = magnifyingArea.offsetHeight
+
+    clientX = clientX / mWidth * 100
+    clientY = clientY / mHeight * 100
+
+    magnifyingImg.style.transform = 'translate(-'+clientX+'%, -'+clientY+'%) scale(2)'
+    // magnifyingImg.style.transform = 'translate(-50%,-50%) scale(2)'
+
+})
+
+magnifyingArea.addEventListener('mouseleave', function(){
+    magnifyingImg.style.transform = 'translate(0%,0%) scale(1)'
+})

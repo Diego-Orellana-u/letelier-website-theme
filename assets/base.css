@@ -604,19 +604,17 @@ img,svg {
     border-radius: 2px;
     margin: 3rem 1rem 1rem 1rem;
 }
-#magnifying-area{
-    width: 600px;
-    height: 900px;
+#magnifying_area{
+    max-height: 650px;
+    height: 50vw;
+    width: 40vw;
     overflow: hidden;
     position: relative;
 }
-#magnifying-img{
-    max-width: 100%;
-    min-width: 100%;
+#magnifying_img{
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
+    max-height: 650px;
+    height: 50vw;
 }
 .product__page-info{
     display: flex;
