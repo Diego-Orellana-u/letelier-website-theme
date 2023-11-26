@@ -309,14 +309,13 @@ magnifyingArea.addEventListener('mousemove', function(e){
     mWidth = magnifyingArea.offsetWidth
     mHeight = magnifyingArea.offsetHeight
 
-    clientX = clientX / mWidth * 100
-    clientY = clientY / mHeight * 100
+    clientX = clientX / mWidth * 125   
+    clientY = clientY / mHeight * 125
 
     magnifyingImg.style.transform = 'translate(-'+clientX+'%, -'+clientY+'%) scale(2)'
-    // magnifyingImg.style.transform = 'translate(-50%,-50%) scale(2)'
 
 })
 
 magnifyingArea.addEventListener('mouseleave', function(){
-    magnifyingImg.style.transform = 'translate(0%,0%) scale(1)'
+    magnifyingImg.style.transform = 'translate(-50%,-50%) scale(1)'
 })
