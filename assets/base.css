@@ -586,10 +586,13 @@ img,svg {
     flex-direction: column;
     justify-content: center;
     background-color: #f1f1f1;   
-    align-items: center;
+    align-items: flex-start;
 }
 .product__page-imgs-container{
-    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
     flex: none;
 }
 .product__page-main-img-container{
@@ -614,7 +617,7 @@ img,svg {
     overflow: hidden;
     position: relative;
 }
-#magnifying_img{
+.magnifying_img{
     position: absolute;
     max-height: 680px;
     min-width: 100%;
@@ -624,6 +627,7 @@ img,svg {
     left: 50%;
     transition: transform .1s ease-out;
     object-position: bottom;
+    object-fit: cover;
 }
 .product__page-info{
     display: flex;
@@ -637,6 +641,24 @@ img,svg {
     font-size: 1.55rem;
     text-align: center;
     margin-bottom: 1rem;
+    color: rgba(22,22,44,.8);
+}
+.product__page-small-imgs-container{
+    display: flex;
+    gap: 10px;
+    margin: 0 1rem 1rem 1rem;
+}
+.product__page-small-img-container{
+    cursor: pointer;
+}
+.product__secondary-img{
+    width: 75px;
+    height: 100px;
+    object-fit: cover;
+    object-position: bottom;
+}
+.product__secondary-big[data-visible="false"]{
+    display: none;
 }
 .main-img{
     max-height: 650px;
@@ -769,6 +791,12 @@ img,svg {
     object-fit: cover;
     object-position: bottom;
     width: 100%;
+}
+.pagination{
+    display: flex;
+    justify-content: center;
+    gap: .8rem;
+    margin-bottom: 2rem;
 }
 /*=============== FILTER ===============*/
 .filter__section-container{
@@ -1294,11 +1322,11 @@ input[type="range"]::-moz-range-thumb{
 }
 @media screen and (min-width: 768px){
     #magnifying_area{
-        height: 52vw;
+        height: 45vw;
         width: 34vw;
     }
     #magnifying_img{
-        height: 55vw;
+        height: 100%;
     }
     .home__container{
         flex-direction: row-reverse;
@@ -1630,10 +1658,9 @@ input[type="range"]::-moz-range-thumb{
         width: 100%;
         max-width: 40%;
         height: 540px;
-        margin: 3rem 1rem 1rem;
+        margin: 6rem 1rem 1rem;
     }
     .product__page-top-container{
-        align-items: center;
         padding-bottom: 5rem;
     }
     .product__page-desc-container{

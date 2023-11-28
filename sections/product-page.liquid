@@ -6,7 +6,11 @@
                     <svg width="65" fill="gray" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10.828 12 4.95 4.95-1.414 1.415L8 12l6.364-6.364 1.414 1.414-4.95 4.95Z"/></svg>
                 </button>
                 <div id="magnifying_area" class="main-img-container">
-                    <img src="{{ product.featured_image | image_url: width: 1024}}" id="magnifying_img" alt="{{ product.title }}" class="main-img" decoding=“async”>
+                    {% comment %} <img src="{{ product.featured_image | image_url: width: 1024}}" id="magnifying_img" alt="{{ product.title }}" class="main-img" decoding=“async”> {% endcomment %}
+                    {% for image in product.images %}
+                        <img src="{{ image | image_url: width: 1024 }}" class="product__secondary-big magnifying_img" data-visible="true">
+                    {% endfor %}
+
                 </div>
                 <button class="next-img-btn img-icon icon">
                     <svg width="65" fill="gray" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m13.171 12-4.95-4.95 1.415-1.413L16 12l-6.364 6.364-1.414-1.415 4.95-4.95Z"/></svg>
@@ -14,7 +18,11 @@
             </div>
             
             <div class="product__page-small-imgs-container">
-                {% comment %} a for to create a list with the secondary images {% endcomment %}
+                {% for image in product.images %}
+                    <div class="product__page-small-img-container">
+                        <img src="{{ image | image_url: width: 300 }}" class="product__secondary-img" alt="Imagenes secundarias" decoding=“async”>
+                    </div>
+                {% endfor %}
             </div>
         </div>
 
@@ -76,7 +84,7 @@
 <script>
     // PRODUCT ZOOM
     const magnifyingArea = document.getElementById("magnifying_area");
-    const magnifyingImg = document.getElementById("magnifying_img");
+    const magnifyingImg = document.querySelectorAll(".magnifying_img");
 
     magnifyingArea.addEventListener('mousemove', function(e){
         clientX = e.clientX - magnifyingArea.offsetLeft
@@ -88,12 +96,15 @@
         clientX = clientX / mWidth * 125   
         clientY = clientY / mHeight * 125
 
-        magnifyingImg.style.transform = 'translate(-'+clientX+'%, -'+clientY+'%) scale(2)'
-
+        magnifyingImg.forEach(img => {
+        img.style.transform = 'translate(-'+clientX+'%, -'+clientY+'%) scale(2)'
+        })
     })
 
     magnifyingArea.addEventListener('mouseleave', function(){
-        magnifyingImg.style.transform = 'translate(-50%,-50%) scale(1)'
+        magnifyingImg.forEach(img => {
+        img.style.transform = 'translate(-50%,-50%) scale(1)'
+        })
     })
 
 </script>
