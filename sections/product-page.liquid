@@ -8,7 +8,7 @@
                 <div id="magnifying_area" class="main-img-container">
                     {% comment %} <img src="{{ product.featured_image | image_url: width: 1024}}" id="magnifying_img" alt="{{ product.title }}" class="main-img" decoding=“async”> {% endcomment %}
                     {% for image in product.images %}
-                        <img src="{{ image | image_url: width: 1024 }}" class="product__secondary-big magnifying_img" data-visible="true">
+                        <img src="{{ image | image_url: width: 1024 }}" class="product__secondary-big magnifying_img" data-visible="false">
                     {% endfor %}
 
                 </div>
@@ -19,7 +19,7 @@
             
             <div class="product__page-small-imgs-container">
                 {% for image in product.images %}
-                    <div class="product__page-small-img-container">
+                    <div class="product__page-small-img-container" aria-selected="false" aria-controls="magnifying_area">
                         <img src="{{ image | image_url: width: 300 }}" class="product__secondary-img" alt="Imagenes secundarias" decoding=“async”>
                     </div>
                 {% endfor %}
@@ -82,10 +82,45 @@
 </article>
 
 <script>
-    // PRODUCT ZOOM
     const magnifyingArea = document.getElementById("magnifying_area");
     const magnifyingImg = document.querySelectorAll(".magnifying_img");
+    const smallImagesContainer = document.querySelector('.product__page-small-imgs-container');
+    const smallImages = document.querySelectorAll('.product__page-small-img-container');
 
+    //IMAGE SELECTION
+    function selectFirstImage(){
+        magnifyingArea.firstElementChild.setAttribute('data-visible', true);
+        smallImagesContainer.firstElementChild.setAttribute('aria-selected', true);
+    }
+    selectFirstImage()
+
+    function deselectAll(){
+        smallImages.forEach(image => {
+            image.setAttribute('aria-selected', false);
+        })
+
+        magnifyingImg.forEach(img => {
+            img.setAttribute('data-visible', false);
+        })
+    }
+    
+    function selectImage(selectedImg){
+        selectedImg.setAttribute('aria-selected', true); 
+        const nodeSmallArr = Array.from(smallImages)
+        const smallImgIndex = nodeSmallArr.indexOf(selectedImg)
+
+        const selectedBigImage = magnifyingArea.children.item(smallImgIndex)
+        selectedBigImage.setAttribute('data-visible', true)
+    }
+
+    smallImages.forEach(smallImg => {
+        smallImg.addEventListener('click', () =>{
+            deselectAll()
+            selectImage(smallImg)  
+        })
+    })
+
+    // PRODUCT ZOOM
     magnifyingArea.addEventListener('mousemove', function(e){
         clientX = e.clientX - magnifyingArea.offsetLeft
         clientY = e.clientY - magnifyingArea.offsetTop
@@ -106,5 +141,4 @@
         img.style.transform = 'translate(-50%,-50%) scale(1)'
         })
     })
-
 </script>

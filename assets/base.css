@@ -660,6 +660,9 @@ img,svg {
 .product__secondary-big[data-visible="false"]{
     display: none;
 }
+.product__page-small-img-container[aria-selected="true"]{
+    border: 4px solid #cecccc;
+}
 .main-img{
     max-height: 650px;
     object-fit: cover;
