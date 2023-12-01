@@ -1,7 +1,14 @@
 // HEADER
 const navMenu = document.querySelector('.nav__list');
 const toggleButton = document.getElementById('nav-toggle');
+// const navSubLinks = document.querySelectorAll('.nav__item');
 
+// navSubLinks.forEach(link => {
+//     link.addEventListener("click", () => {
+//         console.log("hola")
+//         link.classList.toggle('nav__item-visible')
+//     })
+// })
 
 toggleButton.addEventListener('click', () => {
     const visibility = navMenu.getAttribute('data-visible');
@@ -144,13 +151,7 @@ productForms.forEach(form => {
         openCart()
     })
 })
-
-// SEARCH
-
-
-
 // FAQ
-
 const faqBody = document.querySelectorAll(".faq__question-body");
 const faqHeader = document.querySelectorAll(".faq__question-header");
 
@@ -159,16 +160,11 @@ faqHeader.forEach(header => {
         header.parentElement.classList.toggle('faq-visible')
     })
 })
-
-
 // FILTER
-
 const filterDrawer = document.getElementById('filter-container')
 const openFilterBtn = document.querySelectorAll('.filter__openBtn')
 const closeFilterBtn = document.getElementById('filter-closeBtn')
 const filterLabel = document.querySelectorAll('.filter__label')
-
-
 
 function openFilter(){
     filterDrawer.setAttribute('data-visible', true)

@@ -26,12 +26,42 @@
     </div>
 
 
-    <ul data-visible="false" class="nav__list" id="nav-list">
+    <ul data-visible="false" class="nav__list nav__list-mobile" id="nav-list">
         {% for link in section.settings.navigation.links %}
             <li class="nav__item">
                 <a href="{{ link.url }}" class="nav__link">
                     {{ link.title}}
                 </a>
+                {% if link.links != blank %}
+                    <svg class="header__dropdown-icon" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 13.171 4.95-4.95 1.414 1.415L12 16 5.636 9.636 7.05 8.222l4.95 4.95Z"/></svg>
+                    <div class="sublinks__container-m">
+                        Antigüedades m
+                    </div>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+
+    <ul class="nav__list-desktop">
+        {% for link in section.settings.navigation.links %}
+            <li class="nav__item">
+                <a href="{{ link.url }}" class="nav__link">
+                    {{ link.title}}
+                </a>
+                {% if link.links != blank %}
+                    <div class="dropdown__menu information__grid">
+                    {% for child_link in link.links %}
+                        <div class="dropdown__heading">{{ child_link.title }}</div>
+                        {% if child_link.links.size > 0 %}
+                            <div>
+                                {% for grandchild_link in child_link.links %}
+                                    <a href="{{ grandchild_link.url}}" target="_blank" >{{ grandchild_link.title }}</a>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                    </div>
+                {% endif %}
             </li>
         {% endfor %}
     </ul>
