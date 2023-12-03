@@ -307,7 +307,7 @@ img,svg {
     font-size: 1.35rem;
 }
 .nav__label-title{
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
 }
 .nav__label{
@@ -363,6 +363,9 @@ img,svg {
     opacity: 1;
     transform: translateY(0);
     pointer-events: initial;
+}
+.dropdown__link-m{
+    font-size: 1rem;
 }
 .dropdown__heading-container{
     margin-bottom: .7rem;
@@ -557,7 +560,6 @@ img,svg {
     color: #FFFFFF;
     margin: 1rem 0rem 1rem 0rem;
     font-weight: 100;
-    text-align: center;
 }
 .home__btn{
     background-color: #FFF;
@@ -1079,10 +1081,29 @@ img,svg {
     max-height: 0;
     overflow: hidden;
     transition: .1s max-height;
+    padding-bottom: 0rem;
 }
 .nav__content{
     background-color: #F1F1F1;
     padding: 0 1rem;
+}
+.dropdown__heading-container-m{
+    border: none;
+}
+.dropdown__links-container-m{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-left: 1rem;
+}
+.filter__sublinks-content{
+    max-height: 0;
+    overflow: hidden;
+    transition: .1s max-height;
+}
+.filter__sublinks-label-container.filter-visible .filter__sublinks-content{
+    max-height: 400px;
+    transition: .5s max-height;
 }
 .filter__label-value{
     margin-bottom: .5rem;
@@ -1092,8 +1113,9 @@ img,svg {
     font-size: 1.2rem;
 }
 .filter__label-container.filter-visible .filter__content{
-    max-height: 400px;
+    max-height: 600px;
     transition: .5s max-height;
+    padding: 1rem;
 }
 .filter__collapsible{
     padding-left: 8px;

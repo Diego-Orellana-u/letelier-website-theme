@@ -6,7 +6,6 @@
                     <svg width="65" fill="gray" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10.828 12 4.95 4.95-1.414 1.415L8 12l6.364-6.364 1.414 1.414-4.95 4.95Z"/></svg>
                 </button>
                 <div id="magnifying_area" class="main-img-container">
-                    {% comment %} <img src="{{ product.featured_image | image_url: width: 1024}}" id="magnifying_img" alt="{{ product.title }}" class="main-img" decoding=“async”> {% endcomment %}
                     {% for image in product.images %}
                         <img src="{{ image | image_url: width: 1024 }}" class="product__secondary-big magnifying_img" data-visible="false">
                     {% endfor %}
@@ -86,6 +85,7 @@
     const magnifyingImg = document.querySelectorAll(".magnifying_img");
     const smallImagesContainer = document.querySelector('.product__page-small-imgs-container');
     const smallImages = document.querySelectorAll('.product__page-small-img-container');
+    const imgIcon = document.querySelectorAll('.img-icon')
 
     //IMAGE SELECTION
     function selectFirstImage(){
@@ -110,13 +110,30 @@
         const smallImgIndex = nodeSmallArr.indexOf(selectedImg)
 
         const selectedBigImage = magnifyingArea.children.item(smallImgIndex)
-        selectedBigImage.setAttribute('data-visible', true)
+        selectedBigImage.setAttribute('data-visible', true);
+    }
+    
+    function imageIcon(icon){
+        const nodeSmallArr = Array.from(smallImages)
+        smallImages.forEach(image => {
+            let mingus = image.getAttribute('aria-selected')
+            if(mingus === true){
+                
+            }
+        })
+        console.log(nodeSmallArr)
     }
 
     smallImages.forEach(smallImg => {
         smallImg.addEventListener('click', () =>{
-            deselectAll()
-            selectImage(smallImg)  
+            deselectAll();
+            selectImage(smallImg);
+        })
+    })
+
+    imgIcon.forEach(icon => {
+        icon.addEventListener('click', () =>{
+            imageIcon(icon);
         })
     })
 

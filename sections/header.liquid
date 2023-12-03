@@ -9,14 +9,12 @@
             </svg>
             <span class="header__cart-count"> {{ cart.item_count }} </span>
         </button>
-
         <button aria-controls="nav-search" aria-expanded="false" class="mobile__search__toggle icon" id="search-toggle">
             <svg width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path id="search-icon-path" d="m18.031 16.617 4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617Zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.867-3.133-7-7-7s-7 3.133-7 7 3.133 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15Z"/>
                 <span class="sr-only">Search</span>
             </svg>
         </button>
-
         <button aria-controls="nav-list" aria-expanded="false" class="mobile__nav__toggle icon" id="nav-toggle">
             <svg width="31" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path id="menu-icon-path" d="M3 4h18v2H3V4Zm0 7h18v2H3v-2Zm0 7h18v2H3v-2Z"/>
@@ -24,7 +22,6 @@
             </svg>
         </button>
     </div>
-
     <div class="nav__container-m" data-visible="false" id="nav-list">
         <div class="cart__header">
             <span class="cart__header-title">Menú</span>
@@ -42,14 +39,19 @@
                     {% if link.links != blank %}
                     <div class="filter__content nav__content">
                         {% for child_link in link.links %}
-                            <div class="dropdown__heading-container-m"><a href="{{ child_link.url }}" class="dropdown__heading-title-m">{{ child_link.title }}</a></div>
+                            <div class="filter__sublinks-label-container">
+                                <div class="dropdown__heading-container-m filter__label">
+                                    <a href="{{ child_link.url }}" class="dropdown__heading-title-m">{{ child_link.title }}</a>
+                                    <svg width="20" class="menu__dropdown-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 13.171 4.95-4.95 1.414 1.415L12 16 5.636 9.636 7.05 8.222l4.95 4.95Z"/></svg>
+                                </div>
                             {% if child_link.links.size > 0 %}
-                                <div class="dropdown__links-container-m">
+                                <div class="dropdown__links-container-m filter__sublinks-content">
                                     {% for grandchild_link in child_link.links %}
                                         <a href="{{ grandchild_link.url}}"class="dropdown__link-m">{{ grandchild_link.title }}</a>
                                     {% endfor %}
                                 </div>
                             {% endif %}
+                            </div>
                         {% endfor %}
                     </div>
                     {% endif %}

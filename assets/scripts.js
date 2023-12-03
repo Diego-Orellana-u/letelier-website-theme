@@ -5,29 +5,18 @@ const navSubLinks = document.querySelectorAll('.nav__item-m');
 const menuIcon = document.getElementById('menu-icon-path');
 const overlay = document.querySelector('.drawer__overlay');
 
-// navSubLinks.forEach(link => {
-//     link.addEventListener("click", () => {
-//         console.log("hola")
-//         link.classList.toggle('nav__item-visible')
-//     })
-// })
-
-// document.querySelectorAll('.filter__closebtn, .drawer__overlay').forEach(c =>{
-//     c.addEventListener('click', closeFilter)
-// })
-
 function openMenu(){
     navMenu.setAttribute('data-visible', true);
-    toggleButton.setAttribute('aria-expanded',true)
-    menuIcon.setAttribute("d", "m12 10.586 4.95-4.95 1.415 1.415-4.95 4.95 4.95 4.95-1.415 1.414-4.95-4.95-4.95 4.95-1.413-1.415 4.95-4.95-4.95-4.95L7.05 5.638l4.95 4.95Z")
+    toggleButton.setAttribute('aria-expanded',true);
+    menuIcon.setAttribute("d", "m12 10.586 4.95-4.95 1.415 1.415-4.95 4.95 4.95 4.95-1.415 1.414-4.95-4.95-4.95 4.95-1.413-1.415 4.95-4.95-4.95-4.95L7.05 5.638l4.95 4.95Z");
     overlay.style.opacity = '0.3';
     overlay.style.visibility = 'visible';
 }
 
 function closeMenu(){
-    navMenu.setAttribute('data-visible', false)
-    toggleButton.setAttribute('aria-expanded',false)
-    menuIcon.setAttribute("d", "M3 4h18v2H3V4Zm0 7h18v2H3v-2Zm0 7h18v2H3v-2Z")
+    navMenu.setAttribute('data-visible', false);
+    toggleButton.setAttribute('aria-expanded',false);
+    menuIcon.setAttribute("d", "M3 4h18v2H3V4Zm0 7h18v2H3v-2Zm0 7h18v2H3v-2Z");
     overlay.style.opacity = "0";
     overlay.style.visibility = "hidden";
 }
@@ -38,7 +27,7 @@ toggleButton.addEventListener('click', () => {
 })
 
 document.querySelectorAll('.menu__close-m, .drawer__overlay').forEach(c =>{
-    c.addEventListener('click', closeMenu)
+    c.addEventListener('click', closeMenu);
 })
 
 const navSearchBtn = document.getElementById('search-toggle');
@@ -51,7 +40,7 @@ navSearchBtn.addEventListener('click', () => {
     if(visibility === "false"){
         navSearchContainer.setAttribute('data-visible', true); //show menu on mobile
         navSearchBtn.setAttribute('aria-expanded',true); //search purpose
-        navSearchIcon.setAttribute('d', 'm12 10.586 4.95-4.95 1.415 1.415-4.95 4.95 4.95 4.95-1.415 1.414-4.95-4.95-4.95 4.95-1.413-1.415 4.95-4.95-4.95-4.95L7.05 5.638l4.95 4.95Z') //change icon
+        navSearchIcon.setAttribute('d', 'm12 10.586 4.95-4.95 1.415 1.415-4.95 4.95 4.95 4.95-1.415 1.414-4.95-4.95-4.95 4.95-1.413-1.415 4.95-4.95-4.95-4.95L7.05 5.638l4.95 4.95Z');
     }else{
         navSearchContainer.setAttribute('data-visible', false);
         navSearchBtn.setAttribute('aria-expanded',false);
@@ -93,8 +82,6 @@ async function updateCart(){
 
     const newContainer = html.querySelector(".mini__cart-container").innerHTML;
     document.querySelector('.mini__cart-container').innerHTML = newContainer;
-
-
     addCartListeners();
 }
 
@@ -134,14 +121,11 @@ function addCartListeners(){
     })
 
 }
-
 addCartListeners()
 
 cartToggle.addEventListener('click', () => {
     openCart()
 })
-
-
 productForms.forEach(form => {
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
