@@ -2,20 +2,18 @@
     <div class="product__page-top-container">
         <div class="product__page-imgs-container">
             <div class="product__page-main-img-container">
-                <button class="previous-img-btn img-icon icon">
+                <button class="previous-img-btn img-icon icon" aria-controls="magnifying_area">
                     <svg width="65" fill="gray" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10.828 12 4.95 4.95-1.414 1.415L8 12l6.364-6.364 1.414 1.414-4.95 4.95Z"/></svg>
                 </button>
                 <div id="magnifying_area" class="main-img-container">
                     {% for image in product.images %}
                         <img src="{{ image | image_url: width: 1024 }}" class="product__secondary-big magnifying_img" data-visible="false">
                     {% endfor %}
-
                 </div>
-                <button class="next-img-btn img-icon icon">
+                <button class="next-img-btn img-icon icon" aria-controls="magnifying_area">
                     <svg width="65" fill="gray" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m13.171 12-4.95-4.95 1.415-1.413L16 12l-6.364 6.364-1.414-1.415 4.95-4.95Z"/></svg>
                 </button>
             </div>
-            
             <div class="product__page-small-imgs-container">
                 {% for image in product.images %}
                     <div class="product__page-small-img-container" aria-selected="false" aria-controls="magnifying_area">
@@ -24,7 +22,6 @@
                 {% endfor %}
             </div>
         </div>
-
 
         <div class="product__page-info-container">
             <div class="product__page-info">
@@ -105,7 +102,7 @@
     }
     
     function selectImage(selectedImg){
-        selectedImg.setAttribute('aria-selected', true); 
+        selectedImg.setAttribute('aria-selected', true);
         const nodeSmallArr = Array.from(smallImages)
         const smallImgIndex = nodeSmallArr.indexOf(selectedImg)
 
@@ -115,13 +112,34 @@
     
     function imageIcon(icon){
         const nodeSmallArr = Array.from(smallImages)
-        smallImages.forEach(image => {
-            let mingus = image.getAttribute('aria-selected')
-            if(mingus === true){
-                
+        for(let i = 0; i < smallImages.length; i++){
+            const selectedIndex = smallImages[i].getAttribute('aria-selected')
+            if(selectedIndex === "true"){
+                let smallImgIndex = nodeSmallArr.indexOf(smallImages[i])
+                deselectAll()
+                if(icon.classList.contains('next-img-btn')){
+                    if((smallImgIndex + 1) === smallImages.length){
+                        let finalImage = nodeSmallArr[0]
+                        selectImage(finalImage)
+                        break
+                    }else{
+                        smallImgIndex = nodeSmallArr[smallImgIndex + 1]
+                        selectImage(smallImgIndex)
+                        break
+                    }
+                }else{    
+                    if(smallImgIndex === 0){
+                        finalImage = nodeSmallArr[smallImages.length - 1]
+                        selectImage(finalImage)
+                        break
+                    }else{
+                        smallImgIndex = nodeSmallArr[smallImgIndex - 1]
+                        selectImage(smallImgIndex)
+                        break
+                    }       
+                }
             }
-        })
-        console.log(nodeSmallArr)
+        }
     }
 
     smallImages.forEach(smallImg => {

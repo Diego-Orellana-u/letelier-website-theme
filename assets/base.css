@@ -908,12 +908,12 @@ img,svg {
 }
 .product__page-desc-title{
     text-align: center;
-    font-size: 1.55rem;
+    font-size: 2rem;
     margin-bottom: 2.5rem;
 }
 .product__page-desc-details-title{
     font-family: "Inter";
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-bottom: 1rem;
 }
 .product__page-details-ul{
