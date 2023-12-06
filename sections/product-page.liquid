@@ -1,4 +1,26 @@
 <article class="product__page-container">
+        {% assign collection_handle = product.collections.first.handle %}
+        {% assign collectionBread = collections[collection_handle] %}
+        {% assign maxCollections = 2 %}
+        {% assign count = 0 %}
+        {% assign secondCollectionHandle = '' %}
+
+        {% for collection in product.collections %}
+            {% if count == 1 %}
+                {% assign secondCollectionHandle = collection.handle %}
+                {% break %}
+            {% endif %}
+            {% assign count = count | plus: 1 %}
+        {% endfor %}
+        
+        {% if collectionBread %}
+            <div class="breadcrumbs">
+                <a href="/">Inicio</a> /
+                <a href="{{ collectionBread.url }}" class="first">{{ collectionBread.title }}</a> /
+                <a href="{{ secondCollectionHandle.url }}" class="second">{{ secondCollectionHandle }}</a> /
+                <span>{{ product.title }}</span>
+            </div>
+        {% endif %}
     <div class="product__page-top-container">
         <div class="product__page-imgs-container">
             <div class="product__page-main-img-container">
@@ -70,9 +92,9 @@
         </div>
         <div class="product__page-item-p-container">
             <h3 class="product__page-desc-details-title">Información de la antigüedad</h3>
-            <p class="product__page-item-desc">
+            <div class="product__page-item-desc">
                 {{ product.description }}
-            </p>
+            </div>
         </div>
     </div>
 </article>

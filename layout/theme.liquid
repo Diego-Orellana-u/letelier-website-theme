@@ -8,6 +8,22 @@
         <script src="{{ 'scripts.js' | asset_url }}" defer></script>
         <link rel="stylesheet" href="{{ 'base.css' | asset_url}}">
         <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+        {% if template == 'index' %}
+            {% include 'organization-schema' %}
+        {% endif %}
+
+        {% if template == 'page.contacto' %}
+            {% include 'organization-schema' %}
+        {% endif %}
+
+        {% if template == 'page.nosotros' %}
+            {% include 'organization-schema' %}
+        {% endif %}
+
+        {% if template == 'page.vender' %}
+            {% include 'faq-schema' %}
+        {% endif %}
+
         {{ content_for_header }}
     </head>
 
