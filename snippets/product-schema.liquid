@@ -1,0 +1,13 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Product", 
+  "name": "{{ product.title }}",
+  "image":{% for image in product.images %}"{{ image | img_url }}",{% break %}{% endfor %}
+  "description": "{{ product.description }}",
+  "brand": {
+    "@type": "Brand",
+    "name": "{{ product.metafields.producto.marca.value }}"
+  }
+}
+</script>

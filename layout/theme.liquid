@@ -24,6 +24,10 @@
             {% include 'faq-schema' %}
         {% endif %}
 
+        {% if template == 'product' %}
+            {% include 'product-schema' %}
+        {% endif %}
+
         {{ content_for_header }}
     </head>
 
