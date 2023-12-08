@@ -49,12 +49,20 @@
             "title": "¿Puedo vender mis objetos si no vivo en Santiago?",
             "body": "<p>Si, comunícate con nosotros y te daremos las indicaciones necesarias dependiendo de la región en la que vivas.<\/p>"
           }
+        },
+        "fa9cba73-760b-498f-961c-1765ae6be38b": {
+          "type": "question",
+          "settings": {
+            "title": "¿Cuánto se demoran en pagar por las antigüedades?",
+            "body": "<p>Nada, pagamos al momento.<\/p>"
+          }
         }
       },
       "block_order": [
         "5939b4d2-1c6c-49a5-ac7e-3c93ab3ea6a1",
         "4f62bd0b-2832-4fb5-b1cd-cfa45662eae1",
-        "8ec33faf-faa9-4742-866f-87983a9c1298"
+        "8ec33faf-faa9-4742-866f-87983a9c1298",
+        "fa9cba73-760b-498f-961c-1765ae6be38b"
       ],
       "settings": {
       }
