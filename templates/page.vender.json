@@ -56,13 +56,21 @@
             "title": "¿Cuánto se demoran en pagar por las antigüedades?",
             "body": "<p>Nada, pagamos al momento.<\/p>"
           }
+        },
+        "7867b176-f338-40b3-90b1-42b9694ca6db": {
+          "type": "question",
+          "settings": {
+            "title": "Tengo muchos objetos que quiero vender. ¿Tienen algún limite de cantidad?",
+            "body": "<p>En general no tenemos limite de compra. Escríbenos a nuestro WhatsApp +569 84192433 para poder ayudarte de forma más personalizada.<\/p>"
+          }
         }
       },
       "block_order": [
         "5939b4d2-1c6c-49a5-ac7e-3c93ab3ea6a1",
         "4f62bd0b-2832-4fb5-b1cd-cfa45662eae1",
         "8ec33faf-faa9-4742-866f-87983a9c1298",
-        "fa9cba73-760b-498f-961c-1765ae6be38b"
+        "fa9cba73-760b-498f-961c-1765ae6be38b",
+        "7867b176-f338-40b3-90b1-42b9694ca6db"
       ],
       "settings": {
       }
