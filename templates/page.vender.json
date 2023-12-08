@@ -22,7 +22,7 @@
       "settings": {
         "sell__contact-title": "Contáctate con nosotros",
         "sell__contact-desc": "Envíanos fotos de las antigüedades que quieras vender y te responderemos a la brevedad",
-        "sell__contact-link": "",
+        "sell__contact-link": "https:\/\/wa.me\/56984192433?text=Hola%20estoy%20interesado%20en%20vender%20un%20objeto%20antiguo",
         "sell__contact-btn": "Escribenos por WhatsApp"
       }
     },
