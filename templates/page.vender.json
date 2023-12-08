@@ -35,10 +35,18 @@
             "title": "¿Qué antigüedades compran?",
             "body": "<p>Compramos múltiples objetos, entre ellos: Cuadros, figuras (de bronce, mármol, entre otros materiales), relojes pulsera, relojes de bolsillo, relojes de bronce, porcelana, platería, plaqué antiguo, joyas, violines antiguos, cellos, etc. Compramos todo tipo de objetos coleccionables. <\/p>"
           }
+        },
+        "4f62bd0b-2832-4fb5-b1cd-cfa45662eae1": {
+          "type": "question",
+          "settings": {
+            "title": "¿Qué debo hacer para vender una antigüedad?",
+            "body": "<p>Solamente tienes que comunicarte con nosotros a nuestro WhatsApp +569 84192433 y nos pondremos rápidamente en contacto.<\/p>"
+          }
         }
       },
       "block_order": [
-        "5939b4d2-1c6c-49a5-ac7e-3c93ab3ea6a1"
+        "5939b4d2-1c6c-49a5-ac7e-3c93ab3ea6a1",
+        "4f62bd0b-2832-4fb5-b1cd-cfa45662eae1"
       ],
       "settings": {
       }
