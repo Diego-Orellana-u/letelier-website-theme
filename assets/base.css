@@ -373,7 +373,7 @@ img,svg {
     margin-bottom: .7rem;
 }
 .dropdown__heading-title{
-    color: #7e1010;
+    color: #000;
     font-size: 1.2rem;
     text-transform: uppercase;
 }
@@ -487,14 +487,12 @@ img,svg {
 }
 .mini__cart-item-main-flex-left span {
     font-size: 15px;
-    font-weight: 500;
 } 
 .mini__cart-item-main-flex-right span {
-    font-weight: 500;
     font-size: 14px;
 }
 .mini__cart-quantity-selector {
-    display: inline-flex;
+    display: flex;
     margin-top: 10px;
 }
 .mini__cart-quantity-selector button {
@@ -566,13 +564,16 @@ img,svg {
 }
 .home__p{
     color: #FFFFFF;
-    margin: 1rem 0rem 1rem 0rem;
+    margin: 1.5rem 0;
     font-weight: 100;
+    width: 90%;
 }
 .home__btn{
     background-color: #FFF;
     color: #222;
-    width: 200px;
+}
+.home__btn-container{
+    width: 90%;
 }
 /*=============== SHORT ABOUT US ===============*/
 .main-title-home{
@@ -663,7 +664,7 @@ img,svg {
 }
 /*=============== SOCIAL BAR ===============*/
 .social__container{
-    background-color: #024842;
+    background-color: #222;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1004,6 +1005,7 @@ img,svg {
     justify-content: space-between;
 }
 .collection__item-title{
+    font-family: "Inter";
     font-weight: 400;
     margin: .5rem 0 .5rem 0;
 }
@@ -1324,9 +1326,12 @@ input[type="range"]::-moz-range-thumb{
 }
 .sell__contact-btn{
     background-color: #FFF;
-    font-size:25px;
-    padding: .8rem .5rem .8rem .5rem;
-    border: none;
+    font-size: 25px;
+    padding: .8rem 1rem;
+    border: 1px solid #FFF;
+    border-radius: 3px;
+    cursor: pointer;
+    
 }
 /*=============== CONTACT US ===============*/
 .contact__container{
@@ -1346,7 +1351,7 @@ input[type="range"]::-moz-range-thumb{
     font-size: 2rem;
     text-transform: uppercase;
     margin: 2rem 0 2.5rem 0;
-    color: #832f2d;
+    color: #222;
 }
 .contact_title-explanation-container{
     margin: 0 2.2rem 0 1.2rem;
@@ -1381,7 +1386,7 @@ input[type="range"]::-moz-range-thumb{
 .contact__info-container{
     margin: 3rem 1rem;
     border: 1px solid #444;
-    background-color: #f7f0ea;
+    background-color: #F1F1F1;
     padding: 1rem;
 }
 .contact__contact-title{
@@ -1415,7 +1420,7 @@ input[type="range"]::-moz-range-thumb{
     flex-direction: column;
 }
 .nosotros__desc-container{
-    background-color: #F7F0EA;
+    background-color: #F1F1F1;
     padding: 7.5rem 1.5rem;
 }
 .nosotros__title{
@@ -1718,7 +1723,7 @@ input[type="range"]::-moz-range-thumb{
         padding-top: 1.2rem;
     }
     .contact__container{
-        background-color: #f7f0ea;
+        background-color: #F1F1F1;
     }
     .contact_title-explanation-container{
         margin: 0;
@@ -1970,6 +1975,7 @@ input[type="range"]::-moz-range-thumb{
     .main-title-home{
         font-size: 3.5rem;
         line-height: 5rem;
+        max-width: 975px;
     }
 }
 @media screen and (min-width: 1200px){
