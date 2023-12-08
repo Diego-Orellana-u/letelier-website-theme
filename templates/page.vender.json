@@ -14,7 +14,7 @@
       "type": "vender-desc",
       "settings": {
         "vender__about-title": "COMPRAMOS TUS ANTIGÜEDADES",
-        "vender__about-desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        "vender__about-desc": "En Letelier llevamos años buscando objetos con historia. Si tienes objetos de coleccionismo, antigüedades, arte, esculturas, joyería, relojes, muebles o algo que quieras vender, no dudes en contactarte con nosotros a nuestro WhatsApp: +569 84192433."
       }
     },
     "form": {
@@ -22,7 +22,7 @@
       "settings": {
         "sell__contact-title": "Contáctate con nosotros",
         "sell__contact-desc": "Envíanos fotos de las antigüedades que quieras vender y te responderemos a la brevedad",
-        "sell__contact-link": "",
+        "sell__contact-link": "https:\/\/wa.me\/56984192433?text=Hola%20estoy%20interesado%20en%20vender%20un%20objeto%20antiguo",
         "sell__contact-btn": "Escribenos por WhatsApp"
       }
     },

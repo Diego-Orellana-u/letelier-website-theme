@@ -5,7 +5,7 @@
       "settings": {
         "hero__desktop-img": "shopify:\/\/shop_images\/Escultura_marmol_cipriani.webp",
         "hero__mobile-img": "shopify:\/\/shop_images\/Escultura_marmol_cipriani_m.webp",
-        "hero__title": "ESCULTURAS",
+        "hero__title": "ESCULTURAS ANTIGUAS",
         "hero__desc": "Descubre nuestras esculturas exclusivamente seleccionadas",
         "hero__button-title": "Ir a esculturas",
         "hero__button-link": "https:\/\/letelier.art\/collections\/all"
@@ -14,7 +14,7 @@
     "short_about": {
       "type": "short_about",
       "settings": {
-        "shortAbout__title": "LETELIER COMPRA Y VENTA DE ANTIGÜEDADES",
+        "shortAbout__title": "LETELIER COMPRA Y VENTA DE ANTIGÜEDADES Y COLECCIONISMO",
         "shortAbout__desc": "Queremos ayudarte a que la decoración de tus espacios represente tu forma de ver el mundo. Letelier cumple 40 años buscando dentro y fuera de Chile arte, antigüedades, coleccionismo y objetos decorativos, entregando un amplio y exclusivo catalogo. Hemos decidido inaugurar nuestra tienda online, ofreciendo así una forma fácil y segura de comprar.",
         "shortAbout__button-title": "SABER MAS"
       }
@@ -24,8 +24,8 @@
       "settings": {
         "sell": "shopify:\/\/shop_images\/Camara_antigua.webp",
         "vendeHome__title": "Vende Tus Antigüedades",
-        "vendeHome__desc": "¡Escríbenos para vender tus antigüedades! +569 84192433",
-        "vendeHome__cta": "Haz click en el botón y escríbenos",
+        "vendeHome__desc": "¿Tienes antigüedades, objetos coleccionables, arte o algo antiguo que quieras vender?",
+        "vendeHome__cta": "¡Escríbenos a +569 84192433!",
         "vendeHome__button": "QUIERO VENDER"
       }
     },
@@ -55,7 +55,7 @@
       "type": "social_section",
       "settings": {
         "socials__title": "Síguenos en redes sociales",
-        "socials__link-1": "",
+        "socials__link-1": "https:\/\/wa.me\/56984192433?text=Hola%20estoy%20interesado%20en%20vender%20un%20objeto%20antiguo",
         "socials__link-2": "",
         "socials__link-3": ""
       }
