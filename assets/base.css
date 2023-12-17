@@ -306,6 +306,7 @@ img,svg {
     transition: transform .3s ease-out;
 }
 .cart__header-title{
+    margin-left: 1rem;
     font-size: 1.35rem;
 }
 .nav__label-title{
@@ -545,6 +546,7 @@ img,svg {
     aspect-ratio: 2/3;
 }
 .home__title{
+    width: 90%;
     color: #FFFFFF;
     font-weight: 600;
     font-size: 3rem;
