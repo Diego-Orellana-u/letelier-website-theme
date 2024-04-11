@@ -23,5 +23,5 @@
       }
     }
   },
-  "order": ["main", "team", "appear"]
+  "order": ["main", "appear"]
 }
