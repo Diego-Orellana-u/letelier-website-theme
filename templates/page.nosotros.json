@@ -3,9 +3,9 @@
     "main": {
       "type": "nosotros-page",
       "settings": {
-        "nosotros-first-img": "shopify:\/\/shop_images\/Caja_antigua_de_hueso_cerrada_1.webp",
-        "nosotros-sec-img": "shopify:\/\/shop_images\/Escultura_de_madera_epoca_colonial.webp",
-        "nosotros-third-img": "shopify:\/\/shop_images\/Jarra-de-laca-china-antigua.webp",
+        "nosotros-first-img": "shopify://shop_images/Caja_antigua_de_hueso_cerrada_1.webp",
+        "nosotros-sec-img": "shopify://shop_images/Escultura_de_madera_epoca_colonial.webp",
+        "nosotros-third-img": "shopify://shop_images/Jarra-de-laca-china-antigua.webp",
         "aboutus__title-1": "Nuestra Visión",
         "aboutus__title-2": "Nuestra Historia",
         "aboutus__title-3": "Nuestro Compromiso",
@@ -14,26 +14,14 @@
         "aboutus__desc-3": "Somos coleccionistas y eso impregna todo lo que hacemos. Nuestra tienda esta hecha por y para amantes de las antigüedades. Por este motivo, nos comprometemos a entregar el mejor servicio y los mejores objetos coleccionables, reinventando la forma de vender antigüedades en Chile."
       }
     },
-    "team": {
-      "type": "nosotros-team",
-      "settings": {
-        "team__desc-1": "Con más de 40 años de inmersión en el apasionante mundo de las antigüedades, Oscar Orellana posee una amplia trayectoria en el rubro. Su pasión por descubrir tesoros únicos lo ha llevado a viajar por lugares recónditos del mundo, con el objetivo de encontrar las más excepcionales piezas, seleccionando cuidadosamente cada objeto para ofrecer a nuestros clientes una exclusiva colección de antigüedades autenticas. Su pasión por el coleccionismo se refleja en cada objeto que ofrecemos.",
-        "team__desc-2": "Amante de la decoración, empieza a principio de los años 80 trabajando en antigüedades junto a su cuñado en una pequeña tienda de providencia. Ahí conoce a Oscar y emprenden juntos el trabajo de formar una de las mejores colecciones de antigüedades en Chile.",
-        "team__desc-3": "Full stack developer con pasión por el diseño y el conocimiento. En 2021 se une a Letelier con el objetivo de crear una pagina web que logre juntar el arte, las antigüedades y el coleccionismo y así impulsar el rubro en el país. Actualmente es parte del equipo técnico, ayudando en todo lo relacionado con el área tecnológica de la compañía."
-      }
-    },
     "appear": {
       "type": "nosotros-appear",
       "settings": {
-        "logo-1": "shopify:\/\/shop_images\/elmercurio_1.png",
-        "logo-2": "shopify:\/\/shop_images\/elmercurio_1.png",
-        "logo-3": "shopify:\/\/shop_images\/elmercurio_1.png"
+        "logo-1": "shopify://shop_images/elmercurio_1.png",
+        "logo-2": "shopify://shop_images/elmercurio_1.png",
+        "logo-3": "shopify://shop_images/elmercurio_1.png"
       }
     }
   },
-  "order": [
-    "main",
-    "team",
-    "appear"
-  ]
+  "order": ["main", "team", "appear"]
 }
