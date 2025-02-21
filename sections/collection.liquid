@@ -226,7 +226,7 @@
                             <a href="{{ product.url }}" class="collection_a-img">
                                 <img src="{{ product.featured_image | product_img_url: 'grande' }}" width="302" height="417" alt="{{ product.title }}" class="collection__img" decoding=“async”>
                                 <h3 class="collection__item-title">{{ product.title }}</h3>
-                                {% if product.available = true %}
+                                {% if product.available == true %}
                                     <span class="collection__price">{{ product.price | money }}</span>
                                 {% else %}
                                     <span class="collection__price">Agotado</span>
