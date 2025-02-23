@@ -232,11 +232,16 @@
                                     <span class="collection__price">Agotado</span>
                                 {% endif %}
                             </a>
-                            <form action="/cart/add" method="post" enctype="multipart/form-data">
+                            {% if product.available == true %}
+                                <form action="/cart/add" method="post" enctype="multipart/form-data">
                                 <input type="hidden" name="id" value="{{ product.variants.first.id }}">
                                 <input type="hidden" name="quantity" value="1">
                                 <button type="submit" class="black__btn">Agregar al carrito</button>
                             </form>
+                            {% else %}
+                                <a href="{{ product.url }}" class="black__btn">Ver Producto</a>
+                            </form>
+                            {% endif %}
                         </div>
                     {% endfor %}
                 </div>
