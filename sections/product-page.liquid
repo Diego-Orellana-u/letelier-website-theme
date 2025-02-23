@@ -53,11 +53,15 @@
             </div>
 
             <div class="product__page-main-btns-container">
-                <form action="/cart/add" method="post" enctype="multipart/form-data">
-                    <input type="hidden" name="id" value="{{ product.variants.first.id }}">
-                    <input type="hidden" name="quantity" value="1">
-                    <button class="product__page-add-cart product_btn black__btn">Añadir al carrito</button>
-                </form>
+                {% if product.available == true %}
+                    <form action="/cart/add" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+                        <input type="hidden" name="quantity" value="1">
+                        <button type="submit" class="black__btn">Agregar al carrito</button>
+                    </form>
+                {% else %}
+                    <a href="{{ product.url }}" class="black__btn">Ver Producto</a>
+                {% endif %}
                 {% comment %} <button class="product__page-request-info product_btn black__btn">Pedir informacion</button> {% endcomment %}
             </div>
 
