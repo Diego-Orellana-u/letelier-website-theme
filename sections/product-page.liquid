@@ -49,7 +49,11 @@
             <div class="product__page-info">
                 <h2 class="product__page-item-title">{{ product.title }}</h2>
                 <span class="product__page-item-year"> Circa 1895 </span>
-                <span class="product__page-item-price">{{ product.price | money }}</span>
+                {% if product.available == true %}
+                    <span class="collection__price">{{ product.price | money }}</span>
+                {% else %}
+                    <span class="collection__price">Agotado</span>
+                {% endif %}
             </div>
 
             <div class="product__page-main-btns-container">
@@ -62,7 +66,6 @@
                 {% else %}
                     <a href="{{ product.url }}" class="black__btn">Ver Producto</a>
                 {% endif %}
-                {% comment %} <button class="product__page-request-info product_btn black__btn">Pedir informacion</button> {% endcomment %}
             </div>
 
             <div class="product__page-social-container">
