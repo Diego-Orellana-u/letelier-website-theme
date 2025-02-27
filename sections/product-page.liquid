@@ -57,7 +57,13 @@
             </div>
 
             <div class="product__page-main-btns-container">
-                
+                {% if product.available == true %}
+                    <form action="/cart/add" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+                        <input type="hidden" name="quantity" value="1">
+                        <button type="submit" class="black__btn">Agregar al carrito</button>
+                    </form>
+                {% endif %}
             </div>
 
             <div class="product__page-social-container">
