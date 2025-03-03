@@ -221,7 +221,7 @@
         {% paginate collection.products by 9 %}
             <section class="collection__container">
                 <div class="collection__items-container">
-                {% assign collection = collection.products | sort: 'published_at'%}
+                {% assign collection = collection.products | sort: 'created_at' | reverse %}
                     {% for product in collection %}
                         <div class="collection__item">
                             <a href="{{ product.url }}" class="collection_a-img">
