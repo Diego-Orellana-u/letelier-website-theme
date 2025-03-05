@@ -218,7 +218,7 @@
             <button aria-controls="filter-container" aria-expanded="false" class="filter__openBtn filter__mobile-btn button">Filtrar</button>
         </div>
 
-        {% paginate collection.products by 9 %}
+        {% paginate collection.products by 12 %}
             <section class="collection__container">
                 <div class="collection__items-container">
                 {% assign collection = collection.products | sort: 'created_at' | reverse %}
