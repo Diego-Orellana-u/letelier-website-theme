@@ -12,7 +12,7 @@
     "main": {
       "type": "product-page",
       "settings": {
-        "socials__link-1": "https://wa.me/+56984192433"
+        "socials__link-1": "https://wa.me/+56984192433?text=hola"
       }
     },
     "related": {
